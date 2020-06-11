@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Medicate Tunis </title>
+  <title>Medicate Tunis :Home</title>
 
   <!-- css -->
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
@@ -25,14 +25,9 @@
   <!-- template skin -->
   <link id="t-colors" href="{{asset('color/default.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <!-- =======================================================
-    Theme Name: Medicio
-    Theme URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
+  @yield('head')
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<body  >
     <div id="wrapper">
         
         @include('layouts.partials._navigation')
@@ -62,6 +57,6 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/nivo-lightbox.min.js"></script>
   <script src="js/custom.js"></script>
- 
+  @yield('script')
 </body>
 </html>

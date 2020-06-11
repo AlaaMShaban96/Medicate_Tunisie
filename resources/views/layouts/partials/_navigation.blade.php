@@ -1,11 +1,14 @@
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="top-area">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-md-6">
+          <div class="col-sm-6 col-md-8">
+            
             <p class="bold text-left">8am to 10pm </p>
           </div>
-          <div class="col-sm-6 col-md-6">
+
+          <div class="col-sm-6 col-md-3">
             <p class="bold text-right"> 
              
 
@@ -13,6 +16,16 @@
                 
             </p>
        
+           
+          </div>
+       
+          <div class="col-sm-6 col-md-1" id="mobile-prom">
+
+            <ul>
+              <li><span><i class="fa fa-android fa-1x" aria-hidden="true"></i></span></li>
+              <li><span><i class="fa fa-apple fa-1x" aria-hidden="true"></i></span></li>
+ 
+            </ul>
           </div>
         {{--  
           <div class="col-sm-6 col-md-2">
@@ -39,6 +52,10 @@
         </div>
       </div>
     </div>
+
+
+  
+
     <div class="container navigation">
 
       <div class="navbar-header page-scroll">
@@ -53,11 +70,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro"> <span class="fa fa-home" aria-hidden="true" style="font-size:23px"></span> Home</a></li>
-          <li><a href="#service"><span class="fa fa-home" aria-hidden="true" style="font-size:23px"></span>Service</a></li>
-          <li><a  href="#doctor"><span class="fa fa-home" aria-hidden="true" style="font-size:23px"></span>Doctors</a></li>
-          <li><a href="#facilities"><span class="fa fa-map-marker" aria-hidden="true" style="font-size:23px"></span>Find Us</a></li>
-          <li><a href="#pricing"><span class="fa fa-home" aria-hidden="true" style="font-size:23px"></span>Pricing</a></li>
+          <li class="active"><a href="{{url('/home')}}">  Home</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a  href="#doctor">Doctors</a></li>
+          {{-- <li><a href="#facilities">Find Us</a></li> --}}
+          <li><a href="#pricing">Pricing</a></li>
+        <li><a href="{{url('/find-us')}}">find us</a></li>
           <li class="dropdown">
             {{-- <span class="badge custom-badge red pull-right">Extra</span> --}}
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">language <b class="caret"></b></a>

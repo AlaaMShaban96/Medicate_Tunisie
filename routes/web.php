@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::view('/find-us', 'findUs');
+Route::view('/home', 'index');
+Route::view('/cpanel', 'cpanel/index');
+Route::view('/bookin', 'cpanel/index');
+
+Route::view('/bookingg', 'booking/index');
