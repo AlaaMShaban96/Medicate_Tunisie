@@ -7,8 +7,8 @@
  *******************************************************************************/
 
  body {
-    direction: rtl;
-    text-align:right;
+    /* direction: rtl; */
+    text-align:left;
 }
 
 dd {
@@ -24,7 +24,10 @@ caption {
 }
 
 th {
-    text-align: right;
+    text-align: center;
+}
+td {
+    text-align: center;
 }
 
 .list-unstyled {
@@ -1221,14 +1224,15 @@ body {
 }
 
 #wrapper.toggled {
-  padding-right: 250px;
+  padding-left: 250px;
 }
 
 #sidebar-wrapper {
+    text-align: left;
   z-index: 1000;
   position: fixed;
-  right: 250px;
-  width: 0;
+  /* right: 250px;
+  width: 0; */
   height: 100%;
   margin-right: -250px;
   overflow-y: auto;
@@ -1307,13 +1311,15 @@ body {
     padding-left: 0;
   }
   #wrapper.toggled {
-    padding-right: 250px;
+    padding-left: 250px;
   }
   #sidebar-wrapper {
     width: 0;
+    left: 0px;
   }
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+    left: 0px;
   }
   #page-content-wrapper {
     padding: 20px;

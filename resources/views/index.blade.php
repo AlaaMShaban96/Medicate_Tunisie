@@ -372,114 +372,49 @@
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
 
               <div class="carousel-inner">
-                <div class="item active">
-                   <div class="col-md-4 col-sm-6">
-                    <div class="block-text rel zmin" >
-                      {{-- <a title="" href="#">Emergency Contraception</a> --}}
-                      <div class="mark">17-11-2020
-                        {{-- <span class="rating-input">
+                  <div class="item active">
+                    @for ($i = 0; $i < 3; $i++)
+                    <div class="col-md-4 col-sm-6">
+                      <div class="block-text rel zmin" >
+                        {{-- <a title="" href="#">Emergency Contraception</a> --}}
+                        <div class="mark">{{$news[$i]['created_at']}}
+                          <span class="rating-input">
 
-                        <span data-value="0" class="glyphicon glyphicon-star"></span>
-                        <span data-value="1" class="glyphicon glyphicon-star"></span>
-                        <span data-value="2" class="glyphicon glyphicon-star"></span>
-                        <span data-value="3" class="glyphicon glyphicon-star"></span>
-                        <span data-value="4" class="glyphicon glyphicon-star-empty"></span>
-                        <span data-value="5" class="glyphicon glyphicon-star-empty"></span>
-
-                       </span> --}}
+                            {{$news[$i]['titel_ar']}}
+                        </span>
+                        </div>
+                        <p> {{$news[$i]['description_ar']}}</p>
+                        <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                       </div>
-                      <p>Ne eam errem semper. </p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                  
                     </div>
-                  {{--  <div class="person-text rel text-light">
-                      <img src="img/testimonials/1.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Anna</a>
-                      <span>Chicago, Illinois</span>
-                    </div> --}}
-                  </div>
-
-                  <div class="col-md-4 col-sm-6 hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Orthopedic Surgery</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
-                        <span
-                          data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                   {{--  <div class="person-text rel text-light">
-                      <img src="img/testimonials/2.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Matthew G</a>
-                      <span>San Antonio, Texas</span>
-                    </div>--}}
-                  </div> 
-                 
-                  <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Medical consultation</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                  {{--    <div class="person-text rel text-light">
-                      <img src="img/testimonials/3.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Scarlet Smith</a>
-                      <span>Dallas, Texas</span>
-                    </div>--}}
-                  </div>
+                    @endfor
                   </div> 
                                 
                  <div class="item">
+                  @for ($i = 0; $i < 3; $i++)
                   <div class="col-md-4 col-sm-6">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Birth control pills</a>
-                      <div class="mark">Mss<span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
+                    <div class="block-text rel zmin" >
+                      {{-- <a title="" href="#">Emergency Contraception</a> --}}
+                      <div class="mark">{{$news[$i]['created_at']}}
+                        <span class="rating-input">
+
+                          {{$news[$i]['titel_ar']}}
+                      </span>
                       </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
+                      <p> {{$news[$i]['description_ar']}}</p>
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
-                    {{--   <div class="person-text rel text-light">
-                      <img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Lucas Thompson</a>
-                      <span>Austin, Texas</span>
-                    </div>--}}
-                  </div> 
-                                    
-                  <div class="col-md-4 col-sm-6 hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Radiology</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span>
-                        <span
-                          data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                   {{--  <div class="person-text rel text-light">
-                      <img src="img/testimonials/5.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Ella Mentree</a>
-                      <span>Fort Worth, Texas</span>
-                    </div>--}}
-                  </div> 
-                  <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                    <div class="block-text rel zmin">
-                      <a title="" href="#">Cervical Lesions</a>
-                      <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3"
-                          class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                      </div>
-                      <p>Ne eam errem semper. Laudem detracto phaedrum cu vim, pri cu errem fierent fabellas. Quis magna in ius, pro vidit nonumy te, nostrud ...</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                    </div>
-                    {{-- <div class="person-text rel text-light">
-                      <img src="img/testimonials/6.jpg" alt="" class="person img-circle" />
-                      <a title="" href="#">Suzanne Adam</a>
-                      <span>Detroit, Michigan</span>
-                    </div> --}}
+                
                   </div>
+                        {{-- <div class="person-text rel text-light">
+                        <img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
+                        <a title="" href="#">Lucas Thompson</a>
+                        <span>Austin, Texas</span>
+                      </div> --}}
+                    {{-- </div>  --}}
+                  @endfor                 
+                   
                 </div>
 
 
@@ -495,7 +430,10 @@
           </div>
         </div>
       </div>
-      <button type="submit">More ...</button>
+      <a href="{{url('/news')}}" class="btn btn-warning" > 
+       More ....
+        <i class="far fa-eye"></i>
+      </a>
     </section>
     <!-- /Section: testimonial -->
 

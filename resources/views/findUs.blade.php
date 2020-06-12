@@ -2,7 +2,7 @@
 
 @section('head')
 
-
+ 
 <style>
 #xx {
 	background-color: #f7f7f7;

@@ -53,11 +53,11 @@
 								</div>
 							</div> --}}
 							<div class="row">
-								<div class="col-md-2">
+								<div class="col-md-2 col-sm-6">
 									<div class="dropdown">
 										<button class="btn btn-secondary dropdown-toggle search-bt search-bt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i class="fa fa-stethoscope fa-2x icon-style" aria-hidden="true"></i>
-											<label for="">Select a specialty</label> <br>
+											<label for="">Specialty</label> <br>
 											{{-- <i class="fa fa-user-md" aria-hidden="true"></i> --}}
 											
 											<span>Choose specialty</span>
@@ -69,13 +69,13 @@
 										</div>
 									  </div>
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-2 col-sm-6">
 									
 
 									<div class="dropdown">
 										<button class="btn btn-secondary dropdown-toggle search-bt search-bt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i class="fa fa-map-marker fa-2x icon-style" aria-hidden="true"></i>
-											<label for="">In this City</label> <br>
+											<label for="">City</label> <br>
 											Choose city
 										</button>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -86,12 +86,12 @@
 									  </div>
 								</div>
 							
-								<div class="col-md-2">
+								<div class="col-md-2 col-sm-6">
 									<div class="dropdown">
 										<button class="btn btn-secondary dropdown-toggle search-bt search-bt" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i class="fa fa-map-marker fa-2x icon-style" aria-hidden="true"></i>
 
-											<label for="">In this area</label> <br>
+											<label for="">Area</label> <br>
 											Choose area
 										</button>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -101,12 +101,12 @@
 										</div>
 									  </div>
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-2 col-sm-6">
 									<div class="dropdown">
 										<button class="btn btn-secondary dropdown-toggle search-bt search-bt " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<i class="fa fa-umbrella fa-2x icon-style" aria-hidden="true"></i>
 
-											<label for="">My insurance is</label> <br>
+											<label for="">My insurance </label> <br>
 											Choose insurance
 										</button>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -116,7 +116,7 @@
 										</div>
 									  </div>
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-2 col-sm-6">
 									<div class="dropdown">
 										
 										<button class="btn btn-secondary dropdown-toggle search-bt search-bt " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,7 +132,7 @@
 										</div>
 									  </div>
 								</div>
-								{{-- <div class="col-md-2">
+								{{-- <div class="col-md-2 col-sm-6">
 									
 									<div class="form-btn ">
 										<button class="submit-btn">Show flights</button>

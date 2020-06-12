@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/pages/partials/_footer.css')}}">
 <footer>
 
-    <div class="container">
+    <div class="container" style="display: block ruby;">
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <div class="wow fadeInDown" data-wow-delay="0.1s">

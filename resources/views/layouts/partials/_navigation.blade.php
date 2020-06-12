@@ -70,7 +70,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{{url('/home')}}">  Home</a></li>
+          <li class="active"><a href="{{url('/')}}">  Home</a></li>
+          <li ><a href="{{url('/news')}}">  News</a></li>
           <li><a href="#service">Service</a></li>
           <li><a  href="#doctor">Doctors</a></li>
           {{-- <li><a href="#facilities">Find Us</a></li> --}}

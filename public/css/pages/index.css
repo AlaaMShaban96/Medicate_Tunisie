@@ -1,7 +1,8 @@
  /* test */
  @media screen and (max-width: 600px) {
 	#img-responsive-hide {
-	  display: none;
+    display: none;
+    
 	}
   }
   .icon-color {

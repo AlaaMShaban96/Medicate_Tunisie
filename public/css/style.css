@@ -174,7 +174,7 @@ p.ultra {
 }
 
 a {
-    color: #f7f6f4;
+    color:black;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -2092,6 +2092,10 @@ a.btn:focus{
 		display: block;
 		margin: 0 auto;
 	}
+	.img-responsive {
+    
+		visibility: hidden;
+		}
 	
 	.intro-content {
 		padding:250px 0 0;
