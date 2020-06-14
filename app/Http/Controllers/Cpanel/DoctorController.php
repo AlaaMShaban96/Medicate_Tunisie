@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Cpanel;
 
-use App\News;
+use App\Doctor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class NewsController extends Controller
+class DoctorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-       $news= News::all();
-       
-        return view('news.index',compact('news'));
+        $doctors= Doctor::all();
+        return view('cpanel/doctor/index',compact('doctors'));
     }
 
     /**

@@ -1,4 +1,10 @@
 
+@php
+  App::setLocale(	Session::get('applocale'));
+@endphp
+
+<link rel="stylesheet" href="{{ asset('css/pages/partials/__navigation.css')}}">
+
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="top-area">
       <div class="container">
@@ -8,53 +14,12 @@
             <p class="bold text-left">8am to 10pm </p>
           </div>
 
-          <div class="col-sm-6 col-md-3">
-            <p class="bold text-right"> 
-             
-
-                <a  href="https://api.whatsapp.com/send?phone=+21671948171">Call us now +216 71 948 171</a>
-                
-            </p>
-       
-           
-          </div>
-       
-          <div class="col-sm-6 col-md-1" id="mobile-prom">
-
-            <ul>
-              <li><span><i class="fa fa-android fa-1x" aria-hidden="true"></i></span></li>
-              <li><span><i class="fa fa-apple fa-1x" aria-hidden="true"></i></span></li>
- 
-            </ul>
-          </div>
-        {{--  
-          <div class="col-sm-6 col-md-2">
-             <p class="bold text-right"> 
-              <i class="fa fa-android fa-2x" aria-hidden="true"></i>
-              <i class="fa fa-apple fa-2x" aria-hidden="true"></i>
- --}}
-
-            {{-- <div>
-                <ul class="mobile-app page-scroll" style="display: flex;/*! direction: none; */list-style-type: none;">
-                 <!-- <li>DOWNLOAD FREE APP</li> -->
-                 <li><span><i class="fa fa-android" aria-hidden="true"></i></span></li>
-                 <li><span><i class="fa fa-apple" aria-hidden="true"></i></span></li>
-                 </ul> 
-                </div>  --}}
-                  
-                  
-                
-                {{-- <a  href="https://api.whatsapp.com/send?phone=+21671948171">Call us now +216 71 948 171</a> --}}
-                
-            {{-- </p>
-       
-          </div> --}}
         </div>
       </div>
     </div>
 
 
-  
+   
 
     <div class="container navigation">
 
@@ -70,20 +35,20 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="{{url('/')}}">  Home</a></li>
-          <li ><a href="{{url('/news')}}">  News</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a  href="#doctor">Doctors</a></li>
+          <li class="active"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
+          <li ><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
+          <li><a href="#service">{{__('_nav._service')}}</a></li>
+          <li><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
           {{-- <li><a href="#facilities">Find Us</a></li> --}}
-          <li><a href="#pricing">Pricing</a></li>
-        <li><a href="{{url('/find-us')}}">find us</a></li>
+          <li><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
+        <li><a href="{{url('/find-us')}}">{{__('_nav._find_us')}}</a></li>
           <li class="dropdown">
             {{-- <span class="badge custom-badge red pull-right">Extra</span> --}}
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">language <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('_nav._lang')}}<b class="caret"></b></a>
           
             <ul class="dropdown-menu">
-              <li><a href="index.html">AR (Arabic)</a></li>
-              <li><a href="index-form.html">EN (English)</a></li>
+            <li><a href="{{ url('/lang/ar')}}">AR (Arabic)</a></li>
+              <li><a href="{{ url('/lang/en')}}">EN (English)</a></li>
               <li><a href="index-video.html">DE (Deutch)</a></li>
               <li><a href="index-video.html">FR (France)</a></li>
             </ul>
@@ -94,3 +59,5 @@
     </div>
     <!-- /.container -->
   </nav>
+
+

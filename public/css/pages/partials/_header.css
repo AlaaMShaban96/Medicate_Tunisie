@@ -4,3 +4,9 @@
 .form-control {
     padding: 3px 12px;
 }
+.error{
+    color: red;
+}
+.no-error{
+    display: none;
+}

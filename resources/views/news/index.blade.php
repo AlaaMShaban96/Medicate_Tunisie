@@ -2,13 +2,17 @@
 
 @section('head')
 
+<title>Medicate Tunis : News </title>
 @endsection
 
 @section('content')
 
-<h1 class="h-bold text-center " >Our News Today</h1>
+<img id="cover" src="{{asset('img/pages/news.jpg')}}" style="width: 100%;margin-top: 156px;" alt="" >
+
 <div class="carousel-inner">
     <div class="item active" >
+
+      <h1 class="h-bold text-center " >Our News Today</h1>
       {{-- @for ($i = 0; $i < 4; $i++) --}}
       @foreach ($news as $oneNews)
           
@@ -25,7 +29,7 @@
             {{$oneNews->titel_ar}}
             </span>
             </div>
-            {{-- <p> {{$news[$i]['description_ar']}}</p> --}}
+            <p> {{$oneNews->description_ar}}</p>
             <ins class="ab zmin sprite sprite-i-triangle block"></ins>
             </div>
       

@@ -42,20 +42,19 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper"> 
             <ul class="sidebar-nav">
-                <li > <a href="{{ url("/user-profile") }}"><i class="far fa-user-circle"></i> حسابي </a> </li>
-                <li> <a href="{{url('/user/index')}}"><i style='font-size:24px' class='fas'>&#xf292;</i> لوحة التحكم</a> </li>
+                <li > <a href="{{ url('#') }}"><i class="far fa-user-circle"></i> Profile </a> </li>
+                {{-- <li> <a href="{{url('/user/index')}}"><i style='font-size:24px' class='fas'>&#xf292;</i> لوحة التحكم</a> </li> --}}
                 <li> <a href="{{url('/cpanel/news')}}"> <i style='font-size:24px' class='far'>&#xf1d8;</i>  News </a> </li>
-                <li> <a href="{{url('/orders')}}"> <i style='font-size:24px' class='far'>&#xf0e0;</i> الطلبات المرسلة </a> </li>
-                <li> <a href="{{url('/receive')}}"><i style='font-size:24px' class='fas'>&#xf01c;</i>  استلام شحنة </a> </li>
-                <li> <a href="{{url('/my-vaccination-available')}}"><i style='font-size:24px' class='fas'>&#xf48e;</i> التطعيمات </a> </li>
-                <li> <a href="{{url('/infochildren')}}"><i style='font-size:24px' class='fas'>&#xf77c;</i>الاطفال</a> </li>
-                <li> <a href="{{url('/user/reports')}}"><i class="fas fa-chart-pie"></i>   الإحصائيات</a> </li>
+                <li> <a href="{{url('#')}}"> <i style='font-size:24px' class='far'>&#xf0e0;</i> Jobs </a> </li>
+                <li> <a href="{{url('#')}}"><i style='font-size:24px' class='fas'>&#xf01c;</i>Clinic </a> </li>
+                <li> <a href="{{url('/cpanel/doctor')}}"><i style='font-size:24px' class='fas'>&#xf48e;</i> Doctor </a> </li>
+                <li> <a href="{{url('#')}}"><i style='font-size:24px' class='fas'>&#xf77c;</i>Parmacy</a> </li>
+                <li> <a href="{{url('#')}}"><i class="fas fa-chart-pie"></i>Diag</a> </li>
 
                 {{--  <a href="{{url('/reports')}}">تقرير</a> </li> --}}
-                <li><a href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                  <i style='font-size:24px' class='fas'>&#xf011;</i> تسجيل الخروج
-              </a> </li>   
-              <form id="frm-logout" action="{{ url('logout') }}" method="POST" style="display: none;">
+                <li><a href="{{ url('#') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                  <i style='font-size:24px' class='fas'>&#xf011;</i>Logout </a> </li>   
+              <form id="frm-logout" action="{{ url('#') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
                

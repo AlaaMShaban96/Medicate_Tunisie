@@ -1,3 +1,7 @@
+@php
+App::setLocale(	Session::get('applocale'));
+@endphp
+
  <!-- Section: intro -->
 <link rel="stylesheet" href="{{ asset('css/pages/partials/_header.css')}}">
 
@@ -8,27 +12,55 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-              <h2 class="h-ultra">Medicate Tunisie  medical group</h2>
+              <h2 class="h-ultra">{{__('_header.titel_name')}}</h2>
             </div>
             <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-              <h4 class="h-light">Provide best quality healthcare for you</h4>
-            </div>
+              <h4 class="h-light">{{__('_header.titel_description')}}</h4>
+            </div> 
             <div class="well well-trans">
               <div class="wow fadeInRight" data-wow-delay="0.1s">
 
                 <ul class="lead-list">
-                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Affordable monthly premium packages</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
-                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Choose your favourite doctor</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
-                  <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Only use friendly environment</strong><br />Lorem ipsum dolor sit amet, in verterem persecuti vix, sit te meis</span></li>
+                  <li>
+                    <span class="fa fa-check fa-2x icon-success"></span>
+                    <span class="list">
+                      <strong>
+                        {{__('_header.service_name1')}}
+                      </strong>
+                      <br/>
+                      {{__('_header.service_description1')}}
+                    </span>
+                  </li>
+                  <li>
+                    <span class="fa fa-check fa-2x icon-success"></span>
+                    <span class="list">
+                      <strong>
+                        {{__('_header.service_name2')}}
+                      </strong>
+                      <br/>
+                      {{__('_header.service_description2')}}
+                    </span>
+                  </li>
+                  <li>
+                    <span class="fa fa-check fa-2x icon-success"></span>
+                    <span class="list">
+                      <strong>
+                        {{__('_header.service_name3')}}
+                      </strong>
+                      <br/>
+                      {{__('_header.service_description3')}}
+                    </span>
+                  </li>
+
                 </ul>
                
                   <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                    Login
+                    {{__('_header._login')}}
                   </button>
                
                 
                   <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                    Sing Up
+                    {{__('_header._singup')}}
                   </button>
                 
               </div>
@@ -36,70 +68,6 @@
 
 
           </div>
-
-          
-          {{-- <div class="col-lg-4">
-            <div class="form-wrapper">
-              <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-
-                <div class="panel panel-skin">
-                  <div class="panel-heading">
-                    <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Make an appoinment <small>(It's free!)</small></h3>
-                  </div>
-                  <div class="panel-body">
-                    <div id="sendmessage">Your message has been sent. Thank you!</div>
-                    <div id="errormessage"></div>
-
-                    <form action="" method="post" role="form" class="contactForm lead">
-                      <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                          <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text" name="first_name" id="first_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                          <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" name="last_name" id="last_name" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars">
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                          <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" name="email" id="email" class="form-control input-md" data-rule="email" data-msg="Please enter a valid email">
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                          <div class="form-group">
-                            <label>Phone number</label>
-                            <input type="text" name="phone" id="phone" class="form-control input-md" data-rule="required" data-msg="The phone number is required">
-                            <div class="validation"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
-
-                      <p class="lead-footer">* We'll contact you by phone & email later</p>
-                     
-                    </form>
-                    <!-- Button trigger modal -->
-                   
-
-                  </div>
-                </div>
-
-              </div>
-           
-            </div>
-          </div> --}}
 
 
           <div class="col-xs-6">
@@ -215,7 +183,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle" style="display: inline-flex;">Sing Up</h5>
-       
+       <span class='alert alert-success ' id="done" role='alert' >done</span>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
            x 
         </button>
@@ -271,17 +239,19 @@
 
           <div class="form-body">
           
-            <form id="doctorRegForm"  name="doctorRegForm"  method="POST"  enctype="multipart/form-data" >
+            {{-- <form id="doctorRegForm"  name="doctorRegForm"  method="POST"  enctype="multipart/form-data" > --}}
               <div class="row">
                 <div class="col-md-6">
                   <div class="md-form">
                     <label for="doctorContactname" class="">
                     Doctor name
                     </label>
-                    <input placeholder="Doctor name" type="text" name="doctorname" id="doctorContactname" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required />
+                    <label id="doctornameError" class="error" > Error</label>
+                    <input placeholder="Doctor name" type="text" name="doctorname" id="doctorname" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required />
                     
                     <!-- ngIf: doctorRegForm.doctorname.$invalid && doctorRegForm.doctorname.$touched -->
                   </div>
+                 
 
                 </div>
             
@@ -289,8 +259,8 @@
                 <div class="col-md-6">
                   <div class="md-form">
                     <label for="doctorphoneNo" class="">Phone number</label>
-
-                    <input type="text" name="doctornumber" id="doctorphoneNo" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" data-ng-model="userForm.mobileNo" data-ng-pattern="/^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/" required> 
+                    <label id="doctorphoneNoError" class="error" > Error</label>
+                    <input type="text" placeholder="Phone number" name="doctornumber" id="doctorphoneNo" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" data-ng-model="userForm.mobileNo" data-ng-pattern="/^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/" required> 
                     <!-- ngIf: doctorRegForm.doctornumber.$invalid && doctorRegForm.doctornumber.$touched -->
                    
                   </div>
@@ -300,40 +270,37 @@
                   <div class="md-form">
 
                     <label for="doctoremail" class="">Email</label>
+                    <label id="doctoremailError" class="error" > Error</label>
 
-                    <input type="email" name="doctoremail" id="doctoremail" class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" data-ng-model="userForm.email" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+                    <input type="email" placeholder="Email" name="doctoremail" id="doctoremail" class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" data-ng-model="userForm.email" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
                     <!-- ngIf: doctorRegForm.doctoremail.$invalid && doctorRegForm.doctoremail.$touched -->
                   </div>
 
                 </div>
-                <!--
+    
                 <div class="col-md-12">
                   <div class="md-form">
-                    <input type="text" name="regCode" id="doctorregCode" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.businessLicenseNo" required> <label for="doctorregCode" class="">رقم التسجيل</label>
-                  </div>
-                </div>
-                -->
-                
-                <div class="col-md-12">
-                  <div class="md-form">
-                    <label for="address1" class=""> Address</label>
+                    <label for="doctoraddress" class=""> Address</label>
+                    <label id="doctoraddressError" class="error" > Error</label>
 
-                    <input type="text" name="address1" id="address1" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required>
+                    <input type="text" placeholder="Address" name="doctoraddress" id="doctoraddress" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required>
                     
                     <!-- ngIf: doctorRegForm.address1.$invalid && doctorRegForm.address1.$touched -->
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="md-form">
-                    <label for="area" class="">Area</label>
-                    <input type="text" name="area" id="area" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.area" required>
+                    <label for="doctorarea" class="">Area</label>
+                    <label id="doctorareaError" class="error" > Error</label>
+
+                    <input type="text" placeholder="Area" name="doctorarea" id="doctorarea" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.area" required>
                    
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="md-form">
                     <label for="city" class="">City</label>
-                    <input type="text" name="city" id="city" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.city" required>
+                    <input type="text" placeholder="City" name="city" id="doctorcity" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.city" required>
                   </div>
                 </div>
             
@@ -356,21 +323,23 @@
                 <div class="col-md-12">
                   <div class="md-form">
                     <div class="waves-input-wrapper waves-effect waves-light">
-                      <input type="submit" name="to_doctor" value="SEND" class="btn btn-block btn-danger">
+                      <input type="submit" id="sendToDoctor" name="to_doctor" value="SEND" class="btn btn-block btn-danger" >
                     </div>
-
-                    <!-- <button type="submit"
+                    <div >
+                      <div class='alert alert-warning'role='alert' >htyjnyt</div>
+                    </div>
+                    {{-- <button type="submit"
                       class="btn btn-block btn-danger">
                       <a data-toggle="modal"
                         data-target="#myModal-suc">REGISTER NOW</a>
-                    </button> -->
-                    
+                    </button> 
+                     --}}
                     
                   </div>
                 </div>
 
               </div>
-            </form>
+            {{-- </form> --}}
           </div>
 
         </div>
@@ -384,22 +353,22 @@
     <div id="pharmacy">
       <div class="form-body">
         <div class="form-body">
-          <form id="pharmacyForm" name="pharmacyForm" data-ng-submit="savePharmacy(pharmacyForm);" method="POST" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-valid-email">
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="pharmacyName" class="">Pharmacy Name</label>
+                  <label id="pharmacyNameError" class="error" > Error</label>
                   <input type="text" name="name" id="pharmacyName" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="pharmacy.businessName" required=""> 
-                  <!-- ngIf: pharmacyForm.name.$invalid && pharmacyForm.name.$touched -->
                 </div>
 
               </div>
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="pharmacyContactName" class="">Contact Person Name</label>
+                  <label id="pharmacyContactNameError" class="error" > Error</label>
+
                   <input type="text" name="contactName" id="pharmacyContactName" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="pharmacy.contactName" required="">
                  
-                  <!-- ngIf: pharmacyForm.contactName.$invalid && pharmacyForm.contactName.$touched -->
                 </div>
 
               </div>
@@ -407,33 +376,29 @@
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="pharmacyMobileNo" class="">Phone Number</label>
+                  <label id="pharmacyMobileNoError" class="error" > Error</label>
+
                   <input type="text" name="mobileNo" id="pharmacyMobileNo" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" data-ng-model="userForm.mobileNo" data-ng-minlength="10" data-ng-maxlength="10" data-ng-pattern="/^\+?\d{2}[- ]?\d{3}[- ]?\d{5}$/" required=""> 
-                  <!-- ngIf: pharmacyForm.mobileNo.$invalid && pharmacyForm.mobileNo.$touched -->
-                  {{-- <p class="error-msg ng-hide" data-ng-show="pharmacyForm.mobileNo.$error.pattern &amp;&amp; pharmacyForm.mobileNo.$dirty">Please
-                    enter a 10 digit number</p> --}}
+                
                 </div>
 
               </div>
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="pharmacyEmail" class="">Email Id</label>
+                  <label id="pharmacyEmailError" class="error" > Error</label>
+
                   <input type="email" name="email" id="pharmacyEmail" class="form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" data-ng-model="userForm.email" required="">
                   
                   <!-- ngIf: pharmacyForm.email.$invalid && pharmacyForm.email.$touched -->
                 </div>
               </div>
-              <!-- <div class="col-md-6">
-                <div class="md-form">
-                  <i class="fa fa-map-marker prefix white-text"></i>
-                  <input type="text" name="address1" id="form5"
-                    class="form-control" ng-model="pharmacy.entity.contactInfo.address1" required > <label
-                    for="form5" class="">Address</label>
-                    <p ng-show="submitted && pharmacyForm.address1.$invalid" class="error-msg">Address is required.</p>
-                </div>
-              </div> -->
+            
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="pharmacyregCode" class="">Registration Number</label>
+                  <label id="pharmacyregCodeError" class="error" > Error</label>
+
                   <input type="text" name="regCode" id="pharmacyregCode" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="pharmacy.businessLicenseNo" required=""> 
                   <!-- ngIf: pharmacyForm.regCode.$invalid && pharmacyForm.regCode.$touched -->
                 </div>
@@ -443,43 +408,52 @@
                                                                </div> -->
               <div class="col-md-12">
                 <div class="md-form">
-                  <label for="address1" class="">Business Address</label>
-                  <input type="text" name="address1" id="address1" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+                  <label for="pharmacyaddress" class="">Business Address</label>
+                  <label id="pharmacyaddressError" class="error" > Error</label>
+
+                  <input type="text" name="pharmacyaddress" id="pharmacyaddress" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
                   
-                  <!-- ngIf: pharmacyForm.address1.$invalid && pharmacyForm.address1.$touched -->
+                  <!-- ngIf: pharmacyForm.pharmacyaddress.$invalid && pharmacyForm.pharmacyaddress.$touched -->
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form">
-                  <label for="area" class="">Area</label>
-                  <input type="text" name="area" id="area" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.area" required="">
+                  <label for="pharmacyarea" class="">Area</label>
+                  <label id="pharmacyareaError" class="error" > Error</label>
+
+                  <input type="text" name="pharmacyarea" id="pharmacyarea" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.pharmacyarea" required="">
                  
                   <!-- ngIf: pharmacyForm.area.$invalid && pharmacyForm.area.$touched -->
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form">
-                  <label for="city" class="">City</label>
-                  <input type="text" name="city" id="city" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.city" required="">
-                 
-                  <!-- ngIf: pharmacyForm.city.$invalid && pharmacyForm.city.$touched -->
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="md-form">
-                  <label for="state" class="">State</label>
-                  <input type="text" name="state" id="state" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.state" required="">
-                
-                  <!-- ngIf: pharmacyForm.state.$invalid && pharmacyForm.state.$touched -->
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="md-form">
-                  <label for="zipCode" class="">ZipCode</label>
+                  <label for="pharmacycity" class="">City</label>
+                  <label id="pharmacycityError" class="error" > Error</label>
 
-                  <input type="text" name="zipCode" id="zipCode" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.zipCode" required="">
+                  <input type="text" name="pharmacycity" id="pharmacycity" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.pharmacycity" required="">
                  
-                  <!-- ngIf: pharmacyForm.zipCode.$invalid && pharmacyForm.zipCode.$touched -->
+                  <!-- ngIf: pharmacyForm.pharmacycity.$invalid && pharmacyForm.pharmacycity.$touched -->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form">
+                  <label for="pharmacystate" class="">State</label>
+                  <label id="pharmacystateError" class="error" > Error</label>
+
+                  <input type="text" name="pharmacystate" id="pharmacystate" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.pharmacystate" required="">
+                
+                  <!-- ngIf: pharmacyForm.pharmacystate.$invalid && pharmacyForm.pharmacystate.$touched -->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form">
+                  <label for="pharmacyzipCode" class="">ZipCode</label>
+                  <label id="pharmacyzipCodeError" class="error" > Error</label>
+
+                  <input type="text" name="pharmacyzipCode" id="pharmacyzipCode" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.pharmacyzipCode" required="">
+                 
+                  <!-- ngIf: pharmacyForm.pharmacyzipCode.$invalid && pharmacyForm.pharmacyzipCode.$touched -->
                 </div>
               </div>
 
@@ -505,15 +479,11 @@
 
               <div class="col-md-12">
                 <div class="md-form">
-                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" value="REGISTER NOW" class="btn btn-block btn-danger" data-ng-disabled="pharmacyForm.$invalid || showSpinner" disabled="disabled"></div>
-                  <!-- <button type="submit"
-                    class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal-suc" ng-click="savePharmacy()">
-                    REGISTER NOW
-                  </button> -->
+                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" value="REGISTER NOW" onclick="sendToPharmacy()" class="btn btn-block btn-danger" data-ng-disabled="pharmacyForm.$invalid || showSpinner" ></div>
+                
                 </div>
               </div>
             </div>
-          </form>
         </div>
 
       </div>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+@include('layouts.partials._header')
     <!-- Section: boxes -->
     <section id="boxes" class="home-section paddingtop-80">
       <div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -562,6 +562,9 @@
         </div>
       </div>
     </section>
+
+
+
 
 
     @endsection
