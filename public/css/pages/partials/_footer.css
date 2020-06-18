@@ -5,6 +5,26 @@
     /* margin: 5% auto; */
     position: relative;
   }
+  footer{
+    background-color: #33363f;
+    padding-top: 48px;
+    border-top-style: solid;
+    border-top-width: 40px;
+    border-color: #95979b;
+
+  }
+  footer .container , footer .container h5{
+    color: white;
+  }
+  footer li i {
+    color: #33363f;
+  }
+  .sub-footer {
+    margin-top: 30px;
+    background-color: #22242a;
+    border-top: 1px solid #22242a;
+    padding: 30px 0 10px;
+}
   #contact .container .map {
     width: 45%;
     float: left;
@@ -46,5 +66,12 @@
     font-weight: 700;
     margin: 2% 8%;
     border: none;
+  }
+  #contact  {
+    padding-left: 36px;
+    background-color: #00000026;
+    padding-top: 1%;
+    color: #ccc;
+    border-radius: 5px;
   }
   

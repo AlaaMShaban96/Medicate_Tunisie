@@ -5,11 +5,11 @@ $.ajaxSetup({
 }); 
 $('#done').hide();
 $("#doctornameError").addClass('no-error');
- $("#doctorphoneNoError").addClass('no-error');
- $("#doctoremailError").addClass('no-error');
- $("#doctoraddressError").addClass('no-error');
+$("#doctorphoneNoError").addClass('no-error');
+$("#doctoremailError").addClass('no-error');
+$("#doctoraddressError").addClass('no-error');
 $("#doctorareaError").addClass('no-error');
- $("#doctorcityError").addClass('no-error');
+$("#doctorcityError").addClass('no-error');
 $(function(){
     $("#doctor").show();
     $("#navdoctor").addClass("selected");

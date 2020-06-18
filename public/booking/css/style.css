@@ -1,6 +1,38 @@
+*{
+	font-family:'Tajawal';
+	font-size: 16px;
+	font-weight: 300;
+	text-align: center;
+}
+
+#bookingNav{
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: #5dd638;
+	
+}
+@media (max-width:300px) {
+	.search-bt{
+		width: 90%;
+	}
+
+}
+
+.navbar-brand {
+	padding-top: 15px;
+  
+	margin-top: 5px;
+   
+	padding-bottom: 0;
+  }
+  
+label{
+	font-size: smaller;
+}
 .section {
 	position: relative;
-	height: 100vh;
+	height: 112vh;
 }
 
 .section .section-center {
@@ -13,16 +45,17 @@
 }
 
 #booking {
-	/* font-family: 'PT Sans', sans-serif; */
+	/* font-family:'Tajawal'; */
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-position: center;
+	margin-top: 6%;
 }
 
 .booking-form {
-	background: rgb(108, 124, 216);
+	background: rgba(26, 79, 143, 0.46);
 	padding: 40px;
-	border-radius: 6px;
+	border-radius: 78px;
 }
 
 .booking-form .form-group {
@@ -199,7 +232,7 @@
 }
 
 #cardd .card {
-  width: 450px;
+  width: 378px;
   height: 250px;
   background-color: #fff;
   background: linear-gradient(#f8f8f8, #fff);
@@ -216,9 +249,9 @@
 
 #cardd .card .additional {
   position: absolute;
-  width: 150px;
+  width: 152px;
   height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
+  background: linear-gradient(#5d87cf, #5D87CF);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
@@ -235,7 +268,7 @@
 }
 
 #cardd .card .additional .user-card {
-  width: 150px;
+  width: 158px;
   height: 100%;
   position: relative;
   float: left;
@@ -273,10 +306,10 @@
 }
 
 #cardd .card .additional .more-info {
-  width: 300px;
+  width: 215px;
   float: left;
   position: absolute;
-  left: 150px;
+  left: 166px;
   height: 100%;
 }
 
@@ -293,6 +326,7 @@
   margin: 0 1rem;
   color: #fff;
   font-size: 1rem;
+  text-align: left;
 }
 
 #cardd .card.green .additional .coords {
@@ -344,7 +378,7 @@
 }
 
 #cardd .card .general {
-  width: 300px;
+  width: 232px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -365,13 +399,15 @@
 	font-size: 14px;
 }
 .additional .user-card img {
-width: 95%;
+width: 80%;
 height: 57%;
 }
 
 
 /* card 2 */
 
-
+.detsils{
+	font-size: 10px;
+}
 
 

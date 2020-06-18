@@ -1,3 +1,7 @@
+@php
+  App::setLocale(	Session::get('applocale'));
+@endphp
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -26,7 +30,7 @@
   <link id="bodybg" href="{{asset('bodybg/bg1.css')}}" rel="stylesheet" type="text/css" />
   <!-- template skin -->
   <link id="t-colors" href="{{asset('color/default.css')}}" rel="stylesheet">
-  {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
 
   <style>
@@ -37,7 +41,13 @@
   </style>
     @yield('head')
 </head>
-<body  >
+
+@if (Session::get('applocale')=="ar")
+  <body dir="rtl" >
+@else
+  <body dir="ltr" >
+@endif
+
 
     <div id="wrapper">
         
@@ -53,30 +63,7 @@
 
 
   
-    <div type="button" class="callback-bt" style="left: 1334.73px;top: 0px; top:5px;">
-      <a  href="https://api.whatsapp.com/send?phone=+21671948171">
-        <div class="text-call">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>call </span>
-        </div>
-      </a>
-  </div>
-  
-  
-    <div type="button" class="callback-bt" style="top: 0px;right: 89.267px;top:5px;">
-      <div class="text-call">
-        <i class="fa fa-android" aria-hidden="true"></i>
-  
-          <span>download</span>
-      </div>
-  </div>
-  
-    <div type="button" class="callback-bt" style="right: 0px;top: 0px;top:5px;">
-      <div class="text-call">
-        <i class="fa fa-apple" aria-hidden="true"></i>
-          <span>download</span>
-      </div>
-  </div>
+    
   
 
 

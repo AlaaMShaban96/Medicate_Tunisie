@@ -20,7 +20,33 @@ return[
 
     "_login"=>"Login",
 
-    "_singup"=>"Singup",
+    "_singup"=>"join us",
+
+
+
+    "doctor"=>"Doctor",
+    "parmacy"=>"Parmacy",
+    "diag"=>"Diag",
+    "clinic"=>"Clinic",
+    
+
+    "doctor_name"=>"Doctor Name",
+    "phone_number"=>"Phone Number",
+    "email"=>"Email",
+    "address"=>"Address",
+    "area"=>"Area",
+    "city"=>"City",
+    "upload_logo"=>"Upload Logo",
+    "documents"=>"Documents",
+
+    "pharmacy_name"=>"Pharmacy Name",
+    "contact_person_name"=>"Contact Person Name",
+    "pharmacy_pharmacy_reg_code"=>" Registration Number",
+    "business_address"=>" Business Address",
+    "state"=>"State",
+    "ZipCode"=>" ZipCode",
+    "license_No"=>"License No",
+    
 
     
 

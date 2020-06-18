@@ -6,6 +6,11 @@
 
 <link rel="stylesheet" href="{{asset('css/pages/about_us.css')}}">
 <title>Medicate Tunis : About Us</title>
+<style>
+  #about_us{
+		
+	}
+</style>
 @endsection
 
 @section('content')

@@ -1,10 +1,13 @@
+
 @extends('layouts.master')
 
 @section('head')
   <link rel="stylesheet" href="{{asset('css/pages/index.css')}}">
+ 
 @endsection
 
 @section('content')
+
 @include('layouts.partials._header')
     <!-- Section: boxes -->
     <section id="boxes" class="home-section paddingtop-80">
@@ -12,9 +15,9 @@
         <div class="box text-center">
 
           {{-- <i class="fa fa-globe fa-5x icon-color"></i> --}}
-          <h1 class="h-bold">Our Services </h1>
+         <h1 class="h-bold">{{__('index.our_services')}}</h1>
          
-        </div>
+        </div>  
       </div>
       <div class="container">
         <div class="row">
@@ -23,9 +26,8 @@
               <div class="box text-center">
 
                 <i class="fa fa-id-card-o fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold"> Healthcare Identity </h4>
-                <p>
-                  Medicet Card seeks to provide a less intrusive way to check your health care record at partner clinics and clinics.                 </p>
+                <h4 class="h-bold"> {{__('index.healthcare_identity')}} </h4>
+                <p>{{__('index.healthcare_identity_details')}}</p>
               </div>
             </div>
           </div>
@@ -34,9 +36,8 @@
               <div class="box text-center">
 
                 <i class="fa fa-heartbeat fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold">School Health</h4>
-                <p>
-                  The MedKit Card was created to raise the standard of school health care,                </p>
+                <h4 class="h-bold">{{__('index.school_health')}}</h4>
+                <p>{{__('index.school_health_details')}}</p>
               </div>
             </div>
           </div>
@@ -44,10 +45,8 @@
             <div class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="box text-center">
                 <i class="fa fa-percent fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold">Discounts on Services</h4>
-                <p>
-                  Medicate is proud to offer exclusive discounts to subscribers.
-                </p>
+                <h4 class="h-bold">{{__('index.discounts_on_services')}}</h4>
+                <p>{{__('index.discounts_on_services_details')}}</p>
               </div>
             </div>
           </div>
@@ -56,9 +55,8 @@
               <div class="box text-center">
 
                 <i class="fa fa-globe fa-5x icon-color"></i>
-                <h4 class="h-bold">Health Education</h4>
-                <p>
-                  Health education greatly helps to recognize and prevent health risks that affect society.                 </p>
+                <h4 class="h-bold">{{__('index.health_education')}}</h4>
+                <p>{{__('index.health_education_details')}} </p>
               </div>
             </div>
           </div>
@@ -67,10 +65,8 @@
               <div class="box text-center">
 
                 <i class="fa fa-cloud fa-5x icon-color"></i>
-                <h4 class="h-bold">eHR Services</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-                </p>
+                <h4 class="h-bold">{{__('index.eHR_services')}}</h4>
+                <p>{{__('index.eHR_services_details')}}  </p>
               </div>
             </div>
           </div>
@@ -80,9 +76,8 @@
               <div class="box text-center">
 
                 <i class="fa fa-wifi fa-5x icon-color"></i>
-                <h4 class="h-bold">Network Ecosystem</h4>
-                <p>
-                  The Medicet network system consists of the following, patient and service providers.                 </p>
+                <h4 class="h-bold">{{__('index.network_ecosystem')}}</h4>
+                <p>{{__('index.network_ecosystem_details')}} </p>
               </div>
             </div>
           </div>
@@ -374,45 +369,53 @@
               <div class="carousel-inner">
                   <div class="item active">
                     @for ($i = 0; $i < 3; $i++)
+                      @empty($news[$i]['id'])
+                      {{$i=3}}
+                      @endempty
                     <div class="col-md-4 col-sm-6">
-                      <div class="block-text rel zmin" >
-                        {{-- <a title="" href="#">Emergency Contraception</a> --}}
-                        <div class="mark">{{$news[$i]['created_at']}}
+                      <a href="">
+                        <div id="item-news" class="block-text rel zmin" >
+                          {{-- <a title="" href="#">Emergency Contraception</a> --}}
+                          <div class="mark">
+                            {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
+                          </div>
                           <span class="rating-input">
-
-                            {{$news[$i]['titel_ar']}}
-                        </span>
+                            <i>
+                             {{$news[$i]['titel_ar']}}
+                            </i>
+                          </span>
+                          
+                          <p> {{$news[$i]['description_ar']}}</p>
+                          <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                         </div>
-                        <p> {{$news[$i]['description_ar']}}</p>
-                        <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                      </div>
-                  
+                      </a>
                     </div>
                     @endfor
                   </div> 
                                 
                  <div class="item">
-                  @for ($i = 0; $i < 3; $i++)
+                  @for ($i = 3; $i < 6; $i++)
+                    
                   <div class="col-md-4 col-sm-6">
-                    <div class="block-text rel zmin" >
+                    <div id="item-news" class="block-text rel zmin" >
                       {{-- <a title="" href="#">Emergency Contraception</a> --}}
-                      <div class="mark">{{$news[$i]['created_at']}}
-                        <span class="rating-input">
-
-                          {{$news[$i]['titel_ar']}}
-                      </span>
+                      <div class="mark">
+                        {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
                       </div>
+                      <span class="rating-input">
+                        <i>
+                         {{$news[$i]['titel_ar']}}
+                        </i>
+                      </span>
+                      
                       <p> {{$news[$i]['description_ar']}}</p>
                       <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
                 
                   </div>
-                        {{-- <div class="person-text rel text-light">
-                        <img src="img/testimonials/4.jpg" alt="" class="person img-circle" />
-                        <a title="" href="#">Lucas Thompson</a>
-                        <span>Austin, Texas</span>
-                      </div> --}}
-                    {{-- </div>  --}}
+                   @empty($news[$i+1]['id'])
+                    {{$i=6}}
+                    @endempty
                   @endfor                 
                    
                 </div>
@@ -431,8 +434,7 @@
         </div>
       </div>
       <a href="{{url('/news')}}" class="btn btn-warning" > 
-       More ....
-        <i class="far fa-eye"></i>
+       More News
       </a>
     </section>
     <!-- /Section: testimonial -->

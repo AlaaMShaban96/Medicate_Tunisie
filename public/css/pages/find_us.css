@@ -53,7 +53,7 @@
 	top:0;
 	left:0;
 	padding:5px 15px 0 15px;
-	text-align:left;
+	/* text-align:left; */
 	background:#fff;
 	
 }
@@ -85,5 +85,14 @@
 	width : 90px;
 	height : 90px;
 }
+
+#find_us{
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: #ed1e3b;
+	
+}
+ 
 
 

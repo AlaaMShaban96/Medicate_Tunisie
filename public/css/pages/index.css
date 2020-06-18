@@ -1,4 +1,12 @@
  /* test */
+ #home{
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: #ed1e3b;
+	
+}
+ 
  @media screen and (max-width: 600px) {
 	#img-responsive-hide {
     display: none;
@@ -6,7 +14,7 @@
 	}
   }
   .icon-color {
-	color:#5d87cf ;
+	color:#1b3666 ;
   }
 
 
@@ -30,7 +38,15 @@
 	border-bottom-style: solid;
 }
 
+#item-news {
+	background-color: #fff;;
+	border-radius: 13px;
+	margin-left: 2%;
+	width: 95%;
+  height: 166px;
+  color: black;
+  }
+  
+ 
 
-
-
-
+  

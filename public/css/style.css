@@ -341,7 +341,8 @@ Navigation
 	letter-spacing: 1px;
     color: #666;
 	text-transform: uppercase;
-	font-weight: 700;
+  /* font-weight: 700; */
+  font-weight: bold;
 	background: transparent;
 }
 
@@ -1129,6 +1130,7 @@ Testimonial
 	width: 90%;
 	height: 232px;
 }
+
 .block-text a {
     font-size: 20px;
     font-weight: 600;
@@ -1366,7 +1368,7 @@ footer .sub-footer  p {
 	color: #e6e039;
 }	
 .icon-danger {
-	color: #e24e47;
+	color: #ff6580;
 }	
 
 
@@ -2291,24 +2293,29 @@ a.btn:focus{
 
 
 
-
+.icon-nav {
+  color: white;
+  margin-right: 2%;
+  /* direction: ; */
+}
 
 
 /*кнопка звонка*/
 
 .callback-bt {
-    background:#38a3fd;
-    border:2px solid #38a3fd;
+    background:#e43e5d;
+    border:2px solid #e43e5d;
     border-radius:50%;
-    box-shadow:0 8px 10px rgba(56,163,253,0.3);
+   
     cursor:pointer;
     height:68px;
     text-align:center;
     width:68px;
-    position: fixed;
-    right: 8%;
+    /* position: fixed; */
+    /* right: 8%;
     bottom: 18%;
-    z-index:1030;
+    z-index:1030; */
+    display: inline-flex;
     /* transition:.3s; */
     /* -webkit-animation:hoverWave linear 1s infinite; */
     /* animation:hoverWave linear 1s infinite; */

@@ -1,3 +1,7 @@
+@php
+	App::setLocale(	Session::get('applocale'));
+@endphp
+
 @extends('layouts.master')
 
 @section('head')
@@ -6,13 +10,12 @@
 
 <link rel="stylesheet" href="{{asset('css/pages/find_us.css')}}">
 <title>Medicate Tunis : Find Us</title>
+
 @endsection
 
 @section('content')
 
-@php
-App::setLocale(	Session::get('applocale'));
-@endphp
+
 
 <img id="cover" src="{{'img/pages/find-us.jpg'}}" style="width: 100%;margin-top: 156px;" alt="" >
 <div id="xx">
@@ -39,24 +42,26 @@ App::setLocale(	Session::get('applocale'));
 							
 							Email: nextcare@nextcarehealth.com
 						</span>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-							{{__('find_us.report')}}
-						</button>
+						<br>
+						<a href="">
+							<i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
+
 					</div>
 				
 				</div>
 			</div>
 			<!--team-4-->
-		<!--team-1-->
 			<div class="col-lg-4">
 				<div class="our-team-main">
-
+	
 				<div class="team-front">
-					<img src="https://cdn.webshopapp.com/shops/94414/files/53852256/egypt-flag-image-free-download.jpg"  class="img-fluid" />
-					<h3>Egypt</h3>
+					<img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" class="img-fluid" />
+					<h3>Turkey</h3>
 					{{-- <p>Web Designer</p> --}}
 				</div>
-
+	
 				<div class="team-back">
 					<span>
 						<p>
@@ -67,16 +72,16 @@ App::setLocale(	Session::get('applocale'));
 						<p>P.O.Box 18442 Manama, Kingdom of Bahrain
 						Email: nextcare@nextcarehealth.com</p>
 					</span>
-					
-
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-						Report
-					</button>
+					<br>
+						<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
 				</div>
-
+	
 				</div>
 			</div>
 		<!--team-1-->
+		
 
 		<!--team-2-->
 			<div class="col-lg-4">
@@ -98,9 +103,10 @@ App::setLocale(	Session::get('applocale'));
 						<p>P.O.Box 18442 Manama, Kingdom of Bahrain
 						Email: nextcare@nextcarehealth.com</p>
 					</span>
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-						Report
-					</button>
+					<br>
+						<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
 				</div>
 
 				</div>
@@ -127,9 +133,10 @@ App::setLocale(	Session::get('applocale'));
 							<p>P.O.Box 18442 Manama, Kingdom of Bahrain
 							Email: nextcare@nextcarehealth.com</p>
 						</span>
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-							Report
-						</button>
+						<br>
+						<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
 					</div>
 
 				</div>
@@ -158,22 +165,21 @@ App::setLocale(	Session::get('applocale'));
 						<p>P.O.Box 18442 Manama, Kingdom of Bahrain
 						Email: nextcare@nextcarehealth.com</p>
 					</span>
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-						Report
-					</button>
+					<br>
+						<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
 				</div>
 
 			</div>
 		</div>
 		<!--team-5-->
-
-		<!--team-6-->
 		<div class="col-lg-4">
 			<div class="our-team-main">
 
 			<div class="team-front">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" class="img-fluid" />
-				<h3>Turkey</h3>
+				<img src="https://cdn.webshopapp.com/shops/94414/files/53852256/egypt-flag-image-free-download.jpg"  class="img-fluid" />
+				<h3>Egypt</h3>
 				{{-- <p>Web Designer</p> --}}
 			</div>
 
@@ -187,13 +193,19 @@ App::setLocale(	Session::get('applocale'));
 					<p>P.O.Box 18442 Manama, Kingdom of Bahrain
 					Email: nextcare@nextcarehealth.com</p>
 				</span>
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-					Report
-				</button>
+				
+
+				<br>
+						<a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+							{{__('find_us.maps')}}
+						</a>
 			</div>
 
 			</div>
 		</div>
+	<!--team-1-->
+		<!--team-6-->
+	
 		<!--team-6-->
 
 
