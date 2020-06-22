@@ -365,35 +365,38 @@
         <div class="container">
           <div class="row">
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-
-              <div class="carousel-inner">
-                  <div class="item active">
-                    @for ($i = 0; $i < 3; $i++)
-                      @empty($news[$i]['id'])
-                      {{$i=3}}
-                      @endempty
-                    <div class="col-md-4 col-sm-6">
-                      <a href="">
-                        <div id="item-news" class="block-text rel zmin" >
-                          {{-- <a title="" href="#">Emergency Contraception</a> --}}
-                          <div class="mark">
-                            {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
+              @empty($news)
+                       
+            
+                <div class="carousel-inner">
+                    <div class="item active">
+                      @for ($i = 0; $i < 3; $i++)
+                        @empty($news[$i]['id'])
+                        {{$i=3}}
+                        @endempty
+                      <div class="col-md-4 col-sm-6">
+                        <a href="">
+                          <div id="item-news" class="block-text rel zmin" >
+                            {{-- <a title="" href="#">Emergency Contraception</a> --}}
+                            <div class="mark">
+                              {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
+                            </div>
+                            <span class="rating-input">
+                              <i>
+                              {{$news[$i]['titel_ar']}}
+                              </i>
+                            </span>
+                            
+                            <p> {{$news[$i]['description_ar']}}</p>
+                            <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                           </div>
-                          <span class="rating-input">
-                            <i>
-                             {{$news[$i]['titel_ar']}}
-                            </i>
-                          </span>
-                          
-                          <p> {{$news[$i]['description_ar']}}</p>
-                          <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                        </div>
-                      </a>
-                    </div>
-                    @endfor
-                  </div> 
-                                
+                        </a>
+                      </div>
+                      @endfor
+                    </div> 
+                                  
                  <div class="item">
+                 
                   @for ($i = 3; $i < 6; $i++)
                     
                   <div class="col-md-4 col-sm-6">
@@ -417,7 +420,7 @@
                     {{$i=6}}
                     @endempty
                   @endfor                 
-                   
+              @endempty
                 </div>
 
 

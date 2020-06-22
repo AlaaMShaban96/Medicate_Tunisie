@@ -5,10 +5,10 @@ namespace App;
 use App\AppointmentAvailable;
 use Illuminate\Database\Eloquent\Model;
 
-class Doctor extends Model
+class Service extends Model
 {
     protected $fillable = [
-        'name',  'phoneNo', 'email',  'address', 'area',  'city',
+        'name',
     ];
     public function appointmentAvailable()
     {

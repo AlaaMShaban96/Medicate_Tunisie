@@ -30,7 +30,12 @@ Route::view('/about-us', 'aboutUs');
 Route::view('/cpanel', 'cpanel/index');
 Route::view('/bookin', 'cpanel/index');
 
-Route::view('/bookingg', 'booking/index');
+/// this route for Appointment
+Route::get('/bookingg', 'AppointmentController@index');
+Route::post('/bookingg/search', 'AppointmentController@search');
+Route::get('/booking/appointment/{appointment}', 'AppointmentController@show');
+Route::post('/booking/appointment/{appointment}', 'AppointmentController@store');
+
 
 Route::get('/news','NewsController@index' );
 

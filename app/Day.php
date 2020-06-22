@@ -5,13 +5,13 @@ namespace App;
 use App\AppointmentAvailable;
 use Illuminate\Database\Eloquent\Model;
 
-class Doctor extends Model
+class Day extends Model
 {
     protected $fillable = [
-        'name',  'phoneNo', 'email',  'address', 'area',  'city',
+        'name',
     ];
     public function appointmentAvailable()
     {
-        return $this->hasMany(AppointmentAvailable::class);
+        return $this->belongsToMany(AppointmentAvailable::class,'appointment_available_day');
     }
 }
