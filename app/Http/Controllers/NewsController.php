@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
+    public function __construct()
+    {
+        // Session::forget('appointmentAvailables');
+
+    }
     /**
      * Display a listing of the resource.
      *

@@ -2,10 +2,13 @@
 	font-family:'Tajawal';
 	font-size: 16px;
 	font-weight: 300;
-	text-align: center;
+	/* text-align: center; */
 }
 
-#bookingNav{
+
+
+
+#bookingNav {
 
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -411,3 +414,287 @@ height: 57%;
 }
 
 
+
+
+
+
+
+
+
+#sss span{
+    font-size:15px;
+}
+#sss a{
+  text-decoration:none; 
+  color: #0062cc;
+  border-bottom:2px solid #0062cc;
+}
+#sss .box{
+	padding:60px 0px;
+	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+}
+
+#sss .box-part{
+    background: #aaaaaa30;
+	
+	padding: 17px 10px;
+	margin: 30px 0px;
+	border-radius: 11px;
+	border-top-width: 20px;
+	border-bottom-width: 20px;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-color: #3f567e;
+
+}
+#sss .text{
+    margin:20px 0px;
+}
+
+#sss .fa{
+     color:#4183D7;
+}
+#sss img{
+	border-radius: 100px;
+}
+
+
+
+
+ /* new search br like veezet */
+
+
+
+
+.wrapper-dropdown-2 {
+    position: relative;
+    /* width: 200px; */
+    margin: 0 auto;
+    padding: 10px 15px;
+ 
+    /* Styles */
+    background: #fff;
+    /* border-left: 5px solid grey; */
+    cursor: pointer;
+    outline: none;
+	height: 100%;
+}
+.wrapper-dropdown-2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: grey transparent;
+	
+}
+.wrapper-dropdown-2 .dropdown {
+  /* Size & position */
+    position: absolute;
+    top: 105%;
+    left: 0px;
+    right: 0px;
+ 
+    /* Styles */
+    background: white;
+    transition: all 0.3s ease-out;
+    list-style: none;
+ 
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+	padding-left: 0px;
+	border-radius: 6px;
+}
+.wrapper-dropdown-2 .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    /* border-left: 5px solid; */
+    padding: 10px;
+    transition: all 0.3s ease-out;
+}
+ 
+.wrapper-dropdown-2 .dropdown li:nth-child(1) a { 
+    border-left-color: #00ACED;
+}
+ 
+.wrapper-dropdown-2 .dropdown li:nth-child(2) a {
+    border-left-color: #4183C4;
+}
+ 
+.wrapper-dropdown-2 .dropdown li:nth-child(3) a {
+    border-left-color: #3B5998;
+}
+ 
+.wrapper-dropdown-2 .dropdown li i {
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+}
+ 
+/* Hover state */
+ 
+.wrapper-dropdown-2 .dropdown li:hover  {
+    color: grey;
+    background-color: darkgrey;
+}
+.wrapper-dropdown-2.active:after {
+    border-width: 0 6px 6px 6px;
+}
+ 
+.wrapper-dropdown-2.active .dropdown {
+    opacity: 1;
+	pointer-events: auto;
+	z-index: 2;
+}
+#dd5{
+	
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/* border-top-style: solid; */
+	border-color: white;
+}
+#dd{
+
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: red;
+	border: 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-color: red;
+}
+
+
+
+
+
+
+.card-2 {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 200px;
+  margin: 1rem;
+  position: relative;
+  width: 100px;
+}
+#search{
+	display: flex;
+	margin-top: 5%;
+	height: 66px;
+	text-align: center;
+	margin-left: 0;
+	margin-top: 0px;
+}
+.item{
+	/* background-color: blue; */
+	width: 200px;
+	margin: 10px;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0px;
+	border-color: #acacae;
+	
+}
+#content{
+	width: 100%;
+	display: flex;
+	/* background-color: red; */
+	border-radius: 10px;
+}
+select {
+
+	width: 100%;
+	height: 100%;
+	background-color: whitesmoke;
+}
+.rowsearch{
+	padding: 10px;
+}
+.extra-info{
+	text-align: center;
+	background-color: white;
+	height: 100%;
+	width: 50%;
+	border-bottom-width: 1.5px;
+	/* border-radius: 21px; */
+	
+}
+.extra-info h1 {
+	margin-top: 6%;
+}
+.container-search{
+	height: 177px;
+	background-color: white;
+	border-radius: 11px;
+}
+@media (max-width: 400px) {
+	#content {
+		display: block;
+	}
+	.wrapper-dropdown-2 .dropdown{
+		top: 70%;
+		background: #f0e9e9;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* testing for doctor  profile like vista */
+#covor-profile {
+	width: 100%;
+	height: 330.5px;
+	display: flex;
+}
+
+.part-profile{
+	width: 50%;height: 300px;
+
+}
+
+.doctor-img {
+	width: 30%;
+}	
+
+@media (max-width: 300px) {
+	#covor-profile {
+		display: block;
+	}
+	
+}
+/* @media only screen and (max-width: 600px) {
+	
+	.doctor-img {
+		width: 20%;
+		height: 85px;
+	}	
+	.doctor-img-box{
+		width: 100%;
+	}
+	.doctor-descrption {
+
+		margin-left: 14px;
+		text-align: left;
+	}
+	.appointment-booking-btn{
+
+		display: none;
+	}
+} */

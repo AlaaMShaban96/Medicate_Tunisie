@@ -1,3 +1,7 @@
+@php
+	App::setLocale(	Session::get('applocale'));
+@endphp
+
 @extends('layouts.master')
 
 @section('head')
@@ -17,11 +21,31 @@
 <img id="cover" src="{{'img/pages/about-us.jpg'}}" style="width: 100%;margin-top: 156px;" alt="" >
 {{-- <img id="cover" src="https://panoramicresources.com/wp-content/uploads/2015/09/hd-about.jpg" style="width: 100%;margin-top: 156px;" alt="" > --}}
 
+<div class="content">
+
+  <div>
+      <p>{{__('about_us.about_part_1')}}</p>
+  </div>
+  <div>
+    <p>{{__('about_us.about_part_2')}}</p>
+  </div>
+  <div>
+    <p>{{__('about_us.about_part_3')}}</p>
+  </div>
+
+
+
+</div>
+
+
+
+
+
 
 
 <div id="time">
     <div class="page">
-      <h1 class="text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">- Our Career -</h1>
+      <h1 class="text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">-{{__('about_us.our_career')}} -</h1>
         <div class="timeline">
           <div class="timeline__group">
             {{-- <span class="timeline__year">2008</span> --}}
@@ -32,7 +56,7 @@
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>We have gathered to come up with an idea that will solve the prevailing problems of health care in Libya and emergencies at affordable prices. </p>
+                  <p>{{__('about_us.our_career_2016')}}</p>
                 </div>
               </div>
             </div>
@@ -43,7 +67,7 @@
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>Through a deeper understanding of the problem that every Libyan faces in accessing healthcare, we continued to establish Medicet, which aims to make healthcare affordable and affordable through a health card. </p>
+                  <p>{{__('about_us.our_career_2017')}}</p>
                 </div>
               </div>
             </div>
@@ -57,12 +81,13 @@
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>After the organization being founded in 2013, we performed qualitative and quantitative studies in order to understand the means with which we could solve the problems existing in the healthcare system. The extensive research conducted during this time has helped us to recognize issues like medical papers getting mouldered, difficulty in finding hospitals and clinic during emergency and so on. </p>
+
+                    <p>{{__('about_us.our_career_2018_part_1')}}</p>
                 </div>
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>Finally, we took the bold step of registering our company in order to provide customers with the solutions we designed.  </p>
+                  <p>{{__('about_us.our_career_2018_part_2')}}</p>
                 </div>
               </div>
             </div>
@@ -75,15 +100,15 @@
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>Finally, we took the bold step of registering our company in order to provide customers with the solutions we designed. </p>
+                  <p>{{__('about_us.our_career_2019_part_1')}}</p>
                 </div>
                 <br>
                 <div class="timeline__content">
-                  <p>Driven by our desire to make the entire system flawless, we have launched a pilot launch of the mobile app in order to gain an effective understanding of how to help intended users. </p>
+                  <p>{{__('about_us.our_career_2019_part_2')}}</p>
                 </div>
                 <br>
                 <div class="timeline__content">
-                  <p>We have never rushed to develop this whole process in a short time. Because we know that doing good is a matter of time. Through a proper understanding of the health problems of the entire Libya, we have passed one step at a time. Now is the time to provide services to all Libyans who have suffered from medical negligence and lack of medical services and so on for years. </p>
+                  <p>{{__('about_us.our_career_2019_part_3')}}</p>
                 </div>
               </div>
             </div>

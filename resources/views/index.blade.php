@@ -371,9 +371,9 @@
                 <div class="carousel-inner">
                     <div class="item active">
                       @for ($i = 0; $i < 3; $i++)
-                        @empty($news[$i]['id'])
+                        {{-- @empty($news[$i]['id'])
                         {{$i=3}}
-                        @endempty
+                        @endempty --}}
                       <div class="col-md-4 col-sm-6">
                         <a href="">
                           <div id="item-news" class="block-text rel zmin" >

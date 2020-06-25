@@ -14,18 +14,24 @@ use Illuminate\Support\Facades\Session;
 
 class AppointmentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     { 
+        // $request->session()->forget('appointmentAvailables');
+        $x=$request->session()->get('appointmentAvailables');
+
+       $appointmentAvailables=$x[0];
+
         $services = Service::all();
         $clinics  = Clinic::all();
 
-        return view('booking.index', compact('services','clinics'));
+        return view('booking.index', compact('services','clinics','appointmentAvailables'));
     }
     public function search(Request $request)
     {
         
+        // dd();
+        Session::forget('appointmentAvailables');
         
-      
         if ($request->clinic_id != "" && $request->service_id == "") {
             
             $appointmentAvailables =  AppointmentAvailable::where('clinic_id',$request->clinic_id)->get();
@@ -39,20 +45,21 @@ class AppointmentController extends Controller
             $appointmentAvailables = AppointmentAvailable::where('clinic_id',$request->clinic_id)->where('service_id',$request->service_id)->get();
 
         }
-       
+        Session::push('appointmentAvailables', $appointmentAvailables);
 
-       $services = Service::all();
-       $clinics  = Clinic::all();
-
-       return view('booking.index', compact('services','clinics','appointmentAvailables'));
+        return redirect()->route('booking');
        
     }
 
     public function show(AppointmentAvailable $appointment)
     {
+        Session::forget('appointmentAvailables');
+
        $catogrys = Catogry::all();
+
         return view('booking.appointment', compact('appointment','catogrys'));
     }
+
     public function store(AppointmentAvailable $appointment ,Request $request)
     {
       

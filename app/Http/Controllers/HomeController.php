@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        // Session::forget('appointmentAvailables');
+
+    }
     public function index()
     {
         $news= News::all();

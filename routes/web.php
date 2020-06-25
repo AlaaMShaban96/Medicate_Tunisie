@@ -27,11 +27,15 @@ Route::get('/', 'HomeController@index');
 Route::view('/find-us', 'findUs');
 Route::view('/about-us', 'aboutUs');
 
+Route::view('/team', 'team');
+
 Route::view('/cpanel', 'cpanel/index');
-Route::view('/bookin', 'cpanel/index');
+// Route::view('/bookin', 'cpanel/index');
+Route::view('/service', 'service');
+
 
 /// this route for Appointment
-Route::get('/bookingg', 'AppointmentController@index');
+Route::get('/bookingg', 'AppointmentController@index')->name('booking');
 Route::post('/bookingg/search', 'AppointmentController@search');
 Route::get('/booking/appointment/{appointment}', 'AppointmentController@show');
 Route::post('/booking/appointment/{appointment}', 'AppointmentController@store');

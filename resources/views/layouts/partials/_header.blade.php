@@ -815,7 +815,7 @@ App::setLocale(	Session::get('applocale'));
   </div>
 </div>
   <!-- /Section: intro -->
-
+  <script src="{{asset('js/pages/index.js')}}"></script>
 
 
 

@@ -546,5 +546,12 @@
     color: #1369ce;
     background-color: #f7f5ec;
   }
-  
+  .content{
+    padding: 2%;
+  }
+  .content p {
+    padding: 1%;
+    font-weight: bold;
+  }
+
   

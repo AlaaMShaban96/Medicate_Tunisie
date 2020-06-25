@@ -20,14 +20,15 @@
       }
 .well-block {
     background-color: #6b6d701a;
-    border: 1px solid #3f567e;
+    border: solid #3f567e;
     padding: 40px;
-    border-top-width: 33px;
+    border-top-width: 21px;
     padding-top: 0px;
     padding-bottom: 1px;
-    border-bottom-width: 0px;
-border-left-width: 0px;
-border-right-width: 0px;
+    border-bottom-width: 21px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-radius: 11px;
 }
 @media (max-width: 767px){
   #cardd{
@@ -100,19 +101,20 @@ border-right-width: 0px;
                   <div class="well-title">
                       <h2>Questions? Book an Appointment</h2>
                   </div>
-                  <form>
+                  <form action="{{url('/booking/appointment/'.$appointment->id)}}" method="post">
+                    @csrf
                       <!-- Form start -->
                       <div class="row">
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <label class="control-label" for="name">Name</label>
+                                  <label class="control-label" for="name">ID card</label>
                                   <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
                               </div>
                           </div>
                           <!-- Text input-->
                           <div class="col-md-6">
                               <div class="form-group">
-                                  <label class="control-label" for="email">Email</label>
+                                  <label class="control-label" for="email">Password</label>
                                   <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
                               </div>
                           </div>

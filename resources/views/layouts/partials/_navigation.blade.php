@@ -68,7 +68,7 @@
 
             <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
             <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
-            <li id="service" ><a href="#service">{{__('_nav._service')}}</a></li>
+            <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
             <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
             <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
 
@@ -131,7 +131,7 @@
           </div>
         </div>
 
-
+  
       
 
         <div class="container navigation">
@@ -150,7 +150,7 @@
             <ul class="nav navbar-nav" id="listt">
               <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
               <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
-              <li id="service"><a href="#service">{{__('_nav._service')}}</a></li>
+              <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
               <li ><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
               {{-- <li><a href="#facilities">Find Us</a></li> --}}
               <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
