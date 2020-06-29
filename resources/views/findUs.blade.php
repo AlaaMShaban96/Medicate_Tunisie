@@ -17,7 +17,7 @@
 
 
 
-<img id="cover" src="{{'img/pages/find-us.jpg'}}" style="width: 100%;margin-top: 156px;" alt="" >
+<img id="cover" src="{{'img/pages/find-us.png'}}" style="width: 100%;margin-top: 156px;" alt="" >
 <div id="xx">
 	<div class="container">
 

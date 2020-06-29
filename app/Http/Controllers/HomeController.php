@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use GuzzleHttp\Client;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -28,4 +28,17 @@ class HomeController extends Controller
     
          return Redirect::back();
    }
+
+   public function api()
+   {
+
+    $client = new Client();
+
+    $response = $client->post('http://www.medicateint.com/index.php/data2/getClinics');
+    
+    $result = $response->getBody()->getContents();
+    
+    return json_decode($result);   
+
+    }
 }

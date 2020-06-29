@@ -1,0 +1,139 @@
+span{
+
+    cursor: pointer;
+  }
+  .btn{
+      background-color: green;
+  }
+  .btn:hover{
+      background-color: green;
+      color: wheat;
+  }
+  .disabled{
+    color: red;
+    cursor: not-allowed;
+  }
+  .disabled2{
+    color: black;
+    cursor: not-allowed;
+  }
+ 
+  .www{
+  
+      color: chartreuse;
+      background-color: greenyellow;
+  
+  }
+  .container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    max-width: 475px;
+    margin: 0 auto;
+    overflow: auto;
+    margin: 2%;
+    border-radius: 10px;
+  }
+  
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-calendar td, .table-calendar th {
+    padding: 5px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+  }
+  
+  .date-picker.selected {
+    font-weight: bold;
+    outline: 1px dashed #00BCD4;
+  }
+  
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  
+  
+  
+  #monthAndYear {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  
+  #previous {
+    float: left;
+  }
+  
+  #next {
+    float: right;
+  }
+  
+  .footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+  }
+  
+  .footer-container-calendar select {
+
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #585858;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+
+  }
+  
+  
+
+      #cardd{
+            padding-top: 15%;
+            display: flex;
+            padding-bottom: 5%;
+        }
+        img {
+            width: 100%;
+        }
+  .well-block {
+      background-color: #6b6d701a;
+      border: solid #3f567e;
+      padding: 40px;
+      border-top-width: 21px;
+      padding-top: 0px;
+      padding-bottom: 1px;
+      border-bottom-width: 21px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-radius: 11px;
+  }
+  @media (max-width: 767px){
+    #cardd{
+      padding-top: 50%;
+    }
+  }
+  .well-title {
+      margin-bottom: 40px;
+  }

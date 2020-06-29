@@ -11,14 +11,55 @@
 <link rel="stylesheet" href="{{asset('css/pages/about_us.css')}}">
 <title>Medicate Tunis : About Us</title>
 <style>
-  #about_us{
-		
-	}
+.centeredd {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-70%, -30%);
+}
+blockquote {
+  background:#ffffffad;
+  border-left:10px solid #ccc;
+  margin:1.5em 10px;
+  padding:.5em 10px;
+  font-size: 39px;
+  quotes:"\201C""\201D""\2018""\2019";
+  color:#291944 ;
+}
+blockquote:before {
+  color:black;
+  content:open-quote;
+  font-size:4em;
+  line-height:.1em;
+  /* margin-right:.25em; */
+  vertical-align:-.4em;
+}
+blockquote:after {
+  color:black;
+  content:close-quote;
+  font-size:4em;
+  line-height:.1em;
+  margin-right:.25em;
+  vertical-align:-.4em;
+}
+
 </style>
 @endsection
 
 @section('content')
-<img id="cover" src="{{'img/pages/about-us.jpg'}}" style="width: 100%;margin-top: 156px;" alt="" >
+
+<div style="width: 100%;margin-top: 156px; position: relative;" >
+  <img id="cover" src="{{'img/pages/About-us.png'}}" style="width: 100%;" alt="" >
+  <div class="centeredd">
+    
+<blockquote>
+  Healthcare is
+  every citizen's
+  right
+</blockquote>
+    
+  </div>
+</div>
 {{-- <img id="cover" src="https://panoramicresources.com/wp-content/uploads/2015/09/hd-about.jpg" style="width: 100%;margin-top: 156px;" alt="" > --}}
 
 <div class="content">

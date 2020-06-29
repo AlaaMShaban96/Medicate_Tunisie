@@ -1,9 +1,16 @@
 
 
-function x(name , id) {
+function clinic(name , id) {
 	
-	$('#x-select').text(name );
+	$('#clinic-select').text(name );
     $('#clinic_id').val(id);
+
+    console.log(name , id );
+}
+function service(name , id) {
+	
+	$('#service-select').text(name );
+    $('#service_id').val(id);
 
     console.log(name , id );
 }
@@ -48,4 +55,14 @@ $(function() {
 });
 
 
-
+$("#state").on("click", function(){
+  $(".OffersContainer").toggle(function(){
+    if($(this).is(":visible")){
+      $("#state").text("Show less");
+    }
+    else  {
+      //alert("no visible"); 
+      $("#state").text("Show more");
+      }
+  });
+});

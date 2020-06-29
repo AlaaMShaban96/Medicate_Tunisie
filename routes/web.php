@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
  
 
 Route::get('/lang/{lang}', 'HomeController@translater');
+Route::get('/api', 'HomeController@api');
  
         
-    
+
 
 
 Route::get('/', 'HomeController@index');

@@ -49,10 +49,11 @@ label{
 
 #booking {
 	/* font-family:'Tajawal'; */
-	background-image: url('../img/background.jpg');
+	background-image: url('../img/background.png');
 	background-size: cover;
 	background-position: center;
-	margin-top: 6%;
+	margin-top: 8%;
+	height: 480px;
 }
 
 .booking-form {
@@ -559,7 +560,7 @@ height: 57%;
 	/* border-top-style: solid; */
 	border-color: white;
 }
-#dd{
+#style_english{
 
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -569,7 +570,20 @@ height: 57%;
 	border-top-style: solid;
 	border-color: red;
 }
+#style_arbic{
 
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: red;
+	border: 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-color: red;
+}
+#submit-button{
+	background-color: red; 
+	border:0px;
+}
 
 
 
@@ -636,6 +650,10 @@ select {
 	height: 177px;
 	background-color: white;
 	border-radius: 11px;
+	width: 50%;
+	border-style: solid;
+	border-color: gainsboro;
+	border-width: 2.5px;
 }
 @media (max-width: 400px) {
 	#content {
@@ -646,6 +664,7 @@ select {
 		background: #f0e9e9;
 	}
 }
+ 
 
 
 
@@ -654,7 +673,10 @@ select {
 
 
 
-
+input{
+	width: 100%;
+	height: 65px;
+}
 
 
 /* testing for doctor  profile like vista */
@@ -673,9 +695,71 @@ select {
 	width: 30%;
 }	
 
-@media (max-width: 300px) {
+.appointment-booking-btn{
+
+	width: 80%;
+	color: white;
+	height: 174px;
+}
+
+.appointment-time-header ,.appointment-time-footer{
+
+	width: 100%;
+	height: 11%;
+
+
+}
+
+.appointment-time-header{
+
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #3b92df;
+	/* padding-top: 3px; */
+}
+.appointment-time-footer{
+
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #ef0f0f;
+}
+
+.appointment-time-body{
+	width: 100%;
+	height: 78%;
+	background-color: white;
+}
+
+.appointment-time{
+	width: 20%;
+	/* background-color: red; */
+	margin-left: 2%;
+}
+
+@media (max-width: 400px) {
 	#covor-profile {
 		display: block;
+	}
+
+	.container-search{
+
+		width: 94%;
+	}
+	#content {
+		display: flex;
+		width: 101%;
+	}
+	#style_arbic{
+	width: 26%;
+	}
+	#style_english{
+	width: 26%;
+	}
+	#booking{
+	margin-top: 17%;	
+	}
+	#sss .box{
+		padding: 60px 0px;
 	}
 	
 }

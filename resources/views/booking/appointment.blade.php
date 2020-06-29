@@ -2,44 +2,10 @@
 
 @section('head')
 
-
-
-<!-- Bootstrap -->
-<link type="text/css" rel="stylesheet" href="{{asset('booking/css/bootstrap.min.css')}}" />
-
-<!-- Custom stlylesheet -->
-<link type="text/css" rel="stylesheet" href="{{asset('booking/css/style.css')}}" />
 <style>
-	#cardd{
-		  padding-top: 15%;
-          display: flex;
-          padding-bottom: 5%;
-	  }
-      img {
-          width: 100%;
-      }
-.well-block {
-    background-color: #6b6d701a;
-    border: solid #3f567e;
-    padding: 40px;
-    border-top-width: 21px;
-    padding-top: 0px;
-    padding-bottom: 1px;
-    border-bottom-width: 21px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-radius: 11px;
-}
-@media (max-width: 767px){
-  #cardd{
-    padding-top: 50%;
-  }
-}
-.well-title {
-    margin-bottom: 40px;
-}
-  </style>
 
+  </style>
+<link type="text/css" rel="stylesheet" href="{{asset('booking/css/appointment.css')}}" />
 <title>Medicate Tunis : Booking </title>
 @endsection
 
@@ -122,7 +88,7 @@
                           <div class="col-md-12">
                               <div class="form-group">
                                   <label class="control-label" for="date">Preferred Date</label>
-                                  <input id="date" name="date" type="date" placeholder="Preferred Date" class="form-control input-md">
+                                  <input id="datee" name="date" type="date" placeholder="Preferred Date" class="form-control input-md">
                               </div>
                           </div>
                           <!-- Select Basic -->
@@ -160,29 +126,37 @@
           </div>
           <div class="col-md-6">
               <div class="well-block">
-                  <div class="well-title">
-                      <h2>Why Appointment with Us</h2>
-                  </div>
-                  <div class="feature-block">
-                      <div class="feature feature-blurb-text">
-                          <h4 class="feature-title">24/7 Hours Available</h4>
-                          <div class="feature-content">
-                              <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
-                          </div>
-                      </div>
-                      <div class="feature feature-blurb-text">
-                          <h4 class="feature-title">Experienced Staff Available</h4>
-                          <div class="feature-content">
-                              <p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
-                          </div>
-                      </div>
-                      <div class="feature feature-blurb-text">
-                          <h4 class="feature-title">Low Price & Fees</h4>
-                          <div class="feature-content">
-                              <p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
-                          </div>
-                      </div>
-                  </div>
+                    <div class="container-calendar">
+                    <h3 id="monthAndYear"></h3>
+                    <div class="button-container-calendar">
+                        <button id="previous" onclick="previous()">&#8249;</button>
+                        <button id="next" onclick="next()">&#8250;</button>
+                    </div>
+                    
+                    <table class="table-calendar" id="calendar" data-lang="en">
+                        <thead id="thead-month"></thead>
+                        <tbody id="calendar-body"></tbody>
+                    </table>
+                    
+                    <div class="footer-container-calendar">
+                        <label for="month">Jump To: </label>
+                        <select id="month" onchange="jump()">
+                            <option value=0>Jan</option>
+                            <option value=1>Feb</option>
+                            <option value=2>Mar</option>
+                            <option value=3>Apr</option>
+                            <option value=4>May</option>
+                            <option value=5>Jun</option>
+                            <option value=6>Jul</option>
+                            <option value=7>Aug</option>
+                            <option value=8>Sep</option>
+                            <option value=9>Oct</option>
+                            <option value=10>Nov</option>
+                            <option value=11>Dec</option>
+                        </select>
+                        <select id="year" onchange="jump()"></select>       
+                    </div>
+                </div>
               </div>
           </div>
       </div>
@@ -199,7 +173,8 @@
 
 @section('script')
 	{{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> --}}
-	{{-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> --}}
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="{{asset('js/pages/appointment.js')}}" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
 @endsection
 	  

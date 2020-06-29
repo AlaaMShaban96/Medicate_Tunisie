@@ -6,6 +6,9 @@
 	border-color:#ed1e3b;
 	
 }
+#cover{
+  position: relative;
+}
 #time .timeline{
     --uiTimelineMainColor: var(--timelineMainColor, #222);
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);

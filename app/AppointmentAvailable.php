@@ -21,7 +21,7 @@ class AppointmentAvailable extends Model
         return $this->belongsTo(Clinic::class);
     }
 
-    public function day()
+    public function days()
     {
         return $this->belongsToMany(Day::class,'appointment_available_day');
         
