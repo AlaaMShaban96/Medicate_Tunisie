@@ -27,6 +27,7 @@ Route::get('/', 'HomeController@index');
 // Route::get('/find-us', 
 Route::view('/find-us', 'findUs');
 Route::view('/about-us', 'aboutUs');
+Route::view('/yourHealth', 'yourHealth');
 
 Route::view('/team', 'team');
 

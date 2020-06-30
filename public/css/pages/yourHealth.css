@@ -1,0 +1,208 @@
+.content{
+    margin-top: 10%;
+}
+#cover{
+   
+    height: 20%;
+   
+  }
+  #img-content{
+    height: 450px;
+    text-align: center;
+    
+  }
+  #img-content > img {
+      height: 450px;
+  }
+  #your-health{
+      display: flex;
+      height: 450px;
+     
+  }
+  #your-health-titel{
+      /* background-color: red; */
+      height: 450px;
+      width: 20%;
+      padding: 10%;
+  }
+  #your-health-info{
+      /* background-color: green; */
+      height: 450px;
+      width: 80%;
+      padding: 10%;
+  }
+  #health-program{
+      text-align: center;
+  }
+
+  #health-program-items{
+      display: flex;
+      margin: 0 20% 0 20%;
+  }
+  #health-program-items > .health-item{
+      width: 20%;
+  
+      background-color: #e3e7ea;
+      height: 160px;
+      margin: 10px;
+      border-radius: 6px;
+     text-align: center;
+
+  }
+  #health-program-items > .health-item:hover{
+    cursor: pointer;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: red;
+  }
+  .health-item-img{
+    margin-bottom: 5px;
+  }
+  #health-program-items > .health-item:focus{
+    
+    cursor: pointer;
+  }
+  #health-program-content{
+      position: relative;
+      
+    
+      height: 480px;
+      
+      width: 100%;
+  }
+  #health-program-content > .health-program-content-item{
+      position:absolute;
+      display: flex;
+      /* background-color: greenyellow; */
+      margin-top: 1%;
+      width: 60%;
+      height: 350px;
+      left: 20%;
+  }
+  .health-program-content-item-img{
+      width: 40%;
+      height: 100%;
+      /* background-color: red; */
+  }
+  .health-program-content-item-img > img {
+    height: 90%;
+    /* margin-right: 20%; */
+  }
+  .health-program-content-item-info{
+      padding: 3px;
+    width: 60%;
+      /* background-color: blue; */
+      height: 100%;
+
+  }
+
+
+
+  /* collapsibles */
+  .collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 15px;
+    
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  #collapsible > div > .content-text {
+    margin-top: 11px;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  #collapsible{
+      margin: 2% 20% 2% 20%;
+  }
+  .content-collapsible{
+      margin-bottom: 2px;
+  }
+
+
+  @media  (max-width: 1000px) {
+
+    .content{
+      margin-top: 42%;
+    }
+
+    #cover{
+  
+      /* height: 20%; */
+      margin-right: 0px;
+    }
+    #img-content{
+      height: 450px;
+      width: 100%;
+      
+    }
+    #img-content > img {
+        height: 316px;
+        width: 100%;
+    }
+    #your-health-info{
+      padding: 0;
+      width: 100%;
+      height: 450px;
+    }
+    #your-health{
+      display: block;
+      /* height: 450px; */
+      padding-right: 10px;
+      
+     }
+    #health-program-cover{
+      margin-top: 12%;
+    }
+    #your-health-titel{
+      height: 45px;
+      padding: 0 10px 0 0 ;
+
+    }
+    #health-program-items{
+      display: block;
+    }
+    #health-program-items > .health-item{
+      width: 100%;
+      height: 44px;
+      padding-top: 6px;
+    }
+    #health-program-content{
+      position: static;
+      display: inline flow-root list-item;
+    }
+    #health-program-content > .health-program-content-item{
+      width: 100%;
+      position: static;
+      display: block;
+    
+    }
+    .health-program-content-item-img{
+      width: 100%;
+      height: 100%;
+      /* background-color: red; */
+    }
+    
+    .health-program-content-item-info{
+        padding: 10px;
+      width: 100%;
+    
+    }
+    #collapsible{
+      margin: 2% 8% 2% 8%;
+     }
+     .health-item-img{
+       display: none;
+     }
+}

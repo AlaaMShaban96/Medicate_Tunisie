@@ -290,6 +290,10 @@ Navigation
 }
 
 .navbar.navbar-custom .navigation {
+	/* padding-bottom: 33px; */
+display: flex;
+}
+.navbar.navbar-custom .navigationen {
 	padding-bottom: 33px;
 
 }
@@ -397,7 +401,48 @@ Navigation
     transition: background .3s ease-in-out;
 }
 
+#lang-content-navbar{
+  width: 80%;
+  /* display: flex; */
+}
+#lang-content-navbar>ul{
+  list-style: none;
+  display: inline-flex;
+}
+#icon-content-navbar{
+  width: 20%;
+}
+#lang-icon-content{
+  /* width: 78%; */
+  display: flex;
+}
+@media  (max-width: 500px) {
+  #icon-content-navbar{
+    width: 40%;
+  }
+  #lang-content-navbar{
+    width: 60%;
+  }
+  #time-work-navbar{
+    width: 100%;
+  }
+  #row-navbar{
+    display: block;
+  }
+  #lang-icon-content{
+    width: 100%;
+    display: flex;
+  }
+}
 
+/* @media  (max-width: 400px) {
+
+  #lang-content-navbar{
+    
+    display:block;
+  }
+
+} */
 
 .navbar-custom.navbar-fixed-top .nav li a:hover,
 .navbar-custom.navbar-fixed-top .nav li a:focus,

@@ -12,8 +12,8 @@
   <meta name="author" content="">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   
-  <title>Medicate Tunis :Home</title>
-
+ 
+ 
   <!-- css -->
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
   <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
@@ -40,6 +40,7 @@
     }
   </style>
     @yield('head')
+    <title>Medicate Tunis :Home</title>
 </head>
 
 @if (Session::get('applocale')=="ar")

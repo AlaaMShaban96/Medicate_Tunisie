@@ -6,6 +6,7 @@
 
 @section('head')
 <link rel="stylesheet" href="{{asset('css/pages/service.css')}}">
+
 <title>Medicate Tunis : Service </title>
    <style>
 

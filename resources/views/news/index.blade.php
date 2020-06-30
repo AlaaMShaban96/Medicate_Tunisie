@@ -7,6 +7,7 @@
 @section('head')
      
 <link rel="stylesheet" href="{{asset('css/pages/news/index.css')}}">
+
 <style>
 
 </style>

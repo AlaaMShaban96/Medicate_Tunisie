@@ -13,61 +13,78 @@
             
               <div class="top-area">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-sm-4 col-md-6">
+                  <div class="row" style="" id="row-navbar">
+                    <div class="col-sm col-md-6"  id="time-work-navbar">
                       
-                      <div class="bold text-left">8am to 10pm </div>
+                      <p class="bold text-left">8am to 10pm </p>
                     </div>
-                    <div class="col-sm-8 col-md-6">
-                      
+                    <div class="col-sm col-md-6" style="text-align: end;" id="lang-icon-content">
 
-                        <a  href="https://api.whatsapp.com/send?phone=+21671948171">
-                      
-                            <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
-                        
-                        
-                        </a>
-                
-                    
-                    
-                  
-                          <a href=""><i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i></a>
-                    
-                        
-                          <a href=""><i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i></a>
-                    
+                    <div id="lang-content-navbar" >
+                      <ul >
+                        <li>
+                          <a href="{{ url('/lang/ar')}}"> (العربية)</a>
+                        </li>
+
+                        <li>
+                          <a href="{{ url('/lang/en')}}">(الانجلزية)</a>
+                        </li>
+
+                        <li>
+                          <a href="{{ url('/lang/fr')}}">(الفرنسية)</a>
+                        </li>
+
+                      </ul>
                     </div>
-
+        
+                        <div id="icon-content-navbar" >
+                          <a  href="https://api.whatsapp.com/send?phone=+21671948171">
+                             <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
+                           </a>
+                        
+                           <a href="">
+                             <i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i>
+                           </a>  
+                          <a href="">
+                            <i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                    </div>
+        
                   </div>
                 </div>
               </div>
 
             
 
-              <div class="container navigation">
+              <div class="container navigationen">
 
+                      <!-- /.navbar-collapse -->
+                      <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 
+                          <i class="fa fa-bars"></i>
+
+                        </button>
+                        
+                        <a class="navbar-brand" href="index.html">
+                          <img src="img/MedicateLogo.png" alt=""  style="width: 100%;height: 241%;margin-top: -20px;" />
+                        </a>
+                      </div>
+
+                      </div>
+                      <!-- /.container -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                   <ul class="nav navbar-nav" id="listt">
                   
-                    <li class="dropdown">
-                      {{-- <span class="badge custom-badge red pull-right">Extra</span> --}}
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('_nav._lang')}}<b class="caret"></b></a>
-                    
-                      <ul class="dropdown-menu">
-                      <li><a href="{{ url('/lang/ar')}}">AR (العربية)</a></li>
-                        <li><a href="{{ url('/lang/en')}}">EN (الإنجليزية)</a></li>
-                      
-                        <li><a href="{{ url('/lang/fr')}}">FR (الفرنسية)</a></li>
-                      </ul>
-                    </li>
+                
                     <li id="find_us"><a href="{{url('/find-us')}}">{{__('_nav._find_us')}}</a></li>
 
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
-                    <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
+                    <li id="service"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
                     <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
                     <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
 
@@ -75,21 +92,7 @@
 
                   </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-                <div class="navbar-header page-scroll">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-
-                    <i class="fa fa-bars"></i>
-
-                  </button>
-                  
-                  <a class="navbar-brand" href="index.html">
-                    <img src="img/MedicateLogo.png" alt=""  style="width: 100%;height: 241%;margin-top: -20px;" />
-                  </a>
-                </div>
-
-              </div>
-              <!-- /.container -->
+               
             
             </nav>
         @break
@@ -101,29 +104,42 @@
           <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
               <div class="top-area">
                 <div class="container">
-                  <div class="row">
-                    <div class="col-sm col-md-6">
+                  <div class="row" style="" id="row-navbar">
+                    <div class="col-sm col-md-6"  id="time-work-navbar">
                       
                       <p class="bold text-left">8am to 10pm </p>
                     </div>
-                    <div class="col-sm col-md-6" style="text-align: end;">
-                      
+                    <div class="col-sm col-md-6" style="text-align: end;" id="lang-icon-content">
+
+                    <div id="lang-content-navbar" >
+                      <ul >
+                        <li>
+                          <a href="{{ url('/lang/ar')}}"> (Arabic)</a>
+                        </li>
+
+                        <li>
+                          <a href="{{ url('/lang/en')}}">(English)</a>
+                        </li>
+
+                        <li>
+                          <a href="{{ url('/lang/fr')}}">(France)</a>
+                        </li>
+
+                      </ul>
+                    </div>
         
-                        <a  href="https://api.whatsapp.com/send?phone=+21671948171">
-                      
-                            <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
+                        <div id="icon-content-navbar" >
+                          <a  href="https://api.whatsapp.com/send?phone=+21671948171">
+                             <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
+                           </a>
                         
-                        
-                        </a>
-                
-                    
-                    
-                  
-                          <a href=""><i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i></a>
-                    
-                        
-                          <a href=""><i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i></a>
-                    
+                           <a href="">
+                             <i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i>
+                           </a>  
+                          <a href="">
+                            <i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i>
+                          </a>
+                        </div>
                     </div>
         
                   </div>
@@ -133,7 +149,7 @@
         
             
 
-              <div class="container navigation">
+              <div class="container navigationen">
 
                 <div class="navbar-header page-scroll">
 
@@ -161,21 +177,12 @@
                     <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
                     <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
                     <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
-                    <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
+                    <li id="service"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
                     <li ><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li><a href="#facilities">Find Us</a></li> --}}
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
                     <li id="find_us"><a href="{{url('/find-us')}}">{{__('_nav._find_us')}}</a></li>
-                    <li class="dropdown">
-                      {{-- <span class="badge custom-badge red pull-right">Extra</span> --}}
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{__('_nav._lang')}}<b class="caret"></b></a>
                     
-                      <ul class="dropdown-menu">
-                      <li><a href="{{ url('/lang/ar')}}">AR (Arabic)</a></li>
-                        <li><a href="{{ url('/lang/en')}}">EN (English)</a></li>
-                        <li><a href="{{ url('/lang/fr')}}">FR (France)</a></li>
-                      </ul>
-                    </li>
                   </ul>
                 </div>
                 <!-- /.navbar-collapse -->

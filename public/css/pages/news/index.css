@@ -11,31 +11,7 @@
 	}
   }
   
-  /* .container {
-	max-width: 960px;
-  }
-  
-  .pricing-header {
-	max-width: 700px;
-  }
-  
-  .card-deck .card {
-	min-width: 220px;
-  }
-  .bd-placeholder-img {
-	font-size: 1.125rem;
-	text-anchor: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-  }
-
-  @media (min-width: 768px) {
-	.bd-placeholder-img-lg {
-	  font-size: 3.5rem;
-	}
-  } */
+ 
   .block-text {
     background-color: #fff;
     border-radius: 4px;
@@ -54,6 +30,8 @@
   i{
 	  color: black;
   }
+
+
   .align-items-center {
     -ms-flex-align: center !important;
     align-items: center !important;
@@ -91,36 +69,36 @@
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
 }
-.col-md-6 {
+/* .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
-}
+} */
 #ss > .h7 {
-            font-size: 0.8rem;
-        }
+    font-size: 0.8rem;
+}
 
-        #ss > .gedf-wrapper {
-            margin-top: 0.97rem;
-        }
+#ss > .gedf-wrapper {
+    margin-top: 0.97rem;
+}
 
-        @media (min-width: 992px) {
-          #ss > .gedf-main {
-                padding-left: 4rem;
-                padding-right: 4rem;
-            }
-            #ss >  .gedf-card {
-                margin-bottom: 2.77rem;
-            }
-        }
+@media (min-width: 992px) {
+    #ss > .gedf-main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    #ss >  .gedf-card {
+      margin-bottom: 2.77rem;
+    }
+}
 
         /**Reset Bootstrap*/
-        #ss > .dropdown-toggle::after {
-            content: none;
-            display: none;
-        }
+#ss > .dropdown-toggle::after {
+    content: none;
+    display: none;
+}
 
-        .card-header {
+.card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     background-color: rgba(0,0,0,.03);
@@ -149,7 +127,8 @@
     font-weight: 500;
     line-height: 1.2;
     color: inherit;
-}  .align-items-center {
+} 
+ .align-items-center {
     -ms-flex-align: center !important;
     align-items: center !important;
 }
@@ -187,11 +166,11 @@
 	border-radius: .25rem;
 	margin-bottom: 18px;
 }
-.col-md-6 {
+/* .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
-}
+} */
 #ss > .h7 {
             font-size: 0.8rem;
         }
