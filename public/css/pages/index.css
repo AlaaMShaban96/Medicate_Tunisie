@@ -13,9 +13,22 @@
     
 	}
   }
+  /* Icon service company */
   .icon-color {
-	color:#1b3666 ;
+	color:#18A8AA ;
   }
+  
+  /* service */
+  .service-icon span {
+    color: #18A8AA;
+  }
+/* button */
+.btn-skin {
+  background-color: #18A8AA;
+  border-color: #18A8AA;
+}
+
+
 
 
 .navsingup {

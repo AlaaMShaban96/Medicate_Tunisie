@@ -46,7 +46,7 @@ return[
     "state"=>"State",
     "ZipCode"=>" ZipCode",
     "license_No"=>"License No",
-    
+    "diag_name"=>"Diag Name",
 
     
 

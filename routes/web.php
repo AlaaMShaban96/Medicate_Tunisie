@@ -49,15 +49,37 @@ Route::get('/news','NewsController@index' );
 
 Route::post('/doctor-send','RequestController@addDoctor');
 
+Route::post('/pharmacy-send','RequestController@addParmacy');
+
+Route::post('/diag-send','RequestController@addDiag');
+
+Route::post('/clinic-send','RequestController@addClinic');
 
 
-// this route for controll news
-Route::get('/cpanel/news', 'Cpanel\NewsController@index');
-Route::get('/cpanel/news-add', 'Cpanel\NewsController@create');
-Route::post('/cpanel/news-add/store', 'Cpanel\NewsController@store');
-Route::get('/cpanel/news-edit/{news}', 'Cpanel\NewsController@edit');
-Route::get('/cpanel/news-show/{news}', 'Cpanel\NewsController@show');
-Route::post('/cpanel/news-edit/{news}/update', 'Cpanel\NewsController@update');
+Route::group(['prefix' => '/cpanel'], function () {
 
-// this route for controll doctor
-Route::get('/cpanel/doctor', 'Cpanel\DoctorController@index');
+
+    // this route for controll doctor
+    Route::get('/doctor', 'Cpanel\DoctorController@index');
+    // this route for controll pharmacy
+    Route::get('/pharmacy', 'Cpanel\PharmacyController@index');
+    // this route for controll pharmacy
+    Route::get('/diag', 'Cpanel\DiagController@index');
+    // this route for controll pharmacy
+    Route::get('/clinic', 'Cpanel\ClinicController@index');
+    // this route for controll pharmacy
+    Route::get('/company-service', 'Cpanel\CompanyServiceController@index');
+
+    // this route for controll news
+    Route::get('/news', 'Cpanel\NewsController@index');
+    Route::get('/news-add', 'Cpanel\NewsController@create');
+    Route::post('/news-add/store', 'Cpanel\NewsController@store');
+    Route::get('/news-edit/{news}', 'Cpanel\NewsController@edit');
+    Route::get('/news-show/{news}', 'Cpanel\NewsController@show');
+    Route::post('/news-edit/{news}/update', 'Cpanel\NewsController@update');
+
+    //this for service company
+
+  
+});
+

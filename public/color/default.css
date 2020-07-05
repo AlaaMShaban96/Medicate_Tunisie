@@ -21,24 +21,9 @@ a:focus {
 }
 
 
-/* service */
-
-.service-icon span {
-	color: #5D87CF;
-}
-
-
-
-/* button */
-.btn-skin {
-  background-color: #1b3666d6;
-  border-color: #1b3666d6;
-}
-
-
 /* top */
 .top-area {
-	background: #1b3666d6;
+	background: #18A8AA;
 }
 
 /* menu */

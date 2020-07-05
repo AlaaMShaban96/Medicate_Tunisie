@@ -20,7 +20,24 @@
                     </div>
                     <div class="col-sm col-md-6" style="text-align: end;" id="lang-icon-content">
 
-                    <div id="lang-content-navbar" >
+        
+                        <div id="icon-content-navbar" >
+                          
+                          <a href="">
+                            <i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i>
+                          </a>
+                        
+                           <a href="">
+                             <i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i>
+                           </a>  
+                          
+                          <a  href="https://api.whatsapp.com/send?phone=+21671948171">
+                            <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
+                          </a>
+                        </div>
+
+
+                    <div id="lang-content-navbar-ar" >
                       <ul >
                         <li>
                           <a href="{{ url('/lang/ar')}}"> (العربية)</a>
@@ -36,19 +53,6 @@
 
                       </ul>
                     </div>
-        
-                        <div id="icon-content-navbar" >
-                          <a  href="https://api.whatsapp.com/send?phone=+21671948171">
-                             <i class="fa fa-phone fa-2x icon-nav" aria-hidden="true"></i>
-                           </a>
-                        
-                           <a href="">
-                             <i class="fa fa-android fa-2x icon-nav" aria-hidden="true"></i>
-                           </a>  
-                          <a href="">
-                            <i class="fa fa-apple fa-2x icon-nav" aria-hidden="true"></i>
-                          </a>
-                        </div>
                     </div>
         
                   </div>
@@ -58,6 +62,7 @@
             
 
               <div class="container navigationen">
+              <div >
 
                       <!-- /.navbar-collapse -->
                       <div class="navbar-header page-scroll">
@@ -72,7 +77,7 @@
                         </a>
                       </div>
 
-                      </div>
+                      
                       <!-- /.container -->
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -84,7 +89,7 @@
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
-                    <li id="service"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
+                    <li id="yourhealth"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
                     <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
                     <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
 
@@ -92,6 +97,8 @@
 
                   </ul>
                 </div>
+            </div>
+            </div>
                
             
             </nav>
@@ -150,6 +157,7 @@
             
 
               <div class="container navigationen">
+              <div>
 
                 <div class="navbar-header page-scroll">
 
@@ -177,8 +185,8 @@
                     <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
                     <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li>
                     <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li>
-                    <li id="service"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
-                    <li ><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
+                    <li id="yourhealth"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li>
+                    <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li><a href="#facilities">Find Us</a></li> --}}
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
                     <li id="find_us"><a href="{{url('/find-us')}}">{{__('_nav._find_us')}}</a></li>
@@ -186,6 +194,7 @@
                   </ul>
                 </div>
                 <!-- /.navbar-collapse -->
+              </div>
               </div>
               <!-- /.container -->
             </nav>

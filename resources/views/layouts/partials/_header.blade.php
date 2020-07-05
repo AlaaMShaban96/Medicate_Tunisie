@@ -22,7 +22,7 @@ App::setLocale(	Session::get('applocale'));
             </div>
             <div class="col-lg-6">
               <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                <h2 class="h-ultra">{{__('_header.titel_name')}}</h2>
+                <h2  class="h-ultra">{{__('_header.titel_name')}}</h2>
               </div>
               <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
                 <h4 class="h-light">{{__('_header.titel_description')}}</h4>
@@ -92,25 +92,25 @@ App::setLocale(	Session::get('applocale'));
     @default
 
         <section id="intro" class="intro">
-          <div class="intro-content">
-            <div class="container">
-              <div class="row">
+          {{-- <div class="intro-content"> --}}
+            {{-- <div class="container"> --}}
+              {{-- <div class="row">
               
                 <div class="col-lg-6">
                   <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                    <h2 class="h-ultra">{{__('_header.titel_name')}}</h2>
+                    <h2  class="h-ultra" >{{__('_header.titel_name')}}</h2>
                   </div>
                   <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
                     <h4 class="h-light">{{__('_header.titel_description')}}</h4>
                   </div> 
-                  <div class="well well-trans">
-                    <div class="wow fadeInRight" data-wow-delay="0.1s">
+                  <div class="well well-trans"> --}}
+                    {{-- <div class="wow fadeInRight" data-wow-delay="0.1s">
       
                       <ul class="lead-list">
                         <li>
                           <span class="fa fa-check fa-2x icon-success"></span>
                           <span class="list">
-                            <strong>
+                            <strong class="text-anmition">
                               {{__('_header.service_name1')}}
                             </strong>
                             <br/>
@@ -120,7 +120,7 @@ App::setLocale(	Session::get('applocale'));
                         <li>
                           <span class="fa fa-check fa-2x icon-success"></span>
                           <span class="list">
-                            <strong>
+                            <strong class="text-anmition">
                               {{__('_header.service_name2')}}
                             </strong>
                             <br/>
@@ -130,12 +130,13 @@ App::setLocale(	Session::get('applocale'));
                         <li>
                           <span class="fa fa-check fa-2x icon-success"></span>
                           <span class="list">
-                            <strong>
+                            <strong class="text-anmition">
                               {{__('_header.service_name3')}}
                             </strong>
                             <br/>
-                            {{__('_header.service_description3')}}
-                          </span>
+                            <span id="test"></span>
+                            {{-- {{__('_header.service_description3')}} --}}
+                          {{-- </span>
                         </li>
       
                       </ul>
@@ -149,7 +150,51 @@ App::setLocale(	Session::get('applocale'));
                           {{__('_header._singup')}}
                         </button>
                       
+                    </div> --}}
+
+
+                    <div id="slider">
+                      <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                        {{__('_header._login')}}
+                      </button>
+                  
+                    
+                      <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                        {{__('_header._singup')}}
+                      </button>
+                      <a  class="control_next">>></a>
+                      <a  class="control_prev"><</a>
+
+                      <ul>
+                        <li >
+                             <div>
+                             </div>
+                               
+                               <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt="">
+                              
+
+
+                        </li>
+                        <li>
+
+                          <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset="">
+                        </li>
+                        <li>SLIDE 3</li>
+                        <li>SLIDE 4</li>
+                        <li>SLIDE 5</li>
+                        <li>
+                          <img class="slider-img"  src="https://pbs.twimg.com/media/EYi6KloWAAAtTBq.jpg" alt="" srcset="">
+
+                        </li>
+                      </ul>  
                     </div>
+
+                    <div class="slider_option">
+                      <input type="checkbox" id="checkbox">
+                      <label for="checkbox">Autoplay Slider</label>
+                    </div> 
+
+  {{--                   
                   </div>
       
       
@@ -162,9 +207,9 @@ App::setLocale(	Session::get('applocale'));
                   </div>
                 </div>
               
-              </div>
-            </div>
-          </div>
+              </div> --}}
+            {{-- </div> --}}
+          {{-- </div> --}}
         </section>
       
       
@@ -188,7 +233,7 @@ App::setLocale(	Session::get('applocale'));
 
 
   <!-- Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -261,12 +306,12 @@ App::setLocale(	Session::get('applocale'));
   </div>
 </div>
   <!-- Modal sing up-->
-<div class="modal fade" id="singupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="singupModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle" style="display: inline-flex;">{{__('_header._singup')}}</h5>
-       <span class='alert alert-success ' id="done" role='alert' >done</span>
+      
 
       </div>
       <div class="modal-body">
@@ -419,7 +464,6 @@ App::setLocale(	Session::get('applocale'));
     </div>
 {{-- end doctor form --}}
 
-
 {{-- parmacy form --}}
 
     <div id="pharmacy">
@@ -548,7 +592,7 @@ App::setLocale(	Session::get('applocale'));
 
               <div class="col-md-12">
                 <div class="md-form">
-                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" value="SEND" class="btn btn-block btn-success" onclick="sendToPharmacy()" class="btn btn-block btn-danger" ></div>
+                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" id="sendToPharmacy" value="SEND" class="btn btn-block btn-success"  class="btn btn-block btn-danger" ></div>
                 
                 </div>
               </div>
@@ -558,17 +602,19 @@ App::setLocale(	Session::get('applocale'));
       </div>
     </div>
 {{-- end parmacy form --}}
+
 {{-- diag form --}}
     <div id="diag">
       <div class="form-body">
 
         <div class="form-body">
-          <form id="diagregForm" name="diagregForm" data-ng-submit="saveDiagnostic(diagregForm);" method="POST" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-valid-email">
+          {{-- <form id="diagregForm" name="diagregForm" data-ng-submit="saveDiagnostic(diagregForm);" method="POST" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength ng-valid-email"> --}}
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="name" class="">{{__('_header.diag_name')}}</label>
-                  <input type="text" name="diagname" id="name" class="form-control" required="">
+                  <label id="diagNameError"  > Error</label>
+                  <input type="text" name="diagname" id="diagName" class="form-control" required="">
                   <!-- ngIf: diagregForm.diagname.$invalid && diagregForm.diagname.$touched -->
                 </div>
 
@@ -576,7 +622,8 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="contactName" class="">{{__('_header.contact_person_name')}}</label>
-                  <input type="text" name="contactpersonname" id="contactName" class="form-control" required="">
+                  <label id="diagContactNameError"  > Error</label>
+                  <input type="text" name="contactpersonname" id="diagContactName" class="form-control" required="">
                   
                   
                 </div>
@@ -586,7 +633,9 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="phoneNo" class="">{{__('_header.phone_number')}}</label>
-                  <input type="text" name="phonenumber" id="phoneNo" class="form-control" required=""> 
+                  <label id="diagPhoneNoError"  > Error</label>
+
+                  <input type="text" name="phonenumber" id="diagMobileNo" class="form-control" required=""> 
                 
                 </div>
 
@@ -594,7 +643,8 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="diagnosticFormemail" class="">{{__('_header.email')}}</label>
-                  <input type="email" name="diagemail" id="diagnosticFormemail" class="form-control" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required=""> 
+                  <label id="diagEmailError"  > Error</label>
+                  <input type="email" name="diagEmail" id="diagEmail" class="form-control" data-ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required=""> 
                   <!-- ngIf: diagregForm.diagemail.$invalid && diagregForm.diagemail.$touched -->
 
                 </div>
@@ -604,7 +654,9 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="address1" class="">{{__('_header.business_address')}}</label>
-                  <input type="text" name="address1" id="address1" class="form-control" data-ng-model="addressForm.address" required="">
+                  <label id="diagAddressError"  > Error</label>
+
+                  <input type="text" name="address1" id="diagaddress" class="form-control" data-ng-model="addressForm.address" required="">
                   
                   <!-- ngIf: diagregForm.address1.$invalid && diagregForm.address1.$touched -->
                 </div>
@@ -612,7 +664,9 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="area" class="">{{__('_header.area')}}</label>
-                  <input type="text" name="area" id="area" class="form-control" data-ng-model="addressForm.area" required="">
+                  <label id="diagAreaError"  > Error</label>
+
+                  <input type="text" name="area" id="diagarea" class="form-control" data-ng-model="addressForm.area" required="">
                
                   <!-- ngIf: diagregForm.area.$invalid && diagregForm.area.$touched -->
                 </div>
@@ -620,7 +674,9 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="city" class="">{{__('_header.city')}}</label>
-                  <input type="text" name="city" id="city" class="form-control" data-ng-model="addressForm.city" required="">
+                  <label id="diagCityError"  > Error</label>
+
+                  <input type="text" name="city" id="diagcity" class="form-control" data-ng-model="addressForm.city" required="">
                   
                   <!-- ngIf: diagregForm.city.$invalid && diagregForm.city.$touched -->
                 </div>
@@ -628,7 +684,9 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="state" class="">{{__('_header.state')}}</label>
-                  <input type="text" name="state" id="state" class="form-control" data-ng-model="addressForm.state" required="">
+                  <label id="diagStateError"  > Error</label>
+
+                  <input type="text" name="state" id="diagstate" class="form-control" data-ng-model="addressForm.state" required="">
                  
                   <!-- ngIf: diagregForm.state.$invalid && diagregForm.state.$touched -->
                 </div>
@@ -636,7 +694,8 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="zipCode" class="">{{__('_header.ZipCode')}}</label>
-                  <input type="text" name="zipCode" id="zipCode" class="form-control" required="">
+                  <label id="diagZipCodeError"  > Error</label>
+                  <input type="text" name="zipCode" id="diagzipCode" class="form-control" required="">
                   
                   <!-- ngIf: diagregForm.zipCode.$invalid && diagregForm.zipCode.$touched -->
                 </div>
@@ -660,22 +719,21 @@ App::setLocale(	Session::get('applocale'));
 
               <div class="col-md-12">
                 <div class="md-form">
-                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" value="SEND" class="btn btn-block btn-success" ></div>
+                  <div class="waves-input-wrapper waves-effect waves-light"><input type="bottum" id="sendToDiag" value="SEND" class="btn btn-block btn-success" ></div>
 
                  
                 </div>
               </div>
 
             </div>
-          </form>
+          {{-- </form> --}}
         </div>
 
       </div>
     </div>
- {{-- end diag form --}}
+{{-- end diag form --}}
 
-    {{-- clinic form --}}
-
+{{-- clinic form --}}
 
     <div id="clinic">
         
@@ -686,17 +744,17 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="facilityBusinessName" class="">{{__('_header.clinic_name')}}</label>
-                  <input type="text" name="clinicname" id="facilityBusinessName" class="form-control" required=""> 
-                  <!-- ngIf: facilityRegForm.clinicname.$invalid && facilityRegForm.clinicname.$touched -->
+                  <label id="clinicNameError"  > Error</label>
+                  <input type="text" name="clinicname" id="clinicName" class="form-control" required=""> 
+                
                 </div>
 
               </div>
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="facilitycontactName" class="">{{__('_header.contact_person_name')}}</label>
-                  <input type="text" name="contactpersonname" id="facilitycontactName" class="form-control" required="">
-                
-                  <!-- ngIf: facilityRegForm.contactpersonname.$invalid && facilityRegForm.contactpersonname.$touched -->
+                  <label id="clinicContactpersonNameError"  > Error</label>
+                  <input type="text" name="contactpersonname" id="clinicContactName" class="form-control" required="">
                 </div>
 
               </div>
@@ -704,17 +762,17 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="facilityMobile" class="">{{__('_header.phone_number')}}</label>
-                  <input type="text" name="phonenumber" id="facilityMobile" class="form-control" required=""> 
-                  <!-- ngIf: facilityRegForm.phonenumber.$invalid && facilityRegForm.phonenumber.$touched -->
-                  {{-- <p class="error-msg ng-hide" data-ng-show="facilityRegForm.phonenumber.$error.pattern &amp;&amp; facilityRegForm.phonenumber.$dirty">Please
-                    enter a 10 digit number</p> --}}
+                  <label id="clinicPhoneNoErrorError"  > Error</label>
+                  <input type="text" name="phonenumber" id="clinicMobileNo" class="form-control" required=""> 
+
                 </div>
 
               </div>
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="facilityEmail" class="">{{__('_header.email')}}</label>
-                  <input type="email" name="clinicemail" id="facilityEmail" class="form-control" required="">
+                  <label id="clinicEmailError"  > Error</label>
+                  <input type="email" name="clinicemail" id="clinicEmail" class="form-control" required="">
                  
                   <!-- ngIf: facilityRegForm.clinicemail.$invalid && facilityRegForm.clinicemail.$touched -->
                 </div>
@@ -724,8 +782,8 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="facilitybusinessLicenseNo" class="">{{__('_header.license_No')}}.</label>
-                  <input type="text" name="licensenumber" id="facilitybusinessLicenseNo" class="form-control" required=""> 
-                  <!-- ngIf: facilityRegForm.licensenumber.$invalid && facilityRegForm.licensenumber.$touched -->
+                  <label id="clinicLicenseError"  > Error</label>
+                  <input type="text" name="licensenumber" id="cliniclicense" class="form-control" required=""> 
                 </div>
               </div>
 
@@ -735,7 +793,8 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-12">
                 <div class="md-form">
                   <label for="address1" class="">{{__('_header.business_address')}}</label>
-                  <input type="text" name="address1" id="address1" class="form-control" required="">
+                  <label id="clinicAddressError"  > Error</label>
+                  <input type="text" name="address1" id="clinicaddress" class="form-control" required="">
                  
                   <!-- ngIf: facilityRegForm.address1.$invalid && facilityRegForm.address1.$touched -->
                 </div>
@@ -743,32 +802,30 @@ App::setLocale(	Session::get('applocale'));
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="area" class="">{{__('_header.area')}}</label>
-                  <input type="text" name="area" id="area" class="form-control" required="">
-                  
-                  <!-- ngIf: facilityRegForm.area.$invalid && facilityRegForm.area.$touched -->
+                  <label id="clinicAreaError"  > Error</label>
+                  <input type="text" name="area" id="clinicarea" class="form-control" required="">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="city" class="">{{__('_header.city')}}</label>
-                  <input type="text" name="city" id="city" class="form-control " required="">
+                  <label id="clinicCityError"  > Error</label>
+                  <input type="text" name="city" id="cliniccity" class="form-control " required="">
                   
-                  <!-- ngIf: facilityRegForm.city.$invalid && facilityRegForm.city.$touched -->
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="state" class="">{{__('_header.state')}}</label>
-                  <input type="text" name="state" id="state" class="form-control "  required="">
-                  
-                  <!-- ngIf: facilityRegForm.state.$invalid && facilityRegForm.state.$touched -->
+                  <label id="clinicStateError"  > Error</label>
+                  <input type="text" name="state" id="clinicstate" class="form-control "  required="">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form">
                   <label for="zipCode" class="">{{__('_header.ZipCode')}}</label>
-                  <input type="text" name="zipCode" id="zipCode" class="form-control"  required="">
-                  <!-- ngIf: facilityRegForm.zipCode.$invalid && facilityRegForm.zipCode.$touched -->
+                  <label id="clinicZipCodeError"  > Error</label>
+                  <input type="text" name="zipCode" id="cliniczipCode" class="form-control"  required="">
                 </div>
               </div>
 
@@ -791,7 +848,7 @@ App::setLocale(	Session::get('applocale'));
 
               <div class="col-md-12">
                 <div class="md-form">
-                  <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" value="SEND" class="btn btn-block btn-success"></div>
+                  <div class="waves-input-wrapper waves-effect waves-light"><input type="bottum" id="sendToClinic" value="SEND" class="btn btn-block btn-success"></div>
                 </div>
               </div>
 
@@ -801,21 +858,22 @@ App::setLocale(	Session::get('applocale'));
 
       </div>
  {{-- end clinic form --}}
-
-
     </div>
    
 
       </div>
       <div class="modal-footer">
+        <span class='alert alert-success ' id="done" role='alert' >done</span>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         {{-- <button type="button" class="btn btn-success">Save changes</button> --}}
+       
       </div>
     </div>
   </div>
 </div>
   <!-- /Section: intro -->
   <script src="{{asset('js/pages/index.js')}}"></script>
+  
 
 
 

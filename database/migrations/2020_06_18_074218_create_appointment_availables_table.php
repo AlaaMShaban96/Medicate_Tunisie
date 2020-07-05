@@ -17,13 +17,13 @@ class CreateAppointmentAvailablesTable extends Migration
         Schema::create('appointment_availables', function (Blueprint $table) {
             $table->id();
             $table->foreignId('clinic_id')
-                ->constrained();
+                ->constrained('clinics');
 
             $table->foreignId('doctor_id')
-                ->constrained();
+                ->constrained('doctors');
 
             $table->foreignId('service_id')
-                ->constrained();
+                ->constrained('services');
 
             $table->time('time_from', 0);
             $table->time('time_to', 0);

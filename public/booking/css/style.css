@@ -6,15 +6,15 @@
 }
 
 
-
-
-#bookingNav {
+#bookingNav{
 
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-color: #5dd638;
+	border-color: #ed1e3b;
 	
-}
+	}
+
+
 @media (max-width:300px) {
 	.search-bt{
 		width: 90%;

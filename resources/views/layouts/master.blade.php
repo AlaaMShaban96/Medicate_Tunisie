@@ -11,11 +11,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-  
- 
- 
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>  --}}
+  {{-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> --}}
+  {{-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> --}}
+  {{-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> --}}
   <!-- css -->
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+  {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css"> --}}
   <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="{{asset('plugins/cubeportfolio/css/cubeportfolio.min.css')}}">
   <link href="{{asset('css/nivo-lightbox.css')}}" rel="stylesheet" />
@@ -32,8 +35,9 @@
   <link id="t-colors" href="{{asset('color/default.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+  {{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> --}}
 
-  <style>
+ <style>
     body {
         font-family:'Tajawal';
         font-size: 16px;
@@ -44,7 +48,7 @@
 </head>
 
 @if (Session::get('applocale')=="ar")
-  <body dir="rtl" >
+  <body dir="rtl"  >
 @else
   <body dir="ltr" >
 @endif
@@ -71,18 +75,21 @@
 
 
 <!-- Core JavaScript Files -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/jquery.scrollTo.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/nivo-lightbox.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+  <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('js/writeit.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js/jquery.easing.min.js')}}"></script>
+  <script src="{{asset('js/wow.min.js')}}"></script>
+  <script src="{{asset('js/app.js')}}"></script>
+  <script src="{{asset('js/jquery.scrollTo.js')}}"></script>
+  <script src="{{asset('js/jquery.appear.js')}}"></script>
+  <script src="{{asset('js/stellar.js')}}"></script>
+  <script src="{{asset('plugins/cubeportfolio/js/jquery.cubeportfolio.min.js')}}"></script>
+  <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('js/nivo-lightbox.min.js')}}"></script>
+  <script src="{{asset('contactform/contactform.js')}}"></script>
+  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
   
   @yield('script')

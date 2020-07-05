@@ -42,7 +42,9 @@ blockquote:after {
   margin-right:.25em;
   vertical-align:-.4em;
 }
-
+#lang-content-navbar-ar{
+  padding-right: 40px;
+}
 </style>
 @endsection
 

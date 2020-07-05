@@ -409,6 +409,26 @@ display: flex;
   list-style: none;
   display: inline-flex;
 }
+#lang-content-navbar>ul>li{
+  
+  padding-left: 3px;
+}
+#lang-content-navbar>ul>li>a{
+  color: white;
+
+}
+#lang-content-navbar-ar>ul{
+  list-style: none;
+  display: inline-flex;
+}
+#lang-content-navbar-ar>ul>li{
+  
+  padding-right: 3px;
+}
+#lang-content-navbar-ar>ul>li>a{
+  color: white;
+
+}
 #icon-content-navbar{
   width: 20%;
 }

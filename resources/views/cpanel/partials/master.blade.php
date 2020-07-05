@@ -33,7 +33,6 @@
                   {{-- مركز {{auth()->user()->name}}  --}}
                 </li>
                 
-                {{-- <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li> --}}
             </ul>
             <form class="form-inline my-2 my-md-0"> </form>
         </div>
@@ -42,24 +41,28 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper"> 
             <ul class="sidebar-nav">
-                <li > <a href="{{ url('#') }}"><i class="far fa-user-circle"></i> Profile </a> </li>
-                {{-- <li> <a href="{{url('/user/index')}}"><i style='font-size:24px' class='fas'>&#xf292;</i> لوحة التحكم</a> </li> --}}
-                <li> <a href="{{url('/cpanel/news')}}"> <i style='font-size:24px' class='far'>&#xf1d8;</i>  News </a> </li>
-                <li> <a href="{{url('#')}}"> <i style='font-size:24px' class='far'>&#xf0e0;</i> Jobs </a> </li>
-                <li> <a href="{{url('#')}}"><i style='font-size:24px' class='fas'>&#xf01c;</i>Clinic </a> </li>
-                <li> <a href="{{url('/cpanel/doctor')}}"><i style='font-size:24px' class='fas'>&#xf48e;</i> Doctor </a> </li>
-                <li> <a href="{{url('#')}}"><i style='font-size:24px' class='fas'>&#xf77c;</i>Parmacy</a> </li>
-                <li> <a href="{{url('#')}}"><i class="fas fa-chart-pie"></i>Diag</a> </li>
 
-                {{--  <a href="{{url('/reports')}}">تقرير</a> </li> --}}
-                <li><a href="{{ url('#') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                  <i style='font-size:24px' class='fas'>&#xf011;</i>Logout </a> </li>   
+                <li > <a href="{{ url('#') }}"><i class="far fa-user-circle"></i> Profile </a> </li>
+                <li> <a href="{{url('/cpanel/news')}}"> <i style='font-size:24px' class='far'>&#xf1d8;</i>  News </a> </li>
+                <li> <a href="{{url('/cpanel/company-service')}}"> <i style='font-size:24px' class='far'>&#xf0e0;</i> Company Service </a> </li>
+                <li> <a href="{{url('/cpanel/clinic')}}"><i style='font-size:24px' class='fas'>&#xf01c;</i>Clinic </a> </li>
+                <li> <a href="{{url('/cpanel/doctor')}}"><i style='font-size:24px' class='fas'>&#xf48e;</i> Doctor </a> </li>
+                <li> <a href="{{url('/cpanel/pharmacy')}}"><i style='font-size:24px' class='fas'>&#xf77c;</i>Parmacy</a> </li>
+                <li> <a href="{{url('/cpanel/diag')}}"><i class="fas fa-chart-pie"></i>Diag</a> </li>
+
+                <li>
+                  <a href="{{ url('#') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                  <i style='font-size:24px' class='fas'>&#xf011;</i>Logout </a>
+                </li>   
+
               <form id="frm-logout" action="{{ url('#') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}
               </form>
                
             </ul>
-        </div> <!-- /#sidebar-wrapper -->
+        </div> 
+        
+        <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper" style="padding: 2px;">
             <div class="container-fluid">
@@ -72,7 +75,9 @@
     <!-- Bootstrap core JavaScript -->
    
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script> <!-- Menu Toggle Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Menu Toggle Script -->
     <script>
        
 
