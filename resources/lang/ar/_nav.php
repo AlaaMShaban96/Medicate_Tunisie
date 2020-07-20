@@ -3,7 +3,7 @@ return[
     "_lang"=>"اللغة",
     "_find_us"=>"موقعنا",
     "_about_us"=>"عن الشركة",
-    "_booking"=>"حجز",
+    "_booking"=>"حجز موعيد",
     "_service"=>"خدماتنا",
     "_your_health"=>"صحتك",
     "_news"=>"اخبار",

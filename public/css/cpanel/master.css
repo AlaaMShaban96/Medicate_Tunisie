@@ -1331,4 +1331,6 @@ body {
   }
 }
 
-  
+  .input-error{
+      color: #dc3545;
+  }

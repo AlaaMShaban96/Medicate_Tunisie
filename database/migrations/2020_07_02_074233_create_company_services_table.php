@@ -23,9 +23,9 @@ class CreateCompanyServicesTable extends Migration
             $table->string('descrption_en');
             $table->string('descrption_fr');
             
-            $table->string('details_ar');
-            $table->string('details_en');
-            $table->string('details_fr');
+            $table->text('details_ar')->nullable();
+            $table->text('details_en')->nullable();
+            $table->text('details_fr')->nullable();
             $table->timestamps();
         });
     }

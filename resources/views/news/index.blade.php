@@ -16,7 +16,7 @@
 
 @section('content')
 
-<img id="cover" src="{{asset('img/pages/news.jpg')}}" style="width: 100%;margin-top: 156px;" alt="" >
+<img id="cover" src="{{asset('img/pages/news.jpg')}}" style="width: 100%;margin-top: 130px;" alt="" >
 
 
 
@@ -50,19 +50,25 @@
           </div>
       </div>
 
-      <div class="col-md-6 gedf-main">
+      <div class="col-md-6 gedf-main" id="news-content-cover" >
 
-          <!--- \\\\\\\Post-->
+        
 @switch(Session::get('applocale'))
 
   @case('ar')
       
-          <!-- Post /////-->
+         
     @foreach ($news as $oneNews)
-    
+    <div style="display: flex;">
+    <div id="img-cover-news" style="">
 
+    <img src="{{asset("$oneNews->img_path")}}" width="100%" height="229px" alt="" srcset="">
+    </div>
           <!--- \\\\\\\Post-->
           <div class="card gedf-card">
+
+            
+          
               <div class="card-header">
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="d-flex justify-content-between align-items-center">
@@ -79,7 +85,7 @@
 
               </div>
               <div class="card-body">
-                  <a class="card-link" href="#">
+                <a class="card-link" href="{{url('/news/'.$oneNews->id)}}">
                       <h5 class="card-title">{{$oneNews->titel_ar}}</h5>
                   </a>
 
@@ -90,9 +96,11 @@
               <div class="card-footer">
                   {{-- <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a> --}}
                   {{-- <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a> --}}
-                  <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-              </div>
+                  <a href="https://www.facebook.com/sharer/sharer.php?u={{url("/news")}}" class="card-link"  target="_blank"><i class="fa fa-mail-forward"></i> مشاركة علي الفيس بوك</a>
+                </div>
           </div>
+          </div>
+          
         
           <!-- Post /////-->
     @endforeach
@@ -134,7 +142,7 @@
          <div class="card-footer">
              {{-- <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a> --}}
              {{-- <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a> --}}
-             <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+         <a href="https://www.facebook.com/sharer/sharer.php?u={{url("/news")}}" class="card-link"  target="_blank"><i class="fa fa-mail-forward"></i> Share on facebook </a>
          </div>
      </div>
    

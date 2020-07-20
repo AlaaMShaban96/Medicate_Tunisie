@@ -11,14 +11,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
-  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
-  {{-- <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>  --}}
-  {{-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> --}}
-  {{-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> --}}
-  {{-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> --}}
   <!-- css -->
   <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-  {{-- <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css"> --}}
+  
   <link href="{{asset('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="{{asset('plugins/cubeportfolio/css/cubeportfolio.min.css')}}">
   <link href="{{asset('css/nivo-lightbox.css')}}" rel="stylesheet" />
@@ -35,13 +30,9 @@
   <link id="t-colors" href="{{asset('color/default.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
-  {{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> --}}
 
  <style>
-    body {
-        font-family:'Tajawal';
-        font-size: 16px;
-    }
+ 
   </style>
     @yield('head')
     <title>Medicate Tunis :Home</title>
@@ -89,8 +80,6 @@
   <script src="{{asset('js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js/nivo-lightbox.min.js')}}"></script>
   <script src="{{asset('contactform/contactform.js')}}"></script>
-  {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
-
   
   @yield('script')
 </body>

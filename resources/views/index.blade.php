@@ -1,3 +1,7 @@
+@php
+  App::setLocale(	Session::get('applocale'));
+  $x=Session::get('applocale');
+@endphp
 
 @extends('layouts.master')
 
@@ -9,8 +13,14 @@
 @section('content')
 
 @include('layouts.partials._header')
+
     <!-- Section: boxes -->
+@switch(Session::get('applocale'))
+
+  @case('ar')
+      
     <section id="boxes" class="home-section paddingtop-80">
+
       <div class="wow fadeInUp" data-wow-delay="0.2s">
         <div class="box text-center">
 
@@ -20,72 +30,137 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
- 
-                <i class="fa fa-id-card-o fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold"> {{__('index.healthcare_identity')}} </h4>
-                <p>{{__('index.healthcare_identity_details')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
 
-                <i class="fa fa-heartbeat fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold">{{__('index.school_health')}}</h4>
-                <p>{{__('index.school_health_details')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
-                <i class="fa fa-percent fa-5x icon-color" aria-hidden="true"></i>
-                <h4 class="h-bold">{{__('index.discounts_on_services')}}</h4>
-                <p>{{__('index.discounts_on_services_details')}}</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
+          @foreach ($companyServices as $service)
+              
+          
+              <div class="col-sm-3 col-md-3 col-md-3-icon">
+                <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="box text-center">
+                    <div>
+                      <img src="{{asset("$service->img_path")}}" style="width: 40%;margin-right: 31%" class="img-responsive" alt="" />
+                    </div>
 
-                <i class="fa fa-globe fa-5x icon-color"></i>
-                <h4 class="h-bold">{{__('index.health_education')}}</h4>
-                <p>{{__('index.health_education_details')}} </p>
+                    {{-- <i class="{{ $service->img_path }}" aria-hidden="true"></i> --}}
+                    <h4 class="h-bold"> 
+                      {{-- {{__('index.healthcare_identity')}}  --}}
+                      {{ $service->titel_ar }}
+                    </h4>
+                    @php
+                          echo($service->descrption_ar )
+                    @endphp
+                          {{-- {{!! $service->descrption_ar !!}} --}}
+                     
+                   
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
 
-                <i class="fa fa-cloud fa-5x icon-color"></i>
-                <h4 class="h-bold">{{__('index.eHR_services')}}</h4>
-                <p>{{__('index.eHR_services_details')}}  </p>
-              </div>
-            </div>
-          </div>
+          @endforeach
 
-          <div class="col-sm-3 col-md-3">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <div class="box text-center">
 
-                <i class="fa fa-wifi fa-5x icon-color"></i>
-                <h4 class="h-bold">{{__('index.network_ecosystem')}}</h4>
-                <p>{{__('index.network_ecosystem_details')}} </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
     </section>
-    <!-- /Section: boxes -->
+    @break
+  @case('en')
+      
+    <section id="boxes" class="home-section paddingtop-80">
 
+      <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box text-center">
+
+         <h1 class="h-bold">{{__('index.our_services')}}</h1>
+         
+        </div>  
+      </div>
+      <div class="container">
+        <div class="row">
+
+          @foreach ($companyServices as $service)
+              
+          
+              <div class="col-sm-3 col-md-3 col-md-3-icon">
+                <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="box text-center">
+    
+                    <div>
+                      <img src="{{asset("$service->img_path")}}" style="width: 40%;margin-left: 31%" class="img-responsive" alt="" />
+                    </div>
+                    <a href="">
+                      <h4 class="h-bold"> 
+                          {{ $service->titel_en }}
+                      </h4>
+                    </a>
+                    {{-- <p>{{__('index.healthcare_identity_details')}}</p> --}}
+                   
+                    @php
+                    echo($service->descrption_en )
+                   @endphp
+                   
+                  </div>
+                </div>
+              </div>
+
+          @endforeach
+
+
+        </div>
+      </div>
+
+    </section>
+    @break
+  @case('fr')
+      
+    <section id="boxes" class="home-section paddingtop-80">
+
+      <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <div class="box text-center">
+
+         <h1 class="h-bold">{{__('index.our_services')}}</h1>
+         
+        </div>  
+      </div>
+      <div class="container">
+        <div class="row">
+
+          @foreach ($companyServices as $service)
+              
+          
+              <div class="col-sm-3 col-md-3 col-md-3-icon">
+                <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="box text-center">
+    
+                    <div>
+                      <img src="{{asset("$service->img_path")}}" style="width: 40%;margin-left: 31%" class="img-responsive" alt="" />
+                    </div>
+                    <h4 class="h-bold"> 
+                      {{-- {{__('index.healthcare_identity')}}  --}}
+                      {{ $service->titel_fr }}
+                    </h4>
+                    {{-- <p>{{__('index.healthcare_identity_details')}}</p> --}}
+                   
+                    @php
+                    echo($service->descrption_fr )
+                   @endphp
+                   
+                  </div>
+                </div>
+              </div>
+
+          @endforeach
+
+
+        </div>
+      </div>
+
+    </section>
+    @break
+@endswitch
+
+
+    <!-- /Section: boxes -->
 
     <section id="callaction" class="home-section paddingtop-40">
       <div class="container">
@@ -96,8 +171,8 @@
                 <div class="col-md-8">
                   <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="cta-text">
-                      <h3>In an emergency? Need help now?</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipiscing elit uisque interdum ante eget faucibus. </p>
+                      <h3>تطبيق Medicate علاش نبوة ؟</h3>
+                      <p> </p>
                     </div>
                   </div>
                 </div>
@@ -123,8 +198,9 @@
 
         <div class="row">
           <div class="col-sm-6 col-md-6">
-            <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <img src="img/dummy/img-1.jpg" class="img-responsive" alt="" />
+            <div style="text-align: -moz-center;" class="wow fadeInUp" data-wow-delay="0.2s">
+              <img src="{{asset('img/pages/index/phone2.png')}}" style="width: 40%;" class="img-responsive" alt="" />
+           
             </div>
           </div>
           <div class="col-sm-3 col-md-3">
@@ -132,11 +208,11 @@
             <div class="wow fadeInRight" data-wow-delay="0.1s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-stethoscope fa-3x"></span>
+                    <img src="{{asset('img/pages/index/icon/الشبكة-الطبية.png')}}" width="61px" alt="">
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Medical checkup</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">مجموعة متنوعة من المرافق الصحية</h5>
+                  <p>يتم توفير الوصول لمجموعة واسعة من المرافق الصحية</p>
                 </div>
               </div>
             </div>
@@ -144,25 +220,28 @@
             <div class="wow fadeInRight" data-wow-delay="0.2s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-wheelchair fa-3x"></span>
+                  <img src="{{asset('img/pages/index/icon/حجز-مواعيد.png')}}" width="61px" alt="">
+
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Nursing Services</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">فحصات الرعاية الصحية</h5>
+                  <p>تذكير بالفحصات الصحية علي فترة منتظمة</p>
                 </div>
               </div>
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.3s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-plus-square fa-3x"></span>
+                  <img src="{{asset('img/pages/index/icon/الخدمات.png')}}" width="61px" alt="">
+
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Pharmacy</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">الموقع</h5>
+                  <p>البحث عن الشركات في الداخل و الخارج بكل سهولة و يسر</p>
                 </div>
               </div>
             </div>
+          
 
 
           </div>
@@ -171,11 +250,12 @@
             <div class="wow fadeInRight" data-wow-delay="0.1s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-h-square fa-3x"></span>
+                  <img src="{{asset('img/pages/index/icon/كيوار.png')}}" width="61px" alt="">
+
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Gyn Care</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">رمز الاستجابة السريع QR </h5>
+                  <p>بطقة ميديكيت بها رمز QR فريد من نوعة</p>
                 </div>
               </div>
             </div>
@@ -183,25 +263,27 @@
             <div class="wow fadeInRight" data-wow-delay="0.2s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-filter fa-3x"></span>
+                  <img src="{{asset('img/pages/index/icon/الملف-الشخصي.png')}}" width="61px" alt="">
+
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Neurology</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">السجلات الصحية</h5>
+                  <p>عضويتك تتيح لك الوصول الي الملفات الصحية الالكترونية</p>
                 </div>
               </div>
             </div>
             <div class="wow fadeInRight" data-wow-delay="0.3s">
               <div class="service-box">
                 <div class="service-icon">
-                  <span class="fa fa-user-md fa-3x"></span>
+                  <img src="{{asset('img/pages/index/icon/عروض.png')}}" width="61px" alt="">
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">Sleep Center</h5>
-                  <p>Vestibulum tincidunt enim in pharetra malesuada.</p>
+                  <h5 class="h-light">تخفيضات</h5>
+                  <p>تخفيضات وعروض حصرية علي الخدمات الصحية</p>
                 </div>
               </div>
             </div>
+          
 
           </div>
 
@@ -320,7 +402,198 @@
 
 
 
-    <!-- Section: works -->
+    <!-- Section: News -->
+@switch(Session::get('applocale'))
+  @case('ar')
+
+      <section id="facilities" class="home-section paddingbot-60">
+        <div class="container marginbot-50">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow fadeInDown" data-wow-delay="0.1s">
+                <div class="section-heading text-center">
+                  <h2 class="h-bold">News</h2>
+                  <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                </div>
+              </div>
+              <div class="divider-short"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Section: works -->
+
+
+      <!-- Section: testimonial -->
+      <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
+
+      
+        <div class="carousel-reviews broun-block">
+          <div class="container">
+            <div class="row">
+              <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                
+                        
+              
+                  <div class="carousel-inner">
+                      <div class="item active">
+                        @foreach ($news as $oneNews)
+                            
+                      
+                        {{-- @for ($i = 0; $i < 3; $i++) --}}
+                        
+                        <div class="col-md-4 col-sm-6">
+
+                          <a href="">
+
+                            <div id="item-news" class="block-text rel zmin" >
+
+                              <div class="mark">
+
+                                {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
+                            
+                              </div>
+                            
+                              <span class="rating-input">
+                            
+                                <i>
+                            
+                                  {{$oneNews->titel_ar}}
+                            
+                                </i>
+                            
+                              </span>
+                              
+                              <p> {{$oneNews->description_ar}}</p>
+                            
+                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            
+                            </div>
+                          </a>
+                        </div>
+                          @endforeach 
+                        </div>
+                        
+                      </div>
+                        {{-- @endfor --}}
+                      </div> 
+                    
+
+
+                </div>
+
+                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                <a class="right carousel-control" style="margin-right: 0px;" href="#carousel-reviews" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+              </div>
+          
+        </div>
+        <a href="{{url('/news')}}" class="btn btn-warning" > 
+        المزيد من الاخبار
+        </a>
+      </section>
+      <!-- /Section: testimonial -->
+
+    @break
+  @case('en')
+
+      <section id="facilities" class="home-section paddingbot-60">
+        <div class="container marginbot-50">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="wow fadeInDown" data-wow-delay="0.1s">
+                <div class="section-heading text-center">
+                  <h2 class="h-bold">News</h2>
+                  <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                </div>
+              </div>
+              <div class="divider-short"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Section: works -->
+
+
+      <!-- Section: testimonial -->
+      <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
+
+      
+        <div class="carousel-reviews broun-block">
+          <div class="container">
+            <div class="row">
+              <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
+                
+                        
+              
+                  <div class="carousel-inner">
+                      <div class="item active">
+                        @foreach ($news as $oneNews)
+                            
+                      
+                        {{-- @for ($i = 0; $i < 3; $i++) --}}
+                        
+                        <div class="col-md-4 col-sm-6">
+
+                          <a href="">
+
+                            <div id="item-news" class="block-text rel zmin" >
+
+                              <div class="mark">
+
+                                {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
+                            
+                              </div>
+                            
+                              <span class="rating-input">
+                            
+                                <i>
+                            
+                                  {{$oneNews->titel_en}}
+                            
+                                </i>
+                            
+                              </span>
+                              
+                              <p> {{$oneNews->description_en}}</p>
+                            
+                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                            
+                            </div>
+                          </a>
+                        </div>
+                          @endforeach 
+                        </div>
+                        
+                      </div>
+                        {{-- @endfor --}}
+                      </div> 
+                    
+
+
+                </div>
+
+                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                <a class="right carousel-control" style="margin-right: 0px;" href="#carousel-reviews" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+              </div>
+          
+        </div>
+        <a href="{{url('/news')}}" class="btn btn-warning" > 
+        More News
+        </a>
+      </section>
+      <!-- /Section: testimonial -->
+
+    @break
+  @case('fr')
+
     <section id="facilities" class="home-section paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
@@ -336,8 +609,8 @@
         </div>
       </div>
     </section>
-    <!-- /Section: works -->
-  
+  <!-- /Section: works -->
+
 
     <!-- Section: testimonial -->
     <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
@@ -347,59 +620,52 @@
         <div class="container">
           <div class="row">
             <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-              @empty($news)
-                       
+              
+                      
             
                 <div class="carousel-inner">
                     <div class="item active">
-                      @for ($i = 0; $i < 3; $i++)
+                      @foreach ($news as $oneNews)
+                          
+                    
+                      {{-- @for ($i = 0; $i < 3; $i++) --}}
                       
                       <div class="col-md-4 col-sm-6">
+
                         <a href="">
+
                           <div id="item-news" class="block-text rel zmin" >
+
                             <div class="mark">
-                              {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
+
+                              {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
+                          
                             </div>
+                          
                             <span class="rating-input">
+                          
                               <i>
-                              {{$news[$i]['titel_ar']}}
+                          
+                                {{$oneNews->titel_fr}}
+                          
                               </i>
+                          
                             </span>
                             
-                            <p> {{$news[$i]['description_ar']}}</p>
+                            <p> {{$oneNews->description_fr}}</p>
+                          
                             <ins class="ab zmin sprite sprite-i-triangle block"></ins>
+                          
                           </div>
                         </a>
                       </div>
-                      @endfor
-                    </div> 
-                                  
-                 <div class="item">
-                 
-                  @for ($i = 3; $i < 6; $i++)
-                    
-                  <div class="col-md-4 col-sm-6">
-                    <div id="item-news" class="block-text rel zmin" >
-                      <div class="mark">
-                        {{\Carbon\Carbon::parse($news[$i]['created_at'])->diffForHumans()}}
+                        @endforeach 
                       </div>
-                      <span class="rating-input">
-                        <i>
-                         {{$news[$i]['titel_ar']}}
-                        </i>
-                      </span>
                       
-                      <p> {{$news[$i]['description_ar']}}</p>
-                      <ins class="ab zmin sprite sprite-i-triangle block"></ins>
                     </div>
-                
-                  </div>
-                   @empty($news[$i+1]['id'])
-                    {{$i=6}}
-                    @endempty
-                  @endfor                 
-              @endempty
-                </div>
+                      {{-- @endfor --}}
+                    </div> 
+                  
 
 
               </div>
@@ -411,15 +677,18 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>
-          </div>
-        </div>
+        
       </div>
       <a href="{{url('/news')}}" class="btn btn-warning" > 
-       More News
+        plus d’actualités
       </a>
     </section>
     <!-- /Section: testimonial -->
 
+    @break
+@endswitch
+
+  
 
     <!-- Section: pricing -->
     <section id="pricing" class="home-section bg-gray paddingbot-60">

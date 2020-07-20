@@ -50,7 +50,7 @@ blockquote:after {
 
 @section('content')
 
-<div style="width: 100%;margin-top: 156px; position: relative;" >
+<div style="width: 100%;margin-top: 130px; position: relative;" >
   <img id="cover" src="{{'img/pages/About-us.png'}}" style="width: 100%;" alt="" >
   <div class="centeredd">
     
@@ -88,7 +88,7 @@ blockquote:after {
 
 <div id="time">
     <div class="page">
-      <h1 class="text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">-{{__('about_us.our_career')}} -</h1>
+      {{-- <h1 class="text-center wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">-{{__('about_us.our_career')}} -</h1> --}}
         <div class="timeline">
           <div class="timeline__group">
             {{-- <span class="timeline__year">2008</span> --}}

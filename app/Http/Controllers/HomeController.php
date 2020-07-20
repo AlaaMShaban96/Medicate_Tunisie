@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use GuzzleHttp\Client;
 use App\News;
+use GuzzleHttp\Client;
+use App\CompanyService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -16,12 +17,12 @@ class HomeController extends Controller
 
     }
     public function index()
-    {
-        $news= News::all();
-      
-        return view('index',compact('news'));
+    { 
+        $news= News::all()->take(10);
+        $companyServices = CompanyService::all()->sortBy('id');
+        return view('index',compact('news','companyServices'));
     }
-
+  
    public function translater($lang)
    {
         Session::put('applocale', $lang);

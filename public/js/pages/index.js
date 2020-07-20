@@ -100,7 +100,7 @@ var slideWidth = $('#slider ul li').width();
 var slideHeight = $('#slider ul li').height();
 var sliderUlWidth = slideCount * slideWidth;
 
-$('#slider').css({ width: slideWidth, height: slideHeight });
+$('#slider').css({ width: slideWidth, height: (slideHeight) });
 
 // $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 
@@ -109,19 +109,19 @@ $('#slider').css({ width: slideWidth, height: slideHeight });
   function moveLeft() {
       $('#slider ul').animate({
           left: + slideWidth
-      }, 200, function () {
+      }, 500, function () {
           $('#slider ul li:last-child').prependTo('#slider ul');
           $('#slider ul').css('left', '');
       });
   };
-
+ 
   function moveRight() {
     console.log(slideWidth);
       $('#slider ul').animate({
           left: - slideWidth
       }, 500, function () {
           $('#slider ul li:first-child').appendTo('#slider ul');
-          $('#slider ul').css('left', '3px');
+          $('#slider ul').css('left', '');
       });
   };
 
@@ -130,6 +130,9 @@ $('#slider').css({ width: slideWidth, height: slideHeight });
   });
 
   $('a.control_next').click(function () {
+      moveRight();
+  });
+  $('a.control_next_ar').click(function () {
       moveRight();
   });
 

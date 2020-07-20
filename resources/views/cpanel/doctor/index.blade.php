@@ -1,11 +1,14 @@
 @extends('cpanel/partials/master')
+{{-- @section('titel')
+CPanel | Doctor
+@endsection --}}
 @section('head')
 
 <title> CPanel | Doctor</title>
 
 @endsection
 @section('body')
-
+<div class="content">
 <table class="table table-dark">
     <thead>
       <tr>
@@ -35,7 +38,7 @@
              
              
               <td>
-              <a href" class="btn btn-success" > 
+              <a href="" class="btn btn-success" > 
                 Approval
                 <i class="far fa-eye"></i>
 
@@ -58,6 +61,7 @@
       
     </tbody>
   </table>
+</div>
 @endsection
 @section('script')
 

@@ -73,7 +73,7 @@
                         </button>
                         
                         <a class="navbar-brand" href="index.html">
-                          <img src="img/MedicateLogo.png" alt=""  style="width: 100%;height: 241%;margin-top: -20px;" />
+                          <img src="img/new_lolo.svg" alt=""  style="" />
                         </a>
                       </div>
 
@@ -172,13 +172,13 @@
                   <div>
                       <a class="navbar-brand" href="index.html">
                     
-                        <img src="img/MedicateLogo.png" alt=""  style="width: 100%;height: 241%;margin-top: -20px;" />
+                        <img src="img/new_lolo.svg" alt=""   />
                     
                       </a>
                   </div>
 
                 </div>
-
+ 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                   <ul class="nav navbar-nav" id="listt">

@@ -96,13 +96,17 @@ function generate_year_range(start, end) {
                 cell.setAttribute("data-year", year);
                 cell.setAttribute("data-month_name", months[month]);
                 cell.className = "date-picker";
-                if (date == 5 && month == 5 && year == 2020) {
+                if (date == 19 && month == 6 && year == 2020) {
+
                   cell.innerHTML = "<span class='disabled2'>" + date + "</span>";
   
                 }else if (getCookie('xx').split(',').includes(""+(j+1)+"")){
+                 console.log("date this day",this.today.getFullYear()); 
+                //  console.log("date this day by time fun",time().new); 
                 cell.innerHTML = "<span onclick='setDateInForm(" + date +","+ month +","+ year + ")' >" + date + "</span>";
-                // 
+               
                 }else{
+
                   cell.innerHTML = "<span class='disabled' >" + date + "</span>";
 
                 }
@@ -123,7 +127,6 @@ function generate_year_range(start, end) {
     this.month = month ;
     this.year =year;
     var days= getCookie('xx');
-    console.log(getCookie('xx').split(',').includes("1"));
     selectDay(days.split(','));
   }
   
@@ -137,7 +140,7 @@ function generate_year_range(start, end) {
   function selectDay(params) {
       
       for (let index = 0; index < params.length; index++) {
-          // const element = array[index];
+        
           
           $(".date-picker:nth-child("+params[index]+")").css("color", "green");
           $(".date-picker:nth-child("+params[index]+")").css("background", "greenyellow");
@@ -146,9 +149,7 @@ function generate_year_range(start, end) {
       }
   }
   function setDateInForm( day , month , year)  {
-    console.log( );
-    console.log( month);
-    console.log(  year);
+   
     if (day < 10) {
       day="0"+day;
     }
@@ -156,7 +157,7 @@ function generate_year_range(start, end) {
       month="0"+month;
     }
     var date= year +"-" +month  + '-' +  day  ;
-    console.log(date);
+    // console.log(date);
     $('#datee').val(date);
   
   

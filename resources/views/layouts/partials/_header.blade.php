@@ -11,157 +11,142 @@ App::setLocale(	Session::get('applocale'));
     @case("ar")
 
     <section id="intro" class="intro">
-      <div class="intro-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                <img src="img/dummy/img-1.png" id="img-responsive-hide"class="img-responsive" alt="" style="margin-left: 32%;" />
-              
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                <h2  class="h-ultra">{{__('_header.titel_name')}}</h2>
-              </div>
-              <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                <h4 class="h-light">{{__('_header.titel_description')}}</h4>
-              </div> 
-              <div class="well well-trans">
-                <div class="wow fadeInRight" data-wow-delay="0.1s">
-  
-                  <ul class="lead-list">
-                    <li>
-                      <span class="fa fa-check fa-2x icon-success"></span>
-                      <span class="list">
-                        <strong>
-                          {{__('_header.service_name1')}}
-                        </strong>
-                        <br/>
-                        {{__('_header.service_description1')}}
-                      </span>
-                    </li>
-                    <li>
-                      <span class="fa fa-check fa-2x icon-success"></span>
-                      <span class="list">
-                        <strong>
-                          {{__('_header.service_name2')}}
-                        </strong>
-                        <br/>
-                        {{__('_header.service_description2')}}
-                      </span>
-                    </li>
-                    <li>
-                      <span class="fa fa-check fa-2x icon-success"></span>
-                      <span class="list">
-                        <strong>
-                          {{__('_header.service_name3')}}
-                        </strong>
-                        <br/>
-                        {{__('_header.service_description3')}}
-                      </span>
-                    </li>
-  
-                  </ul>
+    
+ 
+      <div id="slider">
+ 
+        <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
+            <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
+                  <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                  {{__('_header._login')}}
+                  </button>
+                
+                
+                  <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                  {{__('_header._singup')}}
+                  </button>
+             </div>
+         </div>
+        <a  class="control_next_ar">>></a>
+        <a  class="control_prev"><</a>
+
+        <ul>
+          <li >
+               {{-- <div>
+                <h1> رمز الاستجابة السريع QR  </h1>
+                <h1> السجلات الصحية </h1>
+               </div> --}}
                  
-                    <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                      {{__('_header._login')}}
-                    </button>
-                 
-                  
-                    <button type="button" data-wow-delay="0.4s" class="btn btn-success text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                      {{__('_header._singup')}}
-                    </button>
-                  
-                </div>
-              </div>
-  
-  
-            </div>
-  
-  
-           
-          </div>
-        </div>
+                 {{-- <img class="slider-img" src="{{asset('/img/pages/index/phonebanner.png')}}" alt=""> --}}
+                
+
+
+          </li>
+          <li>
+            {{-- <div>
+              <h1> رمز الاستجابة السريع QR  </h1>
+              <h1> السجلات الصحية </h1>
+            </div> --}}
+
+            {{-- <img class="slider-img" src="{{asset('/img/pages/index/phonebanner2.png')}}" alt="">          </li> --}}
+          <li>SLIDE 3</li>
+          <li>SLIDE 4</li>
+     
+          <li>
+            
+            <img class="slider-img" src="{{asset('/img/pages/index/phone.png')}}" alt="">          </li>
+
+          </li>
+          <li>
+            
+            <img class="slider-img" src="{{asset('/img/pages/index/phonebanner.png')}}" alt="">          </li>
+
+          </li>
+        </ul>  
       </div>
-    </section>
+
+      {{-- <div class="slider_option">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">Autoplay Slider</label>
+      </div>  --}}
+
+</section>
   
   
         @break
-   
+@case("en")
+          <section id="intro" class="intro">
+      
+  
+            <div id="slider">
+
+              <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
+                <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
+                      <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                      {{__('_header._login')}}
+                      </button>
+                    
+                    
+                      <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                      {{__('_header._singup')}}
+                      </button>
+                 </div>
+             </div>
+              <a  class="control_next">>></a>
+              <a  class="control_prev"><</a>
+
+              <ul>
+                <li >
+                    <div>
+                    </div>
+                      
+                      {{-- <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt=""> --}}
+                      
+
+
+                </li>
+                <li>
+
+                  {{-- <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset=""> --}}
+                </li>
+                <li>SLIDE 3</li>
+                <li>SLIDE 4</li>
+                <li>SLIDE 5</li>
+                <li>
+                  <img class="slider-img" src="{{asset('/img/pages/index/phonebanneren.png')}}" alt="">          </li>
+
+                </li>
+              </ul>  
+            </div>
+
+            {{-- <div class="slider_option">
+              <input type="checkbox" id="checkbox">
+              <label for="checkbox">Autoplay Slider</label>
+            </div>  --}}
+
+  </section>
+
+@break
+
     @default
 
         <section id="intro" class="intro">
-          {{-- <div class="intro-content"> --}}
-            {{-- <div class="container"> --}}
-              {{-- <div class="row">
-              
-                <div class="col-lg-6">
-                  <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-                    <h2  class="h-ultra" >{{__('_header.titel_name')}}</h2>
-                  </div>
-                  <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-                    <h4 class="h-light">{{__('_header.titel_description')}}</h4>
-                  </div> 
-                  <div class="well well-trans"> --}}
-                    {{-- <div class="wow fadeInRight" data-wow-delay="0.1s">
-      
-                      <ul class="lead-list">
-                        <li>
-                          <span class="fa fa-check fa-2x icon-success"></span>
-                          <span class="list">
-                            <strong class="text-anmition">
-                              {{__('_header.service_name1')}}
-                            </strong>
-                            <br/>
-                            {{__('_header.service_description1')}}
-                          </span>
-                        </li>
-                        <li>
-                          <span class="fa fa-check fa-2x icon-success"></span>
-                          <span class="list">
-                            <strong class="text-anmition">
-                              {{__('_header.service_name2')}}
-                            </strong>
-                            <br/>
-                            {{__('_header.service_description2')}}
-                          </span>
-                        </li>
-                        <li>
-                          <span class="fa fa-check fa-2x icon-success"></span>
-                          <span class="list">
-                            <strong class="text-anmition">
-                              {{__('_header.service_name3')}}
-                            </strong>
-                            <br/>
-                            <span id="test"></span>
-                            {{-- {{__('_header.service_description3')}} --}}
-                          {{-- </span>
-                        </li>
-      
-                      </ul>
-                    
-                        <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                          {{__('_header._login')}}
-                        </button>
-                    
-                      
-                        <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                          {{__('_header._singup')}}
-                        </button>
-                      
-                    </div> --}}
-
-
+    
+ 
                     <div id="slider">
-                      <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                        {{__('_header._login')}}
-                      </button>
-                  
-                    
-                      <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                        {{__('_header._singup')}}
-                      </button>
+
+                      <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
+                        <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
+                              <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                              {{__('_header._login')}}
+                              </button>
+                            
+                            
+                              <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                              {{__('_header._singup')}}
+                              </button>
+                         </div>
+                     </div>
                       <a  class="control_next">>></a>
                       <a  class="control_prev"><</a>
 
@@ -170,46 +155,31 @@ App::setLocale(	Session::get('applocale'));
                              <div>
                              </div>
                                
-                               <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt="">
+                               {{-- <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt=""> --}}
                               
 
 
                         </li>
                         <li>
 
-                          <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset="">
+                          {{-- <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset=""> --}}
                         </li>
                         <li>SLIDE 3</li>
                         <li>SLIDE 4</li>
-                        <li>SLIDE 5</li>
+                      
                         <li>
-                          <img class="slider-img"  src="https://pbs.twimg.com/media/EYi6KloWAAAtTBq.jpg" alt="" srcset="">
+                          <img class="slider-img" src="{{asset('/img/pages/index/phonebannerfr.png')}}" alt="">          </li>
+                          {{-- <img class="slider-img"  src="https://pbs.twimg.com/media/EYi6KloWAAAtTBq.jpg" alt="" srcset=""> --}}
 
                         </li>
                       </ul>  
                     </div>
-
+{{-- 
                     <div class="slider_option">
                       <input type="checkbox" id="checkbox">
                       <label for="checkbox">Autoplay Slider</label>
-                    </div> 
+                    </div>  --}}
 
-  {{--                   
-                  </div>
-      
-      
-                </div>
-      
-                <div class="col-xs-6">
-                  <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-                    <img src="img/dummy/img-1.png" id="img-responsive-hide"class="img-responsive" alt="" style="margin-left: 32%;" />
-                  
-                  </div>
-                </div>
-              
-              </div> --}}
-            {{-- </div> --}}
-          {{-- </div> --}}
         </section>
       
       
@@ -228,7 +198,7 @@ App::setLocale(	Session::get('applocale'));
 
 
 
-
+ 
 
 
 

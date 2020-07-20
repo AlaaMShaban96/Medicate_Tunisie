@@ -41,7 +41,7 @@ return [
 
     "health_education_details_part_2"=>"مع زيادة الوعي الصحي، بإمكانك اتخاذ الخطوات اللازمة لمنع المخاطر الصحية. ",
 
-
+ 
 
     ////
     "eHR_services"=>"  نظام شبكة Medicate",

@@ -2,10 +2,12 @@
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-color: #ed1e3b;
+  border-color: #85c43f;
   
   }
-
+  body{
+    background-color: white;
+  }
 .content{
     margin-top: 10%;
 }
@@ -50,8 +52,8 @@
   #health-program-items > .health-item{
       width: 20%;
   
-      background-color: #e3e7ea;
-      height: 160px;
+      /* background-color: #e3e7ea; */
+      height: 185px;
       margin: 10px;
       border-radius: 6px;
      text-align: center;
@@ -65,6 +67,7 @@
   }
   .health-item-img{
     margin-bottom: 5px;
+    width: 77%;
   }
   #health-program-items > .health-item:focus{
     
@@ -213,4 +216,18 @@
      .health-item-img{
        display: none;
      }
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 4%;
+}
+.modal-header{
+ 
+  background-color: #18a8aa;
+  padding-bottom: 0px;
+}
+.modal-dialog {
+  width: 57%;
+
 }

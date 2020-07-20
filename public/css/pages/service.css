@@ -1,4 +1,13 @@
+#service{
 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #85c43f;
+  
+  }
+  body{
+    background-color: white;
+  }
 #servicee span{
     font-size:15px;
 }
@@ -21,7 +30,8 @@
 	border-top-width: 20px;
 
 	border-top-style: solid;
-	border-color: #18A8AA;
+  border-color: #18A8AA;
+  height: 604px;
 
 }
 #servicee .text{
@@ -45,11 +55,4 @@
 } */
 #servicee {
   margin-top: 15%;
-}
-#service{
-
-border-bottom-width: 1px;
-border-bottom-style: solid;
-border-color: #ed1e3b;
-
 }

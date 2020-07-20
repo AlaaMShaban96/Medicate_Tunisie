@@ -225,3 +225,29 @@
     line-height: 1.2;
     color: inherit;
 }
+
+#news-content-cover{
+  width: 61%;
+}
+#img-cover-news{
+    width: 50%;
+    height: 229px;
+    
+    border-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+@media (max-width: 992px){
+  
+  #news-content-cover{
+    width: 100%;
+  }
+
+}
+@media (max-width: 800px){
+  #img-cover-news {
+    display: none;
+  }
+
+
+}

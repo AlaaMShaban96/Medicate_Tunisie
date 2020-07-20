@@ -30,7 +30,7 @@
 
 			<h1>ماهو برنامج صحتك ؟ </h1>
 			<p>ابتكرنا برنامج صحتك الذي يوفر مجموعة من الخدمات المتميزة وغير المسبوقة لك ولعائلتك، سعياً منا لتوفير الرعاية الصحية الأفضل، لحياتكم الاجتماعية والعملية. بمجرد انضمامكم إلينا، ستحصلون تلقائياً وبدون رسوم إضافية على خدمات برنامج صحتك الذي سيكون رفيقكم الصحي أينما تكونوا وفي كل الأوقات. يمكنكم الاستفادة من برنامج صحتك بمجرد الاتصال بأطباء ميديكيت على الرقم ... أو من خلال تسجيل الدخول إلى صحتك ، بوابة خدماتنا الصحية. </p>
-			<button> تسجيل الدخول</button>
+			<button type="button"  class=" bounceIn" data-toggle="modal" data-target="#loginModal" > تسجيل الدخول</button>
 		</div>
 	</div>
 
@@ -89,7 +89,7 @@
 			<div id="item1" class="health-program-content-item">
 
 				<div class="health-program-content-item-img">
-					<img  src="{{'img/pages/yourHealth/sehtk-doctor.PNG'}}" alt="" >
+					<img  src="{{'img/pages/yourHealth/sehtk1.png'}}" alt="" >
 				</div>
 				<div class="health-program-content-item-info">
 					<h6>طبيب ميديكيت </h6>
@@ -107,7 +107,7 @@
 			<div id="item2" class="health-program-content-item">
 
 				<div class="health-program-content-item-img">
-					<img  src="{{'img/pages/yourHealth/doctora.jpg'}}" alt="" >
+					<img  src="{{'img/pages/yourHealth/sehtk2.png'}}" alt="" >
 				</div>
 				<div class="health-program-content-item-info">
 					<h6>رعاية الحمل والأمومة</h6>
@@ -127,7 +127,7 @@
 			<div id="item3" class="health-program-content-item">
 
 				<div class="health-program-content-item-img">
-					<img  src="{{'img/pages/yourHealth/sehtk-doctor.PNG'}}" alt="" >
+					<img  src="{{'img/pages/yourHealth/sehtk3.png'}}" alt="" >
 				</div>
 				<div class="health-program-content-item-info">
 					<h6>رعاية الأمراض المزمنة</h6>
@@ -146,7 +146,7 @@
 			<div id="item4" class="health-program-content-item">
 
 				<div class="health-program-content-item-img">
-					<img  src="{{'img/pages/yourHealth/dwlia.jpg'}}" alt="" >
+					<img  src="{{'img/pages/yourHealth/sehtk4.png'}}" alt="" >
 				</div>
 				<div class="health-program-content-item-info">
 					<h6>الخدمات الدولية المتخصصة</h6>
@@ -163,7 +163,7 @@
 			<div id="item5" class="health-program-content-item">
 
 				<div class="health-program-content-item-img">
-					<img  src="{{'img/pages/yourHealth/sehtk-doctor.PNG'}}" alt="" >
+					<img  src="{{'img/pages/yourHealth/sehtk5.png'}}" alt="" >
 				</div>
 				<div class="health-program-content-item-info">
 					<h6>خدمات الصحة واللياقة</h6>
@@ -245,6 +245,304 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLongTitle">
+			{{-- <div class="tab-content-header"> --}}
+			  <h3 style="color: white;margin-bottom: 9px;font-size: 25px;text-align: center;">
+				{{-- {{__('_header._login')}} --}}
+				نمودج طلب الحصول علي بطاقة Medicate
+			  </h3>
+  
+			{{-- </div> --}}
+		  </h5>
+		 
+		  </button>
+		</div>
+		<div class="modal-body">
+			<div class="form-body">
+				<div class="form-body">
+				<form id="doctorRegForm" action="/ar/Index.php" name="doctorRegForm" method="POST" enctype="multipart/form-data">
+					<div class="row">
+						<div class="md-form col-lg-3">
+							<input placeholder="الاسم الاول" type="text" name="name1" id="name1" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="name1">
+							الاسم الاول
+							</label> --}}
+						</div>
+
+						<div class="md-form col-lg-3">
+							<input placeholder="اسم الاب" type="text" name="name2" id="name2" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="name2">
+							اسم الاب
+							</label> --}}
+						</div>
+
+
+						<div class="md-form col-lg-3">
+							<input placeholder="اسم الجد " type="text" name="name3" id="name3" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="name3">
+							اسم الجد 
+							</label> --}}
+						</div>
+
+						<div class="md-form col-lg-3">
+							<input placeholder="اللقب" type="text" name="name4" id="name4" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="name4">
+							اللقب
+							</label> --}}
+						</div>
+
+
+					</div>
+
+
+					<div class="row">
+
+						<div class="md-form col-lg-6">
+							<input placeholder="اسم الام بالكامل" type="text" name="mamname" id="mamname" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="mamname">
+							اسم الام بالكامل
+							</label> --}}
+						</div>
+
+
+						<div class="md-form col-lg-3" style="display: flex; width: 16%;">
+						<!-- Default unchecked -->
+							<div class="custom-control custom-radio" >
+								<input type="radio" class="custom-control-input" value="ذكر" name="gender" id="g1" required="">
+								<label class="custom-control-label" for="g1">ذكر</label>
+							</div>
+							<!-- Default checked -->
+							<div class="custom-control custom-radio" style="margin-right: 13%;">
+								<input type="radio" class="custom-control-input" value="أنثى" name="gender" id="g2" required="">
+								<label class="custom-control-label" for="g2">أنثى</label>
+							</div>
+						</div>
+						<div class="md-form col-lg-3">
+							<input placeholder="الجنسية" type="text" name="genders" id="genders" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="genders" class="">
+							الجنسية
+							</label> --}}
+						</div>
+					</div>
+					<div class="row">
+						<div class="md-form col-lg-4">
+							<label for="">
+							تاريخ الميلاد
+							</label>
+							<input type="date" name="datebirth" value="2018-09-22" required="">
+						</div>
+
+						<div class="md-form col-lg-4">
+							<input type="text" placeholder="مكان الميلاد" name="mbirth" id="mbirth" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.contactName" required="">
+							{{-- <label for="mbirth">
+							مكان الميلاد
+							</label> --}}
+						</div>
+
+						<div class="md-form col-lg-4">
+
+							<select class="form-control" id="hala" name="hala">
+							<option>الحالة الاجتماعية</option>
+							<option value="عازب">عازب </option>
+							<option value="متزوج">متزوج</option>
+							<option value="مطلق">مطلق </option>
+							<option value="أرمل">أرمل</option>
+							</select>
+
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="md-form col-lg-4" style="display: flex; ">
+
+
+							<label for="">حالة الاقامة
+							</label> <br>
+
+							<!-- Default unchecked -->
+							<div class="custom-control custom-radio" style="margin-right: 8%;">
+								<input type="radio" class="custom-control-input" id="eqama1" value="مقيم" name="eqama" required="">
+								<label class="custom-control-label" for="eqama1">مقيم</label>
+							</div>
+
+							<!-- Default checked -->
+							<div class="custom-control custom-radio" style="margin-right: 13%;">
+								<input type="radio" class="custom-control-input" id="eqama2" value="غير مقيم" name="eqama" required="">
+								<label class="custom-control-label" for="eqama2">غير مقيم</label>
+							</div>
+
+						</div>
+
+						<div class="md-form col-lg-4">
+
+							<select class="form-control" id="idname" name="idname">
+							<option value="">إثبات هوية</option>
+							<option value="بطاقة شخصية"> بطاقة شخصية</option>
+							<option value="جواز سفر">جواز سفر</option>
+							<option value="بطاقة إقامة">بطاقة إقامة </option>
+							<option value="كتيب العائلة">كتيب العائلة</option>
+							<option value="الرقم الوطني">الرقم الوطني</option>
+							</select>
+
+						</div>
+
+
+						<div class="col-md-4">
+							<div class="md-form">
+								<input type="text" placeholder="رقم إثبات الهوية" name="idnumber" id="idnumber" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="doctor.businessLicenseNo" required=""> 
+								{{-- <label for="idnumber" class="">رقم إثبات الهوية</label> --}}
+							</div>
+						</div>
+
+
+
+					</div>
+
+					<div class="row">
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="العنوان" name="address" id="address" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="address" class="">
+									العنوان
+									</label> --}}
+								</div>
+							</div>
+
+
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="	المدينة" name="city" id="city" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="city" class="">
+									المدينة
+									</label> --}}
+								</div>
+							</div>
+
+
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="الدولة" name="country" id="country" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="country" class="">
+									الدولة
+									</label> --}}
+								</div>
+							</div>
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="email" placeholder="البريد الالكتروني" name="email" id="email" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="email" class="">
+									البريد الالكتروني
+									</label> --}}
+								</div>
+							</div>	
+
+					</div>
+
+					<div class="row">
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="الهاتف المحمول1" name="phone1" id="phone1" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="phone1" class="">
+									الهاتف المحمول1
+									</label> --}}
+								</div>
+							</div>
+
+
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="الهاتف المحمول2" name="phone2" id="phone2" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="phone2" class="">
+									الهاتف المحمول2
+									</label> --}}
+								</div>
+							</div>
+
+
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="نوع العمل" name="typejob" id="typejob" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="typejob" class="">
+									نوع العمل
+									</label> --}}
+								</div>
+							</div>
+
+							<div class="col-md-3">
+								<div class="md-form">
+									<input type="text" placeholder="مكان العمل" name="mjob" id="mjob" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="addressForm.address" required="">
+									{{-- <label for="mjob" class="">
+									مكان العمل
+									</label> --}}
+								</div>
+							</div>	
+
+							<div class="col-md-6">
+														
+								<div class="form-group">
+									<span>الصورة الشخصية :</span>	
+								<input type="file" name="attachment" class="form-control">
+								</div>
+							</div>
+
+					</div>
+
+					{{-- <div class="col-md-12">
+						<div class="md-form">
+						<div class="waves-input-wrapper waves-effect waves-light">
+							<div class="waves-input-wrapper waves-effect waves-light">
+								<input type="submit" name="send" value="إرسال" class="btn btn-block btn-danger">
+							</div>
+						</div>
+
+					
+
+						</div>
+					</div> --}}
+
+
+				</form>
+				</div>
+			</div>
+  
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		  <button type="button" class="btn btn-success" data-dismiss="modal">Send</button>
+		  {{-- <button type="button" class="btn btn-success">Save changes</button> --}}
+		</div>
+	  </div>
+	</div>
+  </div>
 
 @endsection
 

@@ -1,3 +1,6 @@
+
+
+
 .form-body {
     margin: 15px;
 }
@@ -11,7 +14,10 @@
     display: none;
 }
 
-
+.btn-danger{
+  background-color: #85c43f;
+  border-color: #85c43f;
+}
 
 /* slider */
 
@@ -21,7 +27,7 @@
     margin: 20px auto 0 auto;
     border-radius: 4px;
     margin-top: 10%;
-    
+    top: -29px;
   }
   
   #slider ul {
@@ -42,21 +48,21 @@
    height: 543px;
     
     text-align: center;
-    line-height: 300px;
+    
     /* background-image: url('../../../img/pages/find-us.png'); */
-    background-color: #044994;
+    background-color: #00acaa;
    
   }
   
-  a.control_prev, a.control_next {
+  a.control_prev, a.control_next,a.control_next_ar {
     position: absolute;
     top: 40%;
     z-index: 999;
     display: block;
-    padding: 4% 3%;
+    padding: 2% 1%;
     width: auto;
     height: auto;
-    background: #2a2a2a;
+    background: #2a2a2aba;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -65,7 +71,7 @@
     cursor: pointer;
   }
   
-  a.control_prev:hover, a.control_next:hover {
+  a.control_prev:hover, a.control_next:hover ,a.control_next_ar:hover {
     opacity: 1;
     /* -webkit-transition: all 0.2s ease; */
     
@@ -81,6 +87,11 @@
     border-radius: 8px;
     margin-right: 8px;
   }
+  a.control_next_ar {
+    left: 0;
+    border-radius: 8px;
+    margin-right: 8px;
+  }
   
   .slider_option {
     position: relative;
@@ -89,7 +100,21 @@
     font-size: 18px;
   }
   .slider-img{
-    width: 63%;
+    width: 95%;
+  }
+  #slider ul li {
+    position: relative;
+ 
+  }
+  #slider ul li div {
+    position: absolute;
+    top: 20%;
+    right: 22%;
+    
+ 
+  }
+  #slider ul li div h1{
+   color: white;
   }
   @media only screen and (max-width: 600px)  {
 

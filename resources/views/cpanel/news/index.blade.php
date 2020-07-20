@@ -5,9 +5,9 @@
 
 @endsection
 @section('body')
-<a href="{{url('/cpanel/news-add')}}" class="btn btn-success" > 
+<a href="{{url('/cpanel/news/add')}}" class="btn btn-success" > 
   Add News 
-  <i class="far fa-eye"></i>
+  
 
 </a>
 
@@ -34,27 +34,32 @@
              
              
               <td>
-              <a href="/cpanel/news-edit/{{$oneNews->id}}" class="btn btn-warning" > 
+              <a href="/cpanel/news/{{$oneNews->id}}/edit" class="btn btn-warning" > 
                 Edit
-                <i class="far fa-eye"></i>
+                
 
               </a>
 
               </td>
               <td>
-              <a href="/cpanel/news-add/{{$oneNews->id}}" class="btn btn-primary" > 
+              <a href="/cpanel/news/{{$oneNews->id}}" class="btn btn-primary" > 
                Show
-              <i class="far fa-eye"></i>
+              
 
               </a>
 
               </td>
               <td>
-                <button type="button" class="btn btn-danger"  data-toggle="modal" onclick="chick_pefor_delete({{$oneNews->id}})" data-target="#delete_Child-id">
-                  Delete
-                  <i class="fas fa-cloud-download-alt"></i>
-
-                </button>
+                <form action="{{url('/cpanel/news/'.$oneNews->id)}}" method="post">
+                  @method('delete')
+                  @csrf
+                    <button type="submit" class="btn btn-danger"  data-toggle="modal"  data-target="#delete_Child-id">
+                      Delete
+                    
+  
+                    </button>
+                
+                </form>
               </td>
             </tr>
      

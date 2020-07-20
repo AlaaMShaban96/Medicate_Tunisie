@@ -27,7 +27,7 @@ return [
     "discounts_on_services_details_part_2"=>"Visit our partner health networks to benefit from exclusive discounts for consultation, diagnostic testing and more. ",
 
     "discounts_on_services_details_part_3"=>"Reduced health care costs are beneficial for those who need monthly medical check-ups.",
-
+ 
 /////
     "health_education"=>"Health Education",
 

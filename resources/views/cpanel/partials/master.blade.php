@@ -1,107 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- 
+* Bootstrap Simple Admin Template
+* Email: heyalexluna@gmail.com
+* Version: 1.1
+* Author: Alexis Luna
+* Copyright 2019 Alexis Luna
+* Website: https://github.com/mralexisluna/bootstrap-simple-admin-template
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-  
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<meta name="csrf-token" content="{{ csrf_token() }}" />
-<link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
-@yield('head')
-<link rel="stylesheet" href="{{asset('css/cpanel/master.css')}}">
-<style>
-  body {
-      font-family:'Tajawal';font-size: 20px;
-  }
-</style>
-
-<title>Control Panel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    
-    <style>
-    
-    </style>
+   
+    @yield('head') 
+    <link href="{{asset('assets/cpanel/vendor/bootstrap4/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/cpanel/css/master.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/cpanel/vendor/chartsjs/Chart.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/cpanel/vendor/flagiconcss3/css/flag-icon.min.css')}}" rel="stylesheet">
+  
 </head>
+
 <body>
-    <nav class="navbar navbar-expand navbar-dark bg-primary"> <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><span class="navbar-toggler-icon"></span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-        <div class="collapse navbar-collapse" id="navbarsExample02">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active" style="color:white;">
-                  {{-- مركز {{auth()->user()->name}}  --}}
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <img src="{{asset('assets/cpanel/img/bootstraper-logo.png')}}" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 
-            </ul>
-            <form class="form-inline my-2 my-md-0"> </form>
-        </div>
-    </nav>
-    <div id="wrapper" class="toggled">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper"> 
-            <ul class="sidebar-nav">
-
-                <li > <a href="{{ url('#') }}"><i class="far fa-user-circle"></i> Profile </a> </li>
-                <li> <a href="{{url('/cpanel/news')}}"> <i style='font-size:24px' class='far'>&#xf1d8;</i>  News </a> </li>
-                <li> <a href="{{url('/cpanel/company-service')}}"> <i style='font-size:24px' class='far'>&#xf0e0;</i> Company Service </a> </li>
-                <li> <a href="{{url('/cpanel/clinic')}}"><i style='font-size:24px' class='fas'>&#xf01c;</i>Clinic </a> </li>
-                <li> <a href="{{url('/cpanel/doctor')}}"><i style='font-size:24px' class='fas'>&#xf48e;</i> Doctor </a> </li>
-                <li> <a href="{{url('/cpanel/pharmacy')}}"><i style='font-size:24px' class='fas'>&#xf77c;</i>Parmacy</a> </li>
-                <li> <a href="{{url('/cpanel/diag')}}"><i class="fas fa-chart-pie"></i>Diag</a> </li>
-
+                <li> 
+                    <a href="{{url('/cpanel/news')}}">  News </a> 
+                </li>
                 <li>
-                  <a href="{{ url('#') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
-                  <i style='font-size:24px' class='fas'>&#xf011;</i>Logout </a>
-                </li>   
-
-              <form id="frm-logout" action="{{ url('#') }}" method="POST" style="display: none;">
-                  {{ csrf_field() }}
-              </form>
-               
+                     <a href="{{url('/cpanel/company-service')}}"> Company Service </a> 
+                    </li>
+                <li> 
+                    <a href="{{url('/cpanel/clinic')}}">Clinic </a>
+                 </li>
+                <li> 
+                    <a href="{{url('/cpanel/doctor')}}"> Doctor </a> 
+                </li>
+                <li> 
+                    <a href="{{url('/cpanel/pharmacy')}}">Parmacy</a> 
+                </li>
+                <li> 
+                    <a href="{{url('/cpanel/diag')}}">Diag</a> 
+                </li>
+ 
+      
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i>Settings</a>
+                </li>
             </ul>
-        </div> 
-        
-        <!-- /#sidebar-wrapper -->
-        <!-- Page Content -->
-        <div id="page-content-wrapper" style="padding: 2px;">
-            <div class="container-fluid">
-            
+        </nav>
+        <div id="body" class="active">
+          <nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+            <button type="button" id="sidebarCollapse" class="btn btn-outline-light default-light-menu"><i class="fas fa-bars"></i><span></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <div class="nav-dropdown">
+                            <a href="" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-link"></i> <span>Quick Links</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                <ul class="nav-list">
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-list"></i> Access Logs</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-database"></i> Back ups</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-cloud-download-alt"></i> Updates</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-user-shield"></i> Roles</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="nav-dropdown">
+                            <a href="" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i> <span>John Doe</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-link-menu">
+                                <ul class="nav-list">
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a></li>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content">
                @yield('body') 
              
-            </div>
-        </div> <!-- /#page-content-wrapper -->
-    </div> <!-- /#wrapper -->
-    <!-- Bootstrap core JavaScript -->
+        </div>
+      </div>
+    </div>  
    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{asset('assets/cpanel/vendor/jquery3/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('assets/cpanel/vendor/bootstrap4/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/cpanel/vendor/fontawesome5/js/solid.min.js')}}"></script>
+    <script src="{{asset('assets/cpanel/vendor/fontawesome5/js/fontawesome.min.js')}}"></script>
+    <script src="{{asset('assets/cpanel/vendor/chartsjs/Chart.min.js')}}"></script>
+    <script src="{{asset('assets/cpanel/js/dashboard-charts.js')}}"></script>
+    <script src="{{asset('assets/cpanel/js/script.js')}}"></script>
+
     
-    <!-- Menu Toggle Script -->
-    <script>
-       
-
-
-      $(function(){
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-
-        $(window).resize(function(e) {
-          if($(window).width()<=768){
-            $("#wrapper").removeClass("toggled");
-          }else{
-            $("#wrapper").addClass("toggled");
-          }
-        });
-      });
-
-        
-    </script>
-    
-
-@yield('script')
+    @yield('script') 
 </body>
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
 </html>

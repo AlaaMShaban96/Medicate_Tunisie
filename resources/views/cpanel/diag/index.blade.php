@@ -1,7 +1,7 @@
 @extends('cpanel/partials/master')
 @section('head')
 
-<title> CPanel | Doctor</title>
+<title> CPanel | Dieg</title>
 
 @endsection
 @section('body')

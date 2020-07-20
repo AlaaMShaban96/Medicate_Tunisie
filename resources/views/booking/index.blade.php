@@ -46,7 +46,7 @@
 									<div class="item">
 								
 								
-										<div id="dd1" class="wrapper-dropdown-2">المشفائ
+										<div id="dd1" class="wrapper-dropdown-2">مزودي الخدمة
 											<p id="clinic-select">اختار </p>
 											<input type="hidden" name="clinic_id" id="clinic_id">
 											<ul class="dropdown">

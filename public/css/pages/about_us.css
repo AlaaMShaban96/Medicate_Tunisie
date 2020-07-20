@@ -3,8 +3,11 @@
 
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-color:#ed1e3b;
+	border-color:#85c43f;
 	
+}
+body{
+  background-color: white;
 }
 #cover{
   position: relative;
