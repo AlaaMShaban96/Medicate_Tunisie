@@ -26,15 +26,24 @@
 <div class="container-fluid gedf-wrapper">
   <div class="row">
 
-
       <div class="col-md-3">
           <div class="card">
               <div class="card-body">
-                  <div class="h5">@LeeCross</div>
-                  <div class="h7 text-muted">Fullname : Miracles Lee Cross</div>
-                  <div class="h7">Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java, Node.js,
-                      etc.
-                  </div>
+
+                <div class="fb-page" 
+                data-href="https://www.facebook.com/MedicateTPA/?_rdc=2&_rdr"
+                data-width="380" 
+                data-hide-cover="false"
+                data-show-facepile="false"></div>
+
+              </div>
+              <div class="card-body">
+
+                {{-- <a class="twitter-timeline" data-lang="en" data-height="300" data-theme="light" >Tweets by TwitterDev</a>  --}}
+                <a class="twitter-timeline" data-lang="en" data-height="300" data-theme="light" href="https://twitter.com/MedicateTPA">Tweets by TwitterDev</a> 
+              </div>
+              <div class="card-body">
+                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ala-mohammed-abid-41172297"><a class="LI-simple-link" href='https://ly.linkedin.com/in/ala-mohammed-abid-41172297?trk=profile-badge'>Ala Mohammed Abid</a></div>
               </div>
               <ul class="list-group list-group-flush">
                   <li class="list-group-item">
@@ -166,5 +175,17 @@
 @endsection
 
 @section('script')
-
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '278462426856837',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v7.0'
+    });
+  };
+</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 @endsection

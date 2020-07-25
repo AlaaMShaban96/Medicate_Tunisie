@@ -17,7 +17,8 @@
           <div class="col-md-6">
               <div class="well-block">
                   <div class="well-title">
-                      <h2>Questions? Book an Appointment</h2>
+                      <br>
+                      <h2> Book an Appointment</h2>
                   </div>
                   <form action="{{url('/booking/appointment/'.$appointment->id)}}" method="post">
                     @csrf

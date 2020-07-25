@@ -75,4 +75,9 @@
     border-radius: 5px;
     margin-bottom: 30px;
   }
-  
+  .download-app{
+    width: 42%;
+  }
+  .download-app-content{
+    text-align: left;
+  }

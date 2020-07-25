@@ -4,6 +4,8 @@ $('#item3').hide();
 $('#item4').hide();
 $('#item5').hide();
 
+// location.href = "#"+index;
+// document.getElementById(index).scrollIntoView();
 function show(id) {
     hide();
 

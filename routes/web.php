@@ -24,12 +24,18 @@ Route::get('/api', 'HomeController@api');
 
 
 Route::get('/', 'HomeController@index');
-// Route::get('/find-us', 
+// Route::get('/find-us',  
 Route::view('/find-us', 'findUs');
 Route::view('/about-us', 'aboutUs');
-Route::view('/yourHealth', 'yourHealth');
+// Route::view('/yourHealth', 'yourHealth');
+Route::get('/yourHealth', 'HomeController@yourHealth');
 
-Route::view('/cpanel2', 'cpanel2.index');
+
+Route::view('/handicappedCard', 'companyService.handicappedCard');
+Route::view('/famileCard', 'companyService.famileCard');
+Route::view('/internationalCard', 'companyService.internationalCard');
+Route::view('/schoolCard', 'companyService.schoolCard');
+
 
 Route::view('/cpanel', 'cpanel/index');
 // Route::view('/bookin', 'cpanel/index');
@@ -93,6 +99,15 @@ Route::group(['prefix' => '/cpanel'], function () {
     Route::get('/compane-service/{service}/edit', 'Cpanel\CompanyServiceController@edit');
     Route::put('/compane-service/{service}/update', 'Cpanel\CompanyServiceController@update');
     Route::delete('/compane-service/{service}', 'Cpanel\CompanyServiceController@destroy');
+
+    //this route for partner
+    Route::get('/partner', 'Cpanel\PartnerController@index');
+    Route::get('/partner/add', 'Cpanel\PartnerController@create');
+    Route::post('/partner/store', 'Cpanel\PartnerController@store');
+    Route::get('/partner/{partner}/edit', 'Cpanel\PartnerController@edit');
+    Route::put('/partner/{partner}/update', 'Cpanel\PartnerController@update');
+
+    Route::delete('/partner/{partner}', 'Cpanel\PartnerController@destroy');
 
   
 });

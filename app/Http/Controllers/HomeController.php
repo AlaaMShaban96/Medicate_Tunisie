@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\News;
+use App\Partner;
 use GuzzleHttp\Client;
 use App\CompanyService;
 use Illuminate\Http\Request;
@@ -19,8 +20,9 @@ class HomeController extends Controller
     public function index()
     { 
         $news= News::all()->take(10);
+        $partners =Partner::all();
         $companyServices = CompanyService::all()->sortBy('id');
-        return view('index',compact('news','companyServices'));
+        return view('index',compact('news','companyServices','partners'));
     }
   
    public function translater($lang)
@@ -28,6 +30,11 @@ class HomeController extends Controller
         Session::put('applocale', $lang);
     
          return Redirect::back();
+   }
+   public function yourHealth(Request $request )
+   {
+       $class =$request->x;
+       return view('yourHealth',compact('class'));
    }
 
    public function api()

@@ -33,6 +33,9 @@
 
  <style>
  
+
+
+
   </style>
     @yield('head')
     <title>Medicate Tunis :Home</title>
@@ -56,11 +59,29 @@
     </div>
 
 
-
-
+   
+<div class="icon-bar">
   
+    {{-- <a class="social-button facebook" href="https://web.facebook.com/MedicateTPA/?_rdc=1&_rdr"></a>
+    <a class="social-button twitter" href="https://twitter.com/MedicateTPA"></a>
+    <a class="social-button linkedin" href="https://www.linkedin.com/in/MedicateTPA/"></a>
+ 
+   --}}
+  <a href="https://web.facebook.com/MedicateTPA/?_rdc=1&_rdr" target="_blank" class="facebook"><i class="fa fa-facebook fa-2x"></i>  </a> 
+  <a href="https://www.linkedin.com/in/MedicateTPA/" target="_blank" class="facebook"><i class="fa fa-linkedin fa-2x"></i></a> 
+  <a href="https://twitter.com/MedicateTPA" target="_blank" class="facebook"><i class="fa fa-twitter fa-2x"></i></a> 
+  <a href="" target="_blank" class="facebook" title="{{__('_header._singup')}}" data-toggle="modal" data-target="#singupModal"><i class="fa fa-plus-circle fa-2x"></i></a> 
+  <a href="https://api.whatsapp.com/send?phone=+21671948171" target="_blank" class="facebook"><i class="fa fa-whatsapp  fa-2x"></i>
+  </a>
+
+</div>
+
     
-  
+<!--Start of Tawk.to Script-->
+
+  <!--End of Tawk.to Script-->
+
+  <!--End of Tawk.to Script-->
 
 
 
@@ -80,7 +101,32 @@
   <script src="{{asset('js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('js/nivo-lightbox.min.js')}}"></script>
   <script src="{{asset('contactform/contactform.js')}}"></script>
-  
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5db03ca2df22d91339a09dd7/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--Start of Tawk.to Script-->
+{{-- <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5f17ef7aa45e787d128be672/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script> --}}
+  <!--End of Tawk.to Script-->
+  <!--End of Tawk.to Script-->
   @yield('script')
 </body>
 </html>

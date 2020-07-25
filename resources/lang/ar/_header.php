@@ -24,8 +24,8 @@ return[
 
     "doctor"=>"دكتور",
     "parmacy"=>"صيدلية",
-    "diag"=>"تشخيص",
-    "clinic"=>"عيادة",
+    "diag"=>"مركز تحليل",
+    "clinic"=>"مصحة",
     
     
     "phone_number"=>"رقم الهاتف",

@@ -118,3 +118,13 @@ margin-bottom: 31px;
   white-space: nowrap;
   font-weight: 200;
 }
+@media  (max-width: 585px) {
+  .col-md-3-icon {
+    width: 100%;
+    height: 243px;
+  }
+}
+img {
+  border: 0;
+  width: 63%;
+}

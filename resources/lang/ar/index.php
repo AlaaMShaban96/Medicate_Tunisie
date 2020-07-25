@@ -1,7 +1,7 @@
 <?php
 
 return[
-    // "our_services"=>"خدماتنا",
+    "our_services"=>"خدماتنا",
 
     // "healthcare_identity"=>"بطاقة medicate للرعاية الصحية",
 
@@ -27,6 +27,9 @@ return[
     // "network_ecosystem"=>"الخدمات الإلكترونية",
 
     // "network_ecosystem_details"=>"مع السجل الصحي الإلكتروني ، الذي يضمن رعاية صحية بجودة عالية. لا يحتاج المرء إلى إضاعة الوقت في العثور على ملفه أثناء الطوارئ. ",
+    "our_partners"=>"شركائنا",
+    "news"=>"الأخبار",
+
 
 
 ];

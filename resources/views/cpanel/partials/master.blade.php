@@ -51,6 +51,9 @@
                 <li> 
                     <a href="{{url('/cpanel/diag')}}">Diag</a> 
                 </li>
+                <li> 
+                    <a href="{{url('/cpanel/partner')}}">Partner</a> 
+                </li>
  
       
                 <li>

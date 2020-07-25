@@ -7,7 +7,7 @@
 @section('head')
 
 
-
+<link rel="stylesheet" href="{{asset('css/pages/find_us.css')}}">
 <link rel="stylesheet" href="{{asset('css/pages/about_us.css')}}">
 <title>Medicate Tunis : About Us</title>
 <style>
@@ -17,15 +17,7 @@
   left: 35%;
   transform: translate(-70%, -30%);
 }
-blockquote {
-  background:#ffffffad;
-  border-left:10px solid #ccc;
-  margin:1.5em 10px;
-  padding:.5em 10px;
-  font-size: 39px;
-  quotes:"\201C""\201D""\2018""\2019";
-  color:#291944 ;
-}
+
 blockquote:before {
   color:black;
   content:open-quote;
@@ -354,8 +346,210 @@ blockquote:after {
     </div>
   </div>
 </div> --}}
+<section>
+  <div id="xx">
+    <div class="container">
+  
+    <h1 class="text-center"> {{__('find_us.find_us')}} </h1>
+      <div class="row"> 
+      <!--team-4--> 
+        <div class="col-lg-4">
+          <div class="our-team-main">
+          
+            <div class="team-front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/2000px-Flag_of_Libya.svg.png"  class="img-fluid" />
+              <h3>{{__('find_us.libya_titel')}}</h3>
+              {{-- <p>Web Designer</p> --}}
+            </div>
+            
+            <div class="team-back">
+              <span>
+                {{__('find_us.libya_discription')}}
+                <br>
+                <b>Tel: +973 1 7382721</b><br>
+                <b>Fax: +973 1 7382082</b><br>
+                
+                Email: nextcare@nextcarehealth.com
+              </span>
+              <br>
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+  
+            </div>
+          
+          </div>
+        </div>
+        <!--team-4-->
+        <div class="col-lg-4">
+          <div class="our-team-main">
+    
+          <div class="team-front">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" class="img-fluid" />
+            <h3>Turkey</h3>
+            {{-- <p>Web Designer</p> --}}
+          </div>
+    
+          <div class="team-back">
+            <span>
+              <p>
+                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
+              </p>
+              <b>Tel: +973 1 7382721</b><br>
+              <b>Fax: +973 1 7382082</b><br>
+              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
+              Email: nextcare@nextcarehealth.com</p>
+            </span>
+            <br>
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+          </div>
+    
+          </div>
+        </div>
+      <!--team-1-->
+      
+  
+      <!--team-2-->
+        <div class="col-lg-4">
+          <div class="our-team-main">
+  
+            <div class="team-front">
+              <img src="https://flagpedia.net/data/flags/vector/tn.svg"   class="img-fluid" />
+              <h3>Tunisia</h3>
+            {{-- <p>Web Designer</p> --}}
+            </div>
+  
+          <div class="team-back">
+            <span>
+              <p>
+                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
+              </p>
+              <b>Tel: +973 1 7382721</b><br>
+              <b>Fax: +973 1 7382082</b><br>
+              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
+              Email: nextcare@nextcarehealth.com</p>
+            </span>
+            <br>
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+          </div>
+  
+          </div>
+        </div>
+      <!--team-2-->
+  
+      <!--team-3-->
+        <div class="col-lg-4">
+          <div class="our-team-main">
+  
+            <div class="team-front">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/800px-Flag_of_Algeria.svg.png"  class="img-fluid" />
+              <h3>Algeria</h3>
+              {{-- <p>Web Designer</p> --}}
+            </div>
+  
+            <div class="team-back">
+              <span>
+                <p>
+                  Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
+                </p>
+                <b>Tel: +973 1 7382721</b><br>
+                <b>Fax: +973 1 7382082</b><br>
+                <p>P.O.Box 18442 Manama, Kingdom of Bahrain
+                Email: nextcare@nextcarehealth.com</p>
+              </span>
+              <br>
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+            </div>
+  
+          </div>
+        </div>
+      <!--team-3-->
+  
+  
+  
+      <!--team-5-->
+      <div class="col-lg-4">
+        <div class="our-team-main">
+  
+          <div class="team-front">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" class="img-fluid" />
+            <h3>Germany</h3>
+          {{-- <p>Web Designer</p> --}}
+          </div>
+  
+          <div class="team-back">
+            <span>
+              <p>
+                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
+              </p>
+              <b>Tel: +973 1 7382721</b><br>
+              <b>Fax: +973 1 7382082</b><br>
+              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
+              Email: nextcare@nextcarehealth.com</p>
+            </span>
+            <br>
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+          </div>
+  
+        </div>
+      </div>
+      <!--team-5-->
+      <div class="col-lg-4">
+        <div class="our-team-main">
+  
+        <div class="team-front">
+          <img src="https://cdn.webshopapp.com/shops/94414/files/53852256/egypt-flag-image-free-download.jpg"  class="img-fluid" />
+          <h3>Egypt</h3>
+          {{-- <p>Web Designer</p> --}}
+        </div>
+  
+        <div class="team-back">
+          <span>
+            <p>
+              Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
+            </p>
+            <b>Tel: +973 1 7382721</b><br>
+            <b>Fax: +973 1 7382082</b><br>
+            <p>P.O.Box 18442 Manama, Kingdom of Bahrain
+            Email: nextcare@nextcarehealth.com</p>
+          </span>
+          
+  
+          <br>
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('find_us.maps')}}
+              </a>
+        </div>
+  
+        </div>
+      </div>
+    <!--team-1-->
+      <!--team-6-->
+    
+      <!--team-6-->
+  
+  
+  
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="icon-bar">
+  <a href="https://www.facebook.com/Koprimo-SA-de-CV-1447440632146814/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://www.instagram.com/koprimo/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
+  <a href="https://www.linkedin.com/company/koprimo/?viewAsMember=true" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
 
+</div>
 @endsection
 
 @section('script')

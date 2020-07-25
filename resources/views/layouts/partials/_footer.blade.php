@@ -70,7 +70,7 @@ App::setLocale(	Session::get('applocale'));
                         <span class="fa-stack fa-lg">
                           <i class="fa fa-circle fa-stack-2x"></i>
                           <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                        </span> +216 71 948 171
+                        </span> <span>171 948 71 216 00 </span>
                       </li>
                       <li>
                         <span class="fa-stack fa-lg">
@@ -80,6 +80,15 @@ App::setLocale(	Session::get('applocale'));
                       </li>
 
                     </ul>
+                    <div class="download-app-content">
+                      <a href="">
+                        <img class="download-app" src="{{asset('img/pages/index/android.png')}}" alt="download app from play store" srcset="">
+                      </a>
+                      <a href="">
+                        <img class="download-app" src="{{asset('img/pages/index/apple.png')}}" alt="download app from app store" srcset="">
+                      </a>
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -149,7 +158,7 @@ App::setLocale(	Session::get('applocale'));
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateEGY')}}</h5>
                     <p>{{__('_footer.about_medicate_info')}}</p>
-                  </div>
+                  </div>download-app-content
                 </div>
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
@@ -263,9 +272,13 @@ App::setLocale(	Session::get('applocale'));
                 </div>
                 <button type="button" class="btn btn-success">{{__('_footer.send')}}</button>
               </form>
+              
             </div>
+            
           </div>
+          
         </div>
+       
         <div class="col-sm-6 col-md-3">
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
@@ -284,7 +297,7 @@ App::setLocale(	Session::get('applocale'));
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                  </span> +216 71 948 171
+                  </span>00 216 71 948 171
                 </li>
                 <li>
                   <span class="fa-stack fa-lg">
@@ -294,6 +307,13 @@ App::setLocale(	Session::get('applocale'));
                 </li>
 
               </ul>
+              <div >
+                <img class="download-app" src="{{asset('img/pages/index/android.png')}}" alt="download app from play store" srcset="">
+                <img class="download-app" src="{{asset('img/pages/index/apple.png')}}" alt="download app from app store" srcset="">
+
+              </div>
+              {{-- <br> --}}
+              
             </div>
           </div>
         </div>
@@ -431,6 +451,6 @@ App::setLocale(	Session::get('applocale'));
             </div>
           </div>
         </div>
-      </div>
+    </div>
     @endswitch
   </footer>

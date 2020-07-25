@@ -5,53 +5,50 @@ App::setLocale(	Session::get('applocale'));
  <!-- Section: intro -->
 
 <link rel="stylesheet" href="{{ asset('css/pages/partials/_header.css')}}">
+<style>
 
+
+</style>
 @switch(Session::get('applocale'))
 
-    @case("ar")
+  @case("ar")
 
     <section id="intro" class="intro">
     
  
-      <div id="slider">
+      <div id="slider" style="position: relative; width: 100%;height: 50px;background-color: #00acaa; @media only screen and (max-width: 600px)  {height: 128px;}">
  
-        <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
-            <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
-                  <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+            <div  id="form-login-singup" >
+                  {{-- <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
                   {{__('_header._login')}}
                   </button>
                 
                 
                   <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
                   {{__('_header._singup')}}
-                  </button>
-             </div>
-         </div>
+                  </button> --}}
+                  <div id="content-form">
+                    <div id="right">
+                      <a href="" data-toggle="modal" data-target="#loginModal">  
+                        {{__('_header._login')}}
+                      </a>
+                      |
+                      <a href="" data-toggle="modal" data-target="#singupModal">
+                        {{__('_header._singup')}}
+                      </a>
+                    </div>
+                    
+                  </div>
+                  <div id="text-content">
+                    Health Care - Service - Innovation
+                  </div>
+            </div>
         <a  class="control_next_ar">>></a>
         <a  class="control_prev"><</a>
 
         <ul>
-          <li >
-               {{-- <div>
-                <h1> رمز الاستجابة السريع QR  </h1>
-                <h1> السجلات الصحية </h1>
-               </div> --}}
-                 
-                 {{-- <img class="slider-img" src="{{asset('/img/pages/index/phonebanner.png')}}" alt=""> --}}
-                
+        
 
-
-          </li>
-          <li>
-            {{-- <div>
-              <h1> رمز الاستجابة السريع QR  </h1>
-              <h1> السجلات الصحية </h1>
-            </div> --}}
-
-            {{-- <img class="slider-img" src="{{asset('/img/pages/index/phonebanner2.png')}}" alt="">          </li> --}}
-          <li>SLIDE 3</li>
-          <li>SLIDE 4</li>
-     
           <li>
             
             <img class="slider-img" src="{{asset('/img/pages/index/phone.png')}}" alt="">          </li>
@@ -78,44 +75,47 @@ App::setLocale(	Session::get('applocale'));
           <section id="intro" class="intro">
       
   
-            <div id="slider">
-
-              <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
-                <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
-                      <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                      {{__('_header._login')}}
-                      </button>
-                    
-                    
-                      <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                      {{__('_header._singup')}}
-                      </button>
-                 </div>
+            <div id="slider" style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
+ 
+              <div  id="form-login-singup" >
+                    {{-- <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                    {{__('_header._login')}}
+                    </button>
+                  
+                  
+                    <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                    {{__('_header._singup')}}
+                    </button> --}}
+                    <div id="content-form">
+                      <div id="right">
+                        <a href="" data-toggle="modal" data-target="#loginModal">  
+                          {{__('_header._login')}}
+                        </a>
+                        |
+                        <a href="" data-toggle="modal" data-target="#singupModal">
+                          {{__('_header._singup')}}
+                        </a>
+                      </div>
+                      
+                    </div>
+                    <div id="text-content">
+                      Health Care - Service - Innovation
+                    </div>
              </div>
               <a  class="control_next">>></a>
               <a  class="control_prev"><</a>
 
               <ul>
-                <li >
-                    <div>
-                    </div>
-                      
-                      {{-- <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt=""> --}}
-                      
-
-
-                </li>
+              
                 <li>
-
-                  {{-- <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset=""> --}}
+                  <img class="slider-img" src="{{asset('/img/pages/index/phone.png')}}" alt=""> 
                 </li>
-                <li>SLIDE 3</li>
-                <li>SLIDE 4</li>
-                <li>SLIDE 5</li>
+      
                 <li>
-                  <img class="slider-img" src="{{asset('/img/pages/index/phonebanneren.png')}}" alt="">          </li>
-
+                  <img class="slider-img" src="{{asset('/img/pages/index/phonebanneren.png')}}" alt="">  
                 </li>
+
+                
               </ul>  
             </div>
 
@@ -133,45 +133,45 @@ App::setLocale(	Session::get('applocale'));
         <section id="intro" class="intro">
     
  
-                    <div id="slider">
-
-                      <div style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
-                        <div style="position: absolute; top: 1px;right: 16px;margin-top: 0.5%;">
-                              <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                              {{__('_header._login')}}
-                              </button>
-                            
-                            
-                              <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                              {{__('_header._singup')}}
-                              </button>
-                         </div>
+        <div id="slider" style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
+ 
+            <div  id="form-login-singup" >
+                  {{-- <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
+                  {{__('_header._login')}}
+                  </button>
+                
+                
+                  <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
+                  {{__('_header._singup')}}
+                  </button> --}}
+                  <div id="content-form">
+                    <div id="right">
+                      <a href="" data-toggle="modal" data-target="#loginModal">  
+                        {{__('_header._login')}}
+                      </a>
+                      |
+                      <a href="" data-toggle="modal" data-target="#singupModal">
+                        {{__('_header._singup')}}
+                      </a>
+                    </div>
+                    
+                  </div>
+                  <div id="text-content">
+                    Health Care - Service - Innovation
+                  </div>
                      </div>
                       <a  class="control_next">>></a>
                       <a  class="control_prev"><</a>
 
                       <ul>
-                        <li >
-                             <div>
-                             </div>
-                               
-                               {{-- <img class="slider-img" src="https://pbs.twimg.com/media/EZ5rdHBXgAACye4.jpg" alt=""> --}}
-                              
-
-
-                        </li>
                         <li>
-
-                          {{-- <img class="slider-img" src="https://i.vimeocdn.com/video/809649943_780x439.jpg" alt="" srcset=""> --}}
+                          <img class="slider-img" src="{{asset('/img/pages/index/phone.png')}}" alt=""> 
                         </li>
-                        <li>SLIDE 3</li>
-                        <li>SLIDE 4</li>
-                      
+              
                         <li>
-                          <img class="slider-img" src="{{asset('/img/pages/index/phonebannerfr.png')}}" alt="">          </li>
-                          {{-- <img class="slider-img"  src="https://pbs.twimg.com/media/EYi6KloWAAAtTBq.jpg" alt="" srcset=""> --}}
-
+                          <img class="slider-img" src="{{asset('/img/pages/index/phonebanneren.png')}}" alt="">  
                         </li>
+        
                       </ul>  
                     </div>
 {{-- 

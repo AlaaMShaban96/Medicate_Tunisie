@@ -7,7 +7,11 @@
 
 @section('head')
   <link rel="stylesheet" href="{{asset('css/pages/index.css')}}">
- 
+ <style>
+   .partner-img{
+     width: 40%;
+   }
+ </style>
 @endsection
 
 @section('content')
@@ -42,10 +46,11 @@
                     </div>
 
                     {{-- <i class="{{ $service->img_path }}" aria-hidden="true"></i> --}}
-                    <h4 class="h-bold"> 
-                      {{-- {{__('index.healthcare_identity')}}  --}}
-                      {{ $service->titel_ar }}
-                    </h4>
+                    <a href="{{url("/service-info/$service->id")}}">
+                      <h4 class="h-bold"> 
+                          {{ $service->titel_ar }}
+                      </h4>
+                    </a>
                     @php
                           echo($service->descrption_ar )
                     @endphp
@@ -88,7 +93,7 @@
                     <div>
                       <img src="{{asset("$service->img_path")}}" style="width: 40%;margin-left: 31%" class="img-responsive" alt="" />
                     </div>
-                    <a href="">
+                    <a href="{{url("/service-info/$service->id")}}">
                       <h4 class="h-bold"> 
                           {{ $service->titel_en }}
                       </h4>
@@ -135,10 +140,11 @@
                     <div>
                       <img src="{{asset("$service->img_path")}}" style="width: 40%;margin-left: 31%" class="img-responsive" alt="" />
                     </div>
-                    <h4 class="h-bold"> 
-                      {{-- {{__('index.healthcare_identity')}}  --}}
-                      {{ $service->titel_fr }}
-                    </h4>
+                    <a href="{{url("/service-info/$service->id")}}">
+                      <h4 class="h-bold"> 
+                          {{ $service->titel_fr }}
+                      </h4>
+                    </a>
                     {{-- <p>{{__('index.healthcare_identity_details')}}</p> --}}
                    
                     @php
@@ -171,7 +177,7 @@
                 <div class="col-md-8">
                   <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="cta-text">
-                      <h3>تطبيق Medicate علاش نبوة ؟</h3>
+                      <h3>حمل تطبيق Mymedicate</h3>
                       <p> </p>
                     </div>
                   </div>
@@ -179,7 +185,9 @@
                 <div class="col-md-4">
                   <div class="wow lightSpeedIn" data-wow-delay="0.1s">
                     <div class="cta-btn">
-                      <a href="#" class="btn btn-skin btn-lg">Book an appoinment</a>
+                      <img class="download-app" src="{{asset('img/pages/index/android.png')}}" alt="download app from play store" srcset="">
+                      <img class="download-app" src="{{asset('img/pages/index/apple.png')}}" alt="download app from app store" srcset="">
+      
                     </div>
                   </div>
                 </div>
@@ -412,8 +420,8 @@
             <div class="col-lg-8 col-lg-offset-2">
               <div class="wow fadeInDown" data-wow-delay="0.1s">
                 <div class="section-heading text-center">
-                  <h2 class="h-bold">News</h2>
-                  <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                  <h2 class="h-bold">{{__('index.news')}}</h2>
+                  {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
                 </div>
               </div>
               <div class="divider-short"></div>
@@ -506,8 +514,8 @@
             <div class="col-lg-8 col-lg-offset-2">
               <div class="wow fadeInDown" data-wow-delay="0.1s">
                 <div class="section-heading text-center">
-                  <h2 class="h-bold">News</h2>
-                  <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                  <h2 class="h-bold">{{__('index.news')}}</h2>
+                  {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
                 </div>
               </div>
               <div class="divider-short"></div>
@@ -600,8 +608,8 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="section-heading text-center">
-                <h2 class="h-bold">News</h2>
-                <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p>
+                <h2 class="h-bold">{{__('index.news')}}</h2>
+                {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
               </div>
             </div>
             <div class="divider-short"></div>
@@ -609,7 +617,7 @@
         </div>
       </div>
     </section>
-  <!-- /Section: works -->
+    <!-- /Section: works -->
 
 
     <!-- Section: testimonial -->
@@ -685,7 +693,7 @@
     </section>
     <!-- /Section: testimonial -->
 
-    @break
+  @break
 @endswitch
 
   
@@ -698,7 +706,7 @@
             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
               <div class="section-heading text-center">
                 <h2 class="h-bold">Health packages</h2>
-                <p>Take charge of your health today with our specially designed health packages</p>
+                {{-- <p>Take charge of your health today with our specially designed health packages</p> --}}
               </div>
             </div>
             <div class="divider-short"></div>
@@ -780,8 +788,7 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="wow lightSpeedIn" data-wow-delay="0.1s">
               <div class="section-heading text-center">
-                <h2 class="h-bold">Our partner</h2>
-                <p>Take charge of your health today with our specially designed health packages</p>
+                <h2 class="h-bold">{{__('index.our_partners')}}</h2>
               </div>
             </div>
             <div class="divider-short"></div>
@@ -789,29 +796,24 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="img/dummy/partner-1.jpg" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="img/dummy/partner-2.jpg" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="img/dummy/partner-3.jpg" alt="" /></a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <div class="partner">
-              <a href="#"><img src="img/dummy/partner-4.jpg" alt="" /></a>
-            </div>
-          </div>
+      <div class="container" style="display: flex;" >
+        <div style="width: 16%;height: 340px;">
+          <img style="width: 92%;" src="{{asset('img/pages/index/partner/owyatgroup-01.png')}}" alt="" />
         </div>
+        <div class="row" style="width: 100%;">
+          @foreach ($partners as $partner)
+              
+         
+            <div class="col-sm-2 col-md-3">
+              <div class="partner">
+                
+                <a href="#"><img style=" width:{{$partner->width}}%;" src="{{asset("$partner->img_path")}}" alt="" /></a>
+
+              </div>
+            </div>
+          @endforeach
+        </div>
+   
       </div>
     </section>
 

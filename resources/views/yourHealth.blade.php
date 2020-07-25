@@ -14,19 +14,19 @@
 
 @section('content')
 
-
+{{-- <input type="hidden" id="idscroll" value="{{$id}}"> --}}
 <div class="content">
 
 	<div id="img-content">
-		<img id="cover" src="{{'img/pages/med1.jpeg'}}" alt="" >
+		<img id="cover" src="{{'img/pages/med1.png'}}" alt="" >
 	</div>
 
 	<div id="your-health">
 		<div id="your-health-titel">
 
-			<h1>صحتك</h1>
+			<h1>صحتكم</h1>
 		</div>
-		<div id="your-health-info">
+		<div id="your-health-info" >
 
 			<h1>ماهو برنامج صحتك ؟ </h1>
 			<p>ابتكرنا برنامج صحتك الذي يوفر مجموعة من الخدمات المتميزة وغير المسبوقة لك ولعائلتك، سعياً منا لتوفير الرعاية الصحية الأفضل، لحياتكم الاجتماعية والعملية. بمجرد انضمامكم إلينا، ستحصلون تلقائياً وبدون رسوم إضافية على خدمات برنامج صحتك الذي سيكون رفيقكم الصحي أينما تكونوا وفي كل الأوقات. يمكنكم الاستفادة من برنامج صحتك بمجرد الاتصال بأطباء ميديكيت على الرقم ... أو من خلال تسجيل الدخول إلى صحتك ، بوابة خدماتنا الصحية. </p>
@@ -34,8 +34,8 @@
 		</div>
 	</div>
 
-	<div id="health-program-cover">
-		<div id="health-program">
+	<div id="health-program-cover" class="x">
+		<div id="health-program" >
 			<h1>برنامج صحتك</h1>
 			<h4>اكتشف خدمات الصحية الحصرية من برنامج صحتك </h4>
 		</div>
@@ -193,7 +193,9 @@
 			<div class="content-collapsible">
 				<button type="button" class="collapsible">كيف يمكنني الاستفادة من برنامج صحتك؟</button>
 				<div class="content-text">
-					<p>يمكنك الاستفادة من البرنامج بالاتصال على الرقم المجاني , و سوف نقدم لك الخدمات الملائمة لاحتياجاتك الصحية. </p>
+				
+						<p>يمكنك الاستفادة من البرنامج بالاتصال على الرقم المجاني , و سوف نقدم لك الخدمات الملائمة لاحتياجاتك الصحية. </p>
+					
 				</div>
 			</div>
 			<div class="content-collapsible">
@@ -229,7 +231,7 @@
 				</div>
 			</div>
 	
-			<div class="content-collapsible">
+			<div  class="content-collapsible">
 				<button type="button" class="collapsible">ماهي تخصصات أطباء صحتك؟</button>
 				<div class="content-text">
 					<p>أطباء ميديكيت أطباء طب عام.  </p>
@@ -241,6 +243,7 @@
 					<p>لا يستطيع برنامج صحتك مساعدتكم في ذلك. فضلاً اتصل بخدمة العملاء على المساعدة.   </p>
 				</div>
 			</div>
+			
 	 </div>
 </div>
 
@@ -543,9 +546,26 @@
 	  </div>
 	</div>
   </div>
-
+<input type="hidden" class="class" value="{{$class}}">
 @endsection
 
 @section('script')
 <script src="{{asset('js/pages/yourHealth.js')}}"></script>
+<script>
+// var myElement = document.getElementById('x');
+// var topPos = myElement.offsetTop;
+// document.getElementById('x').scrollTop = topPos;
+$(function() {
+	
+var index=	$('.class').val();
+console.log(index);
+    var target = $('.'+index);
+    if (target.length) {
+        $('html,body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+        return false;
+    }
+});
+</script>
 @endsection
