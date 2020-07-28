@@ -24,7 +24,11 @@ Route::get('/api', 'HomeController@api');
 
 
 Route::get('/', 'HomeController@index');
-// Route::get('/find-us',  
+Route::post('/send-complaint', 'HomeController@sendComplaint');
+Route::post('/send-inquiry', 'HomeController@sendInquiry');
+Route::post('/send-scam', 'HomeController@sendScam');
+Route::post('/send-suggestion', 'HomeController@sendSuggestion');
+// Route::get('/find-us', inquiry.blade.php 
 Route::view('/find-us', 'findUs');
 Route::view('/about-us', 'aboutUs');
 // Route::view('/yourHealth', 'yourHealth');
@@ -35,6 +39,10 @@ Route::view('/handicappedCard', 'companyService.handicappedCard');
 Route::view('/famileCard', 'companyService.famileCard');
 Route::view('/internationalCard', 'companyService.internationalCard');
 Route::view('/schoolCard', 'companyService.schoolCard');
+Route::view('/suggestion', 'customerCare.suggestion');
+Route::view('/inquiry', 'customerCare.inquiry');
+Route::view('/complaint', 'customerCare.complaint');
+Route::view('/scam', 'customerCare.scam');
 
 
 Route::view('/cpanel', 'cpanel/index');

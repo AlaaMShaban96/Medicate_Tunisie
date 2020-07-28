@@ -33,8 +33,8 @@ App::setLocale(	Session::get('applocale'));
                         {{__('_header._login')}}
                       </a>
                       |
-                      <a href="" data-toggle="modal" data-target="#singupModal">
-                        {{__('_header._singup')}}
+                      <a href="" data-toggle="modal" data-target="#joinUsModal">
+                        إنشاء حساب
                       </a>
                     </div>
                     
@@ -130,7 +130,7 @@ App::setLocale(	Session::get('applocale'));
 
     @default
 
-        <section id="intro" class="intro">
+  <section id="intro" class="intro">
     
  
         <div id="slider" style="position: relative; width: 100%;height: 50px;background-color: #00acaa;">
@@ -256,6 +256,85 @@ App::setLocale(	Session::get('applocale'));
                 <div class="col-md-12">
                   <div class="md-form">
                     <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" name="submit" value="LOGIN" class="btn btn-block btn-danger" data-ng-disabled="loginForm.$invalid || showSpinner" disabled="disabled"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+
+          </div>
+         
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        {{-- <button type="button" class="btn btn-success">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="joinUsModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          <div class="tab-content-header">
+            <h3 >
+              إنشاء حساب
+            </h3>
+
+          </div>
+        </h5>
+       
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <div class="form-body">
+
+            <form id="loginForm" name="loginForm" data-ng-submit="login(loginForm);" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+            <input type="hidden" name="type" data-ng-model="type" data-ng-init="type=&#39;PARTNER&#39;" value="PARTNER" autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+             
+              <div class="row">
+
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <label for="loginEmail" class="">Enter Your Name </label>
+                    <input type="text" name="email" id="loginEmail" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="email" required="">
+                    
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <label for="loginEmail" class="">Enter Email </label>
+                    <input type="text" name="email" id="loginEmail" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="email" required="">
+                    
+                  </div>
+                </div>
+               
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <label for="loginPassword" class="">Password</label>
+                    <input type="password" id="loginPassword" name="password" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" data-ng-model="password" required=""> 
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="custom-control custom-checkbox sign-check">
+                    <!-- <input type="checkbox" class="custom-control-input"
+                      id="accept">
+                     <label class="custom-control-label" for="accept">Remember Me</label> -->
+                    {{-- <a href="https://mymedicare.in/forgot-password" target="_self" style="color: black;">Forgot
+                      password?</a> --}}
+                  </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                  <div class="md-form">
+                    <div class="waves-input-wrapper waves-effect waves-light"><input type="submit" name="submit" value="SingUp" class="btn btn-block btn-success" ></div>
                   </div>
                 </div>
               </div>

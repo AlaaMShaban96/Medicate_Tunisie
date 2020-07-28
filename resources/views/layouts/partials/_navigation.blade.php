@@ -135,8 +135,23 @@
                    
 
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
-                    <li id=""><a href="">{{__('_nav._customer_service')}}</a></li>
+                    <li id="">
+
+                      <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{__('_nav._customer_service')}}
+                      </a> 
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <div class="dropdown-item" ><a href="{{url('/suggestion')}}"> تقديم إقتراح </a></div>  
+                        <div class="dropdown-item" ><a href="{{url('/inquiry')}}">تقديم استفسار</a></div>
+                        <div class="dropdown-item" ><a href="{{url('/complaint')}}">تقديم شكوي </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/scam')}}"> إبلاغ عن إحتيال </a></div>
+                  
+                                            
+            
+                      </div>
+                    </li>
                     <li id=""><a href="">{{__('_nav._investors')}}</a></li>
+                    <li id=""><a href="">خدمات مسانيدة</a></li>
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li> --}}
                     <li id="service">

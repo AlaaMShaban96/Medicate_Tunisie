@@ -67,11 +67,11 @@
     <a class="social-button linkedin" href="https://www.linkedin.com/in/MedicateTPA/"></a>
  
    --}}
-  <a href="https://web.facebook.com/MedicateTPA/?_rdc=1&_rdr" target="_blank" class="facebook"><i class="fa fa-facebook fa-2x"></i>  </a> 
-  <a href="https://www.linkedin.com/in/MedicateTPA/" target="_blank" class="facebook"><i class="fa fa-linkedin fa-2x"></i></a> 
-  <a href="https://twitter.com/MedicateTPA" target="_blank" class="facebook"><i class="fa fa-twitter fa-2x"></i></a> 
-  <a href="" target="_blank" class="facebook" title="{{__('_header._singup')}}" data-toggle="modal" data-target="#singupModal"><i class="fa fa-plus-circle fa-2x"></i></a> 
-  <a href="https://api.whatsapp.com/send?phone=+21671948171" target="_blank" class="facebook"><i class="fa fa-whatsapp  fa-2x"></i>
+  <a href="https://web.facebook.com/MedicateTPA/?_rdc=1&_rdr" target="_blank" class="facebook"><i class="fa fa-facebook fa-2xx"></i>  </a> 
+  <a href="https://www.linkedin.com/in/MedicateTPA/" target="_blank" class="facebook"><i class="fa fa-linkedin fa-2xx"></i></a> 
+  <a href="https://twitter.com/MedicateTPA" target="_blank" class="facebook"><i class="fa fa-twitter fa-2xx"></i></a> 
+  <a href="" target="_blank" class="facebook" title="{{__('_header._singup')}}" data-toggle="modal" data-target="#singupModal"><img style="width: 100%;" src="{{asset('img/pages/joinus-01.png')}}" alt="" srcset=""></a> 
+  <a href="https://api.whatsapp.com/send?phone=+21671948171" target="_blank" class="facebook"><i class="fa fa-whatsapp  fa-2xx"></i>
   </a>
 
 </div>

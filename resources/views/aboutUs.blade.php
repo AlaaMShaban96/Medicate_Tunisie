@@ -544,12 +544,7 @@ blockquote:after {
   </div>
 </section>
 
-<div class="icon-bar">
-  <a href="https://www.facebook.com/Koprimo-SA-de-CV-1447440632146814/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
-  <a href="https://www.instagram.com/koprimo/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
-  <a href="https://www.linkedin.com/company/koprimo/?viewAsMember=true" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
 
-</div>
 @endsection
 
 @section('script')
