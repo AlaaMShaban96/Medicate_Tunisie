@@ -30,6 +30,7 @@ Route::post('/send-scam', 'HomeController@sendScam');
 Route::post('/send-suggestion', 'HomeController@sendSuggestion');
 // Route::get('/find-us', inquiry.blade.php 
 Route::view('/find-us', 'findUs');
+Route::view('/masaanda-Services', 'masaanda-Services');
 Route::view('/about-us', 'aboutUs');
 // Route::view('/yourHealth', 'yourHealth');
 Route::get('/yourHealth', 'HomeController@yourHealth');

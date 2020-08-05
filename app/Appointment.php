@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Appointment extends Model
 {
     protected $fillable = [
-        'appointment_available_id','patient_id','catogry_id',"appointment_status_id","clinic_employee_id",'date'
+        'appointment_available_id','patient_id','catogry_id',"appointment_status_id","clinic_employee_id",'date',"time"
     ];
     public function appointmentAvailable()
     {

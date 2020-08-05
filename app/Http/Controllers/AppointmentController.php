@@ -11,12 +11,15 @@ use App\Appointment;
 use Illuminate\Http\Request;
 use App\AppointmentAvailable;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
 
 class AppointmentController extends Controller
 {
+    protected $EMAIL="ala96ala96@gmail.com";
+
     public function index(Request $request)
     { 
         // $request->session()->forget('appointmentAvailables');
@@ -85,7 +88,7 @@ class AppointmentController extends Controller
 
 
 
-setcookie("xx", implode(",", $info));
+        setcookie("xx", implode(",", $info));
 
 
 
@@ -99,8 +102,19 @@ setcookie("xx", implode(",", $info));
                 'appointment_available_id'=>$appointment->id,
                 'catogry_id'=>$request->catogry_id,
                 'date'=>$request->date,
+                'time'=>$request->time,
                 'patient_id'=>1,
         ]);
-        return "done";
+       $appointment= Appointment::all()->last();
+
+        $email=$this->EMAIL;
+        $titel="حجز موعد";
+        Mail::send("emails.appointment",compact('appointment'), function($message) use ($email , $titel)   {
+
+            $message->to($email)->subject($titel);
+            
+            });
+            return redirect()->back();
     }
+    
 }

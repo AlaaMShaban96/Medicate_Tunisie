@@ -45,16 +45,16 @@
                               </div>
                           </div>
                           <!-- Select Basic -->
-                          {{-- <div class="col-md-6">
+                          <div class="col-md-12">
                               <div class="form-group">
                                   <label class="control-label" for="time">Preferred Time</label>
                                   <select id="time" name="time" class="form-control">
-                                      <option value="8:00 to 9:00">8:00 to 9:00</option>
-                                      <option value="9:00 to 10:00">9:00 to 10:00</option>
-                                      <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                      <option value="8:00 to 9:00">8:00 - 9:00</option>
+                                      <option value="9:00 to 10:00">9:00 - 10:00</option>
+                                      <option value="10:00 to 1:00">10:00 - 1:00</option>
                                   </select>
                               </div>
-                          </div> --}}
+                          </div>
                           <!-- Select Basic -->
                           <div class="col-md-12">
                               <div class="form-group">

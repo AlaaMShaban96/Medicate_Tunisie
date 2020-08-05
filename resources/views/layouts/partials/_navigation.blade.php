@@ -141,35 +141,35 @@
                         {{__('_nav._customer_service')}}
                       </a> 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <div class="dropdown-item" ><a href="{{url('/suggestion')}}"> تقديم إقتراح </a></div>  
-                        <div class="dropdown-item" ><a href="{{url('/inquiry')}}">تقديم استفسار</a></div>
-                        <div class="dropdown-item" ><a href="{{url('/complaint')}}">تقديم شكوي </a></div>
-                        <div class="dropdown-item" ><a href="{{url('/scam')}}"> إبلاغ عن إحتيال </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/suggestion')}}">  {{__('_nav.suggestion')}}</a></div>  
+                        <div class="dropdown-item" ><a href="{{url('/inquiry')}}">{{__('_nav.inquiry')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url('/complaint')}}">{{__('_nav.complaint')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/scam')}}">{{__('_nav.scam')}} </a></div>
                   
                                             
             
                       </div>
                     </li>
                     <li id=""><a href="">{{__('_nav._investors')}}</a></li>
-                    <li id=""><a href="">خدمات مسانيدة</a></li>
+                  <li id=""><a href="{{asset('/masaanda-Services')}}">خدمات مسانيدة</a></li>
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li> --}}
                     <li id="service">
                       <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{__('_nav._service')}}
-                      </a>
+                      </a> 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <div class="dropdown-item" ><a href="{{url('/service')}}">خدماتنا</a></div>
-                        <div class="dropdown-item" ><a href="">الشركات </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/service')}}"> {{__('_nav._service')}}</a></div>
+                        <div class="dropdown-item" ><a href="">{{__('_nav._companies')}} </a></div>
                         <div class="dropdown-item" ><a href="">{{__('_nav._foundations')}}</a></div>
-                        <div class="dropdown-item" ><a href="{{url('/internationalCard')}}">البطاقة الدولية </a></div>
-                        <div class="dropdown-item" ><a href="{{url('/famileCard')}}">البطاقة العائلية </a></div>
-                        <div class="dropdown-item" ><a href="{{url('/schoolCard')}}">البطاقة المدرسية </a></div>
-                        <div class="dropdown-item" ><a href="{{url('/handicappedCard')}}">بطاقة ذوي الاحتياجات الخاصة </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/internationalCard')}}">{{__('_nav._card_international')}}  </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/famileCard')}}">{{__('_nav.famileCard')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/schoolCard')}}">{{__('_nav.schoolCard')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/handicappedCard')}}">{{__('_nav.handicappedCard')}} </a></div>
                         
             
                       </div>
-                    </li>
+                    </li>     
                     {{-- <li id="yourhealth"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li> --}}
                     <li id="yourhealth">
                       <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -290,14 +290,19 @@
                     <li id="service">
                       <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{__('_nav._service')}}
-                      </a>
+                      </a> 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <div class="dropdown-item" ><a href="{{url('/service')}}">خدماتنا</a></div>
-                        <div class="dropdown-item" ><a href="">مؤساسات</a></div>
-                        <div class="dropdown-item" ><a href="">البطاقة الدولية </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/service')}}"> {{__('_nav._service')}}</a></div>
+                        <div class="dropdown-item" ><a href="">{{__('_nav._companies')}} </a></div>
+                        <div class="dropdown-item" ><a href="">{{__('_nav._foundations')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url('/internationalCard')}}">{{__('_nav._card_international')}}  </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/famileCard')}}">{{__('_nav.famileCard')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/schoolCard')}}">{{__('_nav.schoolCard')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/handicappedCard')}}">{{__('_nav.handicappedCard')}} </a></div>
+                        
             
                       </div>
-                    </li>
+                    </li> 
                     {{-- <li id="yourhealth"><a href="{{url('/yourHealth')}}">{{__('_nav._your_health')}}</a></li> --}}
 
                     <li id="yourhealth">
@@ -316,7 +321,22 @@
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li><a href="#facilities">Find Us</a></li> --}}
                     <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._about_us')}}</a></li>
-                    <li id="about_us"><a href="{{url('/about-us')}}">{{__('_nav._customer_service')}}</a></li>
+                    <li id="">
+
+                      <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{__('_nav._customer_service')}}
+                      </a> 
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <div class="dropdown-item" ><a href="{{url('/suggestion')}}">  {{__('_nav.suggestion')}}</a></div>  
+                        <div class="dropdown-item" ><a href="{{url('/inquiry')}}">{{__('_nav.inquiry')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url('/complaint')}}">{{__('_nav.complaint')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url('/scam')}}">{{__('_nav.scam')}} </a></div>
+                  
+                                            
+            
+                      </div>
+                    </li>
+                    
                     <li id="about_us"><a href="{{url('/about-us')}}">Investisseurs</a></li>
                     {{-- <li id="find_us"><a href="{{url('/find-us')}}">{{__('_nav._find_us')}}</a></li> --}}
                   
