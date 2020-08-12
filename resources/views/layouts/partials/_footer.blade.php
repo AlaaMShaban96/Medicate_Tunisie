@@ -97,13 +97,15 @@ App::setLocale(	Session::get('applocale'));
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateLY')}}</h5>
-                    <p>{{__('_footer.about_medicate_info')}}</p>
+                    {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
                   </div>
                 </div>
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
-                    <h5>{{__('_footer.our_location')}}</h5>
-                    <p>{{__('_footer.our_location_info')}}</p>
+                    <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                      {{__('_footer.our_location')}}</h5>
+                    {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+                    
 
                   </div>
                 </div>
@@ -127,13 +129,15 @@ App::setLocale(	Session::get('applocale'));
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateTUN')}}</h5>
-                    <p>{{__('_footer.about_medicate_info')}}</p>
+                    {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
                   </div>
                 </div>
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
-                    <h5>{{__('_footer.our_location')}}</h5>
-                    <p>{{__('_footer.our_location_info')}}</p>
+                    <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                      {{__('_footer.our_location')}}</h5>
+                    {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+                    
 
                   </div>
                 </div>
@@ -157,13 +161,15 @@ App::setLocale(	Session::get('applocale'));
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateEGY')}}</h5>
-                    <p>{{__('_footer.about_medicate_info')}}</p>
+                    {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
                   </div>download-app-content
                 </div>
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
-                    <h5>{{__('_footer.our_location')}}</h5>
-                    <p>{{__('_footer.our_location_info')}}</p>
+                    <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                      {{__('_footer.our_location')}}</h5>
+                    {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+                    
 
                   </div>
                 </div>
@@ -187,7 +193,7 @@ App::setLocale(	Session::get('applocale'));
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateMORE')}}</h5>
-                    {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
+                    <p>{{__('_footer.about_medicate_info')}}</p>
                   </div>
                 </div>
                   <h5>soon ....</h5>
@@ -196,7 +202,7 @@ App::setLocale(	Session::get('applocale'));
                 <div class="wow fadeInDown" data-wow-delay="0.1s">
                   <div class="widget">
                     <h5>{{__('_footer.about_medicateALG')}}</h5>
-                    {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
+                    <p>{{__('_footer.about_medicate_info')}}</p>
                   </div>
                 </div>
                   <h5>soon ....</h5>
@@ -322,13 +328,15 @@ App::setLocale(	Session::get('applocale'));
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
               <h5>{{__('_footer.about_medicateLY')}}</h5>
-              <p>{{__('_footer.about_medicate_info')}}</p>
+              {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
             </div>
           </div>
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
-              <h5>{{__('_footer.our_location')}}</h5>
-              <p>{{__('_footer.our_location_info')}}</p>
+              <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('_footer.our_location')}}</h5>
+              {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+              
 
             </div>
           </div>
@@ -352,13 +360,15 @@ App::setLocale(	Session::get('applocale'));
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
               <h5>{{__('_footer.about_medicateTUN')}}</h5>
-              <p>{{__('_footer.about_medicate_info')}}</p>
+              {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
             </div>
           </div>
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
-              <h5>{{__('_footer.our_location')}}</h5>
-              <p>{{__('_footer.our_location_info')}}</p>
+              <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('_footer.our_location')}}</h5>
+              {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+              
 
             </div>
           </div>
@@ -382,13 +392,15 @@ App::setLocale(	Session::get('applocale'));
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
               <h5>{{__('_footer.about_medicateEGY')}}</h5>
-              <p>{{__('_footer.about_medicate_info')}}</p>
+              {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
             </div>
           </div>
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
-              <h5>{{__('_footer.our_location')}}</h5>
-              <p>{{__('_footer.our_location_info')}}</p>
+              <h5>  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
+                {{__('_footer.our_location')}}</h5>
+              {{-- <p>{{__('_footer.our_location_info')}}</p> --}}
+              
 
             </div>
           </div>
@@ -412,7 +424,7 @@ App::setLocale(	Session::get('applocale'));
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
               <h5>{{__('_footer.about_medicateMORE')}}</h5>
-              {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
+              <p>{{__('_footer.about_medicate_info')}}</p>
             </div>
           </div>
             <h5>soon ....</h5>
@@ -421,7 +433,7 @@ App::setLocale(	Session::get('applocale'));
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="widget">
               <h5>{{__('_footer.about_medicateALG')}}</h5>
-              {{-- <p>{{__('_footer.about_medicate_info')}}</p> --}}
+              <p>{{__('_footer.about_medicate_info')}}</p>
             </div>
           </div>
             <h5>soon ....</h5>

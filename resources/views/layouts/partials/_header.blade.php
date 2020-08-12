@@ -19,14 +19,7 @@ App::setLocale(	Session::get('applocale'));
       <div id="slider" style="position: relative; width: 100%;height: 50px;background-color: #00acaa; @media only screen and (max-width: 600px)  {height: 128px;}">
  
             <div  id="form-login-singup" >
-                  {{-- <button type="button" data-wow-delay="0.4s" class="btn btn-primary text-right wow bounceIn" data-toggle="modal" data-target="#loginModal">
-                  {{__('_header._login')}}
-                  </button>
-                
-                
-                  <button type="button" data-wow-delay="0.4s" class="btn btn-danger text-right wow bounceIn " data-toggle="modal" data-target="#singupModal">
-                  {{__('_header._singup')}}
-                  </button> --}}
+             
                   <div id="content-form">
                     <div id="right">
                       <a href="" data-toggle="modal" data-target="#loginModal">  
@@ -67,7 +60,7 @@ App::setLocale(	Session::get('applocale'));
         <label for="checkbox">Autoplay Slider</label>
       </div>  --}}
 
-</section>
+    </section>
   
   
         @break
@@ -930,7 +923,7 @@ App::setLocale(	Session::get('applocale'));
 
 
 
-
+  
 
 
 

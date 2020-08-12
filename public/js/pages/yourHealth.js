@@ -19,7 +19,7 @@ function hide() {
     $('#item4').hide();
     $('#item5').hide(); 
 }
-
+ 
 // collapsibles
 var coll = document.getElementsByClassName("collapsible");
 var i;

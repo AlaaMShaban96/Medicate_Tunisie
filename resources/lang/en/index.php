@@ -2,31 +2,27 @@
 
 return [
     "our_services"=>"Our Services ",
-
-    // "healthcare_identity"=>"Healthcare Identity",
-
-    // "healthcare_identity_details"=>"Medicet Card seeks to provide a less intrusive way to check your health care record at partner clinics and clinics. ",
-
-    // "school_health"=>"School Health",
-
-    // "school_health_details"=>"The MedKit Card was created to raise the standard of school health care, ",
-
-    // "discounts_on_services"=>"Discounts on Services",
-
-    // "discounts_on_services_details"=>"Medicate is proud to offer exclusive discounts to subscribers. ",
-
-    // "health_education"=>"Health Education",
-
-    // "health_education_details"=>"Health education greatly helps to recognize and prevent health risks that affect society. ",
-
-    // "eHR_services"=>"eHR Services",
-
-    // "eHR_services_details"=>" Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne. ",
-
-    // "network_ecosystem"=>"Network Ecosystem",
-    
-    // "network_ecosystem_details"=>"The Medicet network system consists of the following, patient and service providers. ",
     "our_partners"=>"Our Partners",
     "news"=>"News",
+
+    "download-Mymedicate-app"=>"Download Mymedicate App",
+    
+    "properties_1"=>"A variety of health facilities",
+    "properties_1_description"=>"Access to a wide range of health facilities",
+
+    "properties_2"=>"Health care checks",
+    "properties_2_description"=>"A reminder of health check-ups on a regular basis",
+
+    "properties_3"=>"Location",
+    "properties_3_description"=>"Search ing for companies at home and abroad with ease",
+
+    "properties_4"=>"QR code",
+    "properties_4_description"=>"Medicate card with unique QR code of its kind",
+
+    "properties_5"=>"Health records",
+    "properties_5_description"=>"Your membership gives you access to electronic health files",
+
+    "properties_6"=>"Discounts",
+    "properties_6_description"=>"Exclusive discounts and offers on health services",
 
 ];

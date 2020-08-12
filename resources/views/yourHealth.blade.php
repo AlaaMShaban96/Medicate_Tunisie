@@ -39,18 +39,18 @@
 			<h1>برنامج صحتك</h1>
 			<h4>اكتشف خدمات الصحية الحصرية من برنامج صحتك </h4>
 		</div>
-
+ 
 		<div id="health-program-items">
-				<div  class="health-item" onclick="show(1)">
+				<div  class="health-item " id="_pregnancy_and_motherhood" onclick="show(1)">
 				
 				
-					<img  class="health-item-img" src="{{'img/pages/yourHealth/sehtk1.png'}}" alt="" >
+					<img  class="health-item-img" id="_doctor_medicit" src="{{'img/pages/yourHealth/sehtk1.png'}}" alt="" >
 					<h6>
 						طبيب ميديكيت
 					</h6>
 				</div>
 
-				<div  class="health-item" onclick="show(2)" >
+				<div  class="health-item " id="_pregnancy_and_motherhood" onclick="show(2)" >
 					<img  class="health-item-img" src="{{'img/pages/yourHealth/sehtk2.png'}}" alt="" >
 					<h6>
 						رعاية الحمل و الامومة
@@ -58,7 +58,7 @@
 				
 				</div>
 
-				<div  class="health-item" onclick="show(3)">
+				<div  class="health-item" id="_card_international" onclick="show(3)">
 					<img  class="health-item-img" src="{{'img/pages/yourHealth/sehtk3.png'}}" alt="" >
 					<h6>
 						رعاية الأمراض المزمنة
@@ -74,7 +74,7 @@
 				
 				</div>
 
-				<div  class="health-item" onclick="show(5)" >
+				<div  class="health-item" id="_health_and_fitness" onclick="show(5)" >
 					<img  class="health-item-img" src="{{'img/pages/yourHealth/sehtk5.png'}}" alt="" >
 					<h6>
 						خدمة الصحة و اللياقة
@@ -558,14 +558,20 @@
 $(function() {
 	
 var index=	$('.class').val();
+
 console.log(index);
-    var target = $('.'+index);
+
+    var target = $('#'+index);
     if (target.length) {
         $('html,body').animate({
             scrollTop: target.offset().top
         }, 1000);
+		console.log(index);
+		
         return false;
+		
     }
+	document.getElementById(index).click();
 });
 </script>
 @endsection

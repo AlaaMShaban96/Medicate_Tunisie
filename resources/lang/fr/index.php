@@ -2,32 +2,30 @@
 
 return [
     "our_services"=>"Nos services ",
-
-    // "healthcare_identity"=>"Healthcare Identity",
-
-    // "healthcare_identity_details"=>"Medicate Card cherche à fournir un moyen moins intrusif pour vérifier votre dossier de soins de santé dans les cliniques partenaires.",
-
-    // "school_health"=>"Santé scolaire",
-
-    // "school_health_details"=>"La carte Medicate a été créée pour élever le niveau des soins de santé en milieu scolaire, ",
-
-    // "discounts_on_services"=>"Réductions sur les services",
-
-    // "discounts_on_services_details"=>"Medicate est fier d'offrir des rabais exclusifs aux abonnés",
-
-    // "health_education"=>"Éducation à la santé",
-
-    // "health_education_details"=>"L'éducation à la santé aide considérablement à reconnaître et à prévenir les risques pour la santé qui affectent la société ",
-
-    // "eHR_services"=>"eRH Services",
-
-    // "eHR_services_details"=>" Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne. ",
-
-    // "network_ecosystem"=>"Écosystème de réseau",
-    
-    // "network_ecosystem_details"=>"Le système de réseau Medicate se compose des patients et des prestataires de services",
     "our_partners"=>"Our Partners",
     "news"=>"News",
+    "download-Mymedicate-app"=>" Télécharger l’application Mymedicate ",
+
+
+    "properties_1"=>"Une variété d’établissements de santé",
+    "properties_1_description"=>"Accès à un large éventail d’établissements de santé",
+
+    "properties_2"=>"Bilans de santé",
+    "properties_2_description"=>"Un rappel des bilans de santé sur une base régulière",
+
+    "properties_3"=>"Emplacement",
+    "properties_3_description"=>"Trouver des entreprises à la maison et à l’étranger avec facilité",
+
+    "properties_4"=>"QR code",
+    "properties_4_description"=>"Carte Medicate avec code QR unique",
+
+    "properties_5"=>"Dossiers de santé",
+    "properties_5_description"=>"Votre adhésion vous donne accès à des dossiers de santé électroniques",
+
+    "properties_6"=>"Preferentiels",
+    "properties_6_description"=>"Réductions et offres exclusives sur les services de santé",
+
+
 
 
 ];

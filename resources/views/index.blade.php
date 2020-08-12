@@ -11,6 +11,10 @@
    .partner-img{
      width: 40%;
    }
+   .img-card-medicate{
+    width: 100%;
+    padding: 2%;
+   }
  </style>
 @endsection
 
@@ -177,7 +181,7 @@
                 <div class="col-md-8">
                   <div class="wow fadeInUp" data-wow-delay="0.1s">
                     <div class="cta-text">
-                      <h3>حمل تطبيق Mymedicate</h3>
+                      <h3> {{__('index.download-Mymedicate-app')}}</h3>
                       <p> </p>
                     </div>
                   </div>
@@ -219,8 +223,8 @@
                     <img src="{{asset('img/pages/index/icon/الشبكة-الطبية.png')}}" width="61px" alt="">
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">مجموعة متنوعة من المرافق الصحية</h5>
-                  <p>يتم توفير الوصول لمجموعة واسعة من المرافق الصحية</p>
+                  <h5 class="h-light">{{__('index.properties_1')}}</h5>
+                  <p>{{__('index.properties_1_description')}}</p>
                 </div>
               </div>
             </div>
@@ -232,8 +236,8 @@
 
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">فحصات الرعاية الصحية</h5>
-                  <p>تذكير بالفحصات الصحية علي فترة منتظمة</p>
+                  <h5 class="h-light">{{__('index.properties_2')}}</h5>
+                  <p>{{__('index.properties_2_description')}}</p>
                 </div>
               </div>
             </div>
@@ -244,8 +248,8 @@
 
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">الموقع</h5>
-                  <p>البحث عن الشركات في الداخل و الخارج بكل سهولة و يسر</p>
+                  <h5 class="h-light">{{__('index.properties_3')}}</h5>
+                  <p>{{__('index.properties_3_description')}}</p>
                 </div>
               </div>
             </div>
@@ -262,8 +266,8 @@
 
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">رمز الاستجابة السريع QR </h5>
-                  <p>بطقة ميديكيت بها رمز QR فريد من نوعة</p>
+                  <h5 class="h-light">{{__('index.properties_4')}}</h5>
+                  <p>{{__('index.properties_4_description')}}</p>
                 </div>
               </div>
             </div>
@@ -275,8 +279,8 @@
 
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">السجلات الصحية</h5>
-                  <p>عضويتك تتيح لك الوصول الي الملفات الصحية الالكترونية</p>
+                  <h5 class="h-light">{{__('index.properties_5')}}</h5>
+                  <p>{{__('index.properties_5_description')}}</p>
                 </div>
               </div>
             </div>
@@ -286,8 +290,8 @@
                   <img src="{{asset('img/pages/index/icon/عروض.png')}}" width="61px" alt="">
                 </div>
                 <div class="service-desc">
-                  <h5 class="h-light">تخفيضات</h5>
-                  <p>تخفيضات وعروض حصرية علي الخدمات الصحية</p>
+                  <h5 class="h-light">{{__('index.properties_6')}}</h5>
+                  <p>{{__('index.properties_6_description')}}</p>
                 </div>
               </div>
             </div>
@@ -411,290 +415,7 @@
 
 
     <!-- Section: News -->
-@switch(Session::get('applocale'))
-  @case('ar')
 
-      <section id="facilities" class="home-section paddingbot-60">
-        <div class="container marginbot-50">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="wow fadeInDown" data-wow-delay="0.1s">
-                <div class="section-heading text-center">
-                  <h2 class="h-bold">{{__('index.news')}}</h2>
-                  {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
-                </div>
-              </div>
-              <div class="divider-short"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Section: works -->
-
-
-      <!-- Section: testimonial -->
-      <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
-
-      
-        <div class="carousel-reviews broun-block">
-          <div class="container">
-            <div class="row">
-              <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                
-                        
-              
-                  <div class="carousel-inner">
-                      <div class="item active">
-                        @foreach ($news as $oneNews)
-                            
-                      
-                        {{-- @for ($i = 0; $i < 3; $i++) --}}
-                        
-                        <div class="col-md-4 col-sm-6">
-
-                          <a href="">
-
-                            <div id="item-news" class="block-text rel zmin" >
-
-                              <div class="mark">
-
-                                {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
-                            
-                              </div>
-                            
-                              <span class="rating-input">
-                            
-                                <i>
-                            
-                                  {{$oneNews->titel_ar}}
-                            
-                                </i>
-                            
-                              </span>
-                              
-                              <p> {{$oneNews->description_ar}}</p>
-                            
-                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                            
-                            </div>
-                          </a>
-                        </div>
-                          @endforeach 
-                        </div>
-                        
-                      </div>
-                        {{-- @endfor --}}
-                      </div> 
-                    
-
-
-                </div>
-
-                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                <a class="right carousel-control" style="margin-right: 0px;" href="#carousel-reviews" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-              </div>
-          
-        </div>
-        <a href="{{url('/news')}}" class="btn btn-warning" > 
-        المزيد من الاخبار
-        </a>
-      </section>
-      <!-- /Section: testimonial -->
-
-    @break
-  @case('en')
-
-      <section id="facilities" class="home-section paddingbot-60">
-        <div class="container marginbot-50">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="wow fadeInDown" data-wow-delay="0.1s">
-                <div class="section-heading text-center">
-                  <h2 class="h-bold">{{__('index.news')}}</h2>
-                  {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
-                </div>
-              </div>
-              <div class="divider-short"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Section: works -->
-
-
-      <!-- Section: testimonial -->
-      <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
-
-      
-        <div class="carousel-reviews broun-block">
-          <div class="container">
-            <div class="row">
-              <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                
-                        
-              
-                  <div class="carousel-inner">
-                      <div class="item active">
-                        @foreach ($news as $oneNews)
-                            
-                      
-                        {{-- @for ($i = 0; $i < 3; $i++) --}}
-                        
-                        <div class="col-md-4 col-sm-6">
-
-                          <a href="">
-
-                            <div id="item-news" class="block-text rel zmin" >
-
-                              <div class="mark">
-
-                                {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
-                            
-                              </div>
-                            
-                              <span class="rating-input">
-                            
-                                <i>
-                            
-                                  {{$oneNews->titel_en}}
-                            
-                                </i>
-                            
-                              </span>
-                              
-                              <p> {{$oneNews->description_en}}</p>
-                            
-                              <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                            
-                            </div>
-                          </a>
-                        </div>
-                          @endforeach 
-                        </div>
-                        
-                      </div>
-                        {{-- @endfor --}}
-                      </div> 
-                    
-
-
-                </div>
-
-                <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                <a class="right carousel-control" style="margin-right: 0px;" href="#carousel-reviews" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-              </div>
-          
-        </div>
-        <a href="{{url('/news')}}" class="btn btn-warning" > 
-        More News
-        </a>
-      </section>
-      <!-- /Section: testimonial -->
-
-    @break
-  @case('fr')
-
-    <section id="facilities" class="home-section paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">{{__('index.news')}}</h2>
-                {{-- <p>Ea melius ceteros oportere quo, pri habeo viderer facilisi ei</p> --}}
-              </div>
-            </div>
-            <div class="divider-short"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Section: works -->
-
-
-    <!-- Section: testimonial -->
-    <section id="testimonial" class="home-section paddingbot-60 parallax" data-stellar-background-ratio="0.5">
-
-    
-      <div class="carousel-reviews broun-block">
-        <div class="container">
-          <div class="row">
-            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-              
-                      
-            
-                <div class="carousel-inner">
-                    <div class="item active">
-                      @foreach ($news as $oneNews)
-                          
-                    
-                      {{-- @for ($i = 0; $i < 3; $i++) --}}
-                      
-                      <div class="col-md-4 col-sm-6">
-
-                        <a href="">
-
-                          <div id="item-news" class="block-text rel zmin" >
-
-                            <div class="mark">
-
-                              {{\Carbon\Carbon::parse($oneNews->created_at)->diffForHumans()}}
-                          
-                            </div>
-                          
-                            <span class="rating-input">
-                          
-                              <i>
-                          
-                                {{$oneNews->titel_fr}}
-                          
-                              </i>
-                          
-                            </span>
-                            
-                            <p> {{$oneNews->description_fr}}</p>
-                          
-                            <ins class="ab zmin sprite sprite-i-triangle block"></ins>
-                          
-                          </div>
-                        </a>
-                      </div>
-                        @endforeach 
-                      </div>
-                      
-                    </div>
-                      {{-- @endfor --}}
-                    </div> 
-                  
-
-
-              </div>
-
-              <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-              <a class="right carousel-control" style="margin-right: 0px;" href="#carousel-reviews" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
-        
-      </div>
-      <a href="{{url('/news')}}" class="btn btn-warning" > 
-        plus d’actualités
-      </a>
-    </section>
-    <!-- /Section: testimonial -->
-
-  @break
-@endswitch
 
   
 
@@ -721,8 +442,9 @@
           <div class="col-sm-4 pricing-box">
             <div class="wow bounceInUp" data-wow-delay="0.1s">
               <div class="pricing-content general">
-                <h2>Basic Fit 1 Package</h2>
-                <h3>$33<sup>.99</sup> <span>/ one time</span></h3>
+                {{-- <h2>Basic Fit 1 Package</h2>
+                <h3>$33<sup>.99</sup> <span>/ one time</span></h3> --}}
+                <img class="img-card-medicate" src="{{asset('img/medicate card bronze.png')}}" alt="" srcset="">
                 <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
@@ -740,8 +462,7 @@
           <div class="col-sm-4 pricing-box featured-price">
             <div class="wow bounceInUp" data-wow-delay="0.3s">
               <div class="pricing-content featured">
-                <h2>Golden Glow Package</h2>
-                <h3>$65<sup>.99</sup> <span>/ one time</span></h3>
+                <img class="img-card-medicate" src="{{asset('img/medicate card gold.png')}}" alt="" srcset="">
                 <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
@@ -760,8 +481,7 @@
           <div class="col-sm-4 pricing-box">
             <div class="wow bounceInUp" data-wow-delay="0.2s">
               <div class="pricing-content general last">
-                <h2>Basic Fit 2 Package</h2>
-                <h3>$47<sup>.99</sup> <span>/ one time</span></h3>
+                <img class="img-card-medicate" src="{{asset('img/medicate card silver.png')}}" alt="" srcset="">
                 <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>

@@ -22,14 +22,14 @@
   <link href="{{asset('css/owl.theme.css')}}" rel="stylesheet" media="screen" />
   <link href="{{asset('css/animate.css')}}" rel="stylesheet" />
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+  {{-- <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'> --}}
 
   <!-- boxed bg -->
   <link id="bodybg" href="{{asset('bodybg/bg1.css')}}" rel="stylesheet" type="text/css" />
   <!-- template skin -->
   <link id="t-colors" href="{{asset('color/default.css')}}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+  <link rel="stylesheet" href="{{asset('font-awesome/css/font-awesome.min.css')}}">
+  {{-- <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'> --}}
 
  <style>
  

@@ -8,10 +8,10 @@
 
 <style>
   .navbar-nav > li > .dropdown-menu {
-    margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-left: 6%;
+    border-top-width: 7px;
+    border-color: #18a8aa;
+    border-left-width: 1px;
+    border-right-width: 1px;
 }
 .dropdown-menu {
   min-width: 196px;
@@ -26,7 +26,8 @@
   direction: ltr;
   border-bottom-style: solid;
   border-width: 1px;
-  border-color: #dbdada;
+  border-color: #18a8aa2e;
+  text-align: center;
 }
 /* .dropdown{
   font-size: 9px;
@@ -57,11 +58,17 @@
                     <div class="col-sm col-md-6"  id="time-work-navbar">
                       
                       <p class="bold text-left">
-                        <span style="margin-left: 47%;">
+                        <span style="margin-left: 40%;">
                           <a style="color: white;" href="{{url('/news')}}">{{__('_nav._news')}}</a>
-                        </span>&nbsp &nbsp &nbsp &nbsp
+                          <span>&nbsp|&nbsp</span>
+                          <a style="color: white;" href="{{url('/news')}}">
+                             <i class="fa fa-whatsapp " aria-hidden="true"></i>
+                            0021671948171
+                           
+                          </a>
+                        </span>  &nbsp &nbsp &nbsp &nbsp
                         8am to 10pm
-                        </p>
+                      </p>
                       
                     </div>
                     <div class="col-sm col-md-6" style="text-align: end;" id="lang-icon-content">
@@ -174,15 +181,15 @@
                     <li id="yourhealth">
                       <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{__('_nav._your_health')}}
-                      </a>
+                      </a> 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <div class="dropdown-item" ><a href="{{url('/yourHealth')}}">{{__('_nav._doctor_medicit')}}</a></div>
-                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=x")}}">{{__('_nav._pregnancy_and_motherhood')}}</a></div>
-                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=x")}}">{{__('_nav._chronic_diseases')}} </a></div>
-                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=x")}}">{{__('_nav._card_international')}}</a></div>
-                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=x")}}">{{__('_nav._health_and_fitness')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url('/yourHealth?x=_doctor_medicit')}}">{{__('_nav._doctor_medicit')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=_pregnancy_and_motherhood")}}">{{__('_nav._pregnancy_and_motherhood')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=_chronic_diseases")}}">{{__('_nav._chronic_diseases')}} </a></div>
+                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=_card_international")}}">{{__('_nav._card_international')}}</a></div>
+                        <div class="dropdown-item" ><a href="{{url("/yourHealth?x=_health_and_fitness")}}">{{__('_nav._health_and_fitness')}}</a></div>
                       </div>
-                    </li>
+                    </li> 
                     {{-- <li id="news"><a href="{{url('/news')}}">{{__('_nav._news')}}</a></li> --}}
                     <li id="home"><a href="{{url('/')}}">{{__('_nav._home')}}</a></li>
                    
@@ -209,8 +216,15 @@
                       
                       <p class="bold text-left">
                         8am to 10pm
-                        &nbsp &nbsp &nbsp &nbsp  <a href="{{url('/news')}}">{{__('_nav._news')}}</a>
-                        
+                        &nbsp &nbsp &nbsp &nbsp 
+                        <span class="news-whatsapp" style="margin-left: 40%;">
+                          <a style="color: white;" href="{{url('/news')}}">
+                            <i class="fa fa-whatsapp " aria-hidden="true"></i>
+                           0021671948171
+                          
+                         </a>                          <span>|</span>
+                          <a style="color: white;" href="{{url('/news')}}">{{__('_nav._news')}}</a>
+                        </span>                       
 
                       </p>
                     </div>

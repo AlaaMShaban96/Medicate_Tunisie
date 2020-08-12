@@ -2,33 +2,28 @@
 
 return[
     "our_services"=>"خدماتنا",
-
-    // "healthcare_identity"=>"بطاقة medicate للرعاية الصحية",
-
-    // "healthcare_identity_details"=>"تسعى Medicet Card إلى توفير طريقة أقل تدخلاً للتحقق من سجل الرعاية الصحية الخاص بك في العيادات والعيادات الشريكة.",
-
-
-    // "school_health"=>"الصحة المدرسية",
-
-    // "school_health_details"=>"تم إنشاء بطاقة MedKit لرفع مستوا الرعاية الصحية المدرسية",
-
-    // "discounts_on_services"=>"تخفيضات على الخدمات",
-
-    // "discounts_on_services_details"=>"نفخر بتقديم خصومات حصرية للمشتركين   ",
-
-    // "health_education"=>"التثقيف الصحي",
-
-    // "health_education_details"=>"يساعد التثقيف الصحي بشكل كبير على التعرف على المخاطر الصحية التي تؤثر على المجتمع والوقاية منها.",
-
-    // "eHR_services"=>"  نظام شبكة Medicate",
-
-    // "eHR_services_details"=>"يتكون نظام شبكة ميديكيت من  المريض ومزودي الخدمات. ",
-
-    // "network_ecosystem"=>"الخدمات الإلكترونية",
-
-    // "network_ecosystem_details"=>"مع السجل الصحي الإلكتروني ، الذي يضمن رعاية صحية بجودة عالية. لا يحتاج المرء إلى إضاعة الوقت في العثور على ملفه أثناء الطوارئ. ",
     "our_partners"=>"شركائنا",
     "news"=>"الأخبار",
+    "download-Mymedicate-app"=>"حمل تطبيق Mymedicate",
+
+
+    "properties_1"=>"مجموعة متنوعة من المرافق الصحية",
+    "properties_1_description"=>"الوصول إلى مجموعة واسعة من المرافق الصحية",
+
+    "properties_2"=>"فحوصات الرعاية الصحية",
+    "properties_2_description"=>"تذكير بالفحوصات الصحية على أساس منتظم",
+
+    "properties_3"=>"موقع",
+    "properties_3_description"=>"البحث عن الشركات في الداخل والخارج بكل سهولة",
+
+    "properties_4"=>"رمز QR",
+    "properties_4_description"=>"بطاقة Medicate مع رمز الاستجابة السريعة الفريد من نوعه",
+
+    "properties_5"=>"السجلات الصحية",
+    "properties_5_description"=>"عضويتك تمنحك الوصول إلى الملفات الصحية الإلكترونية",
+
+    "properties_6"=>"خصومات",
+    "properties_6_description"=>"خصومات وعروض حصرية على الخدمات الصحية",
 
 
 
