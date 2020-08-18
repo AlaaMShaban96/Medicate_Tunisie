@@ -4,7 +4,9 @@
 @endphp
 
 @extends('layouts.master')
-
+@section('titel')
+  Home
+@endsection
 @section('head')
   <link rel="stylesheet" href="{{asset('css/pages/index.css')}}">
  <style>

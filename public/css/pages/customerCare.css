@@ -1,0 +1,94 @@
+#complaint{
+	margin-top: 10%;
+	text-align: center;
+}
+
+
+
+form {
+	max-width: 600px;
+	text-align: center;
+	margin: 20px auto;
+	border-width: 1px;
+	border-style: solid;
+	padding: 10px;
+	border-color: #18a8aa63;
+	border-radius: 18px;
+  
+
+  }
+  input, textarea , select {
+	/* border:0; */
+	outline:0;
+	padding: 1em;
+	
+	display: block;
+	width: 100%;
+	margin-top: 1em;
+	font-family: 'Merriweather', sans-serif;
+	resize: none;
+	border-radius: 9px;
+	border-width: 1px;
+	border-style: solid;
+    
+   
+  }
+  select:focus ,textarea:focus,input:focus{
+	  /* background-color: red; */
+	  border-color: #18a8aa;
+  }
+  
+#submit:hover{
+background-color: #18a8aa;
+color: white;
+}
+  
+  textarea {
+      height: 439px;
+  }
+
+
+
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+     margin-right: 2%; 
+}
+
+
+@media (max-width: 480px) {
+  .half {
+     width: 100%; 
+     float: none;
+     margin-bottom: 0; 
+  }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+#cover{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+.radio{
+	text-align: start;
+	
+}

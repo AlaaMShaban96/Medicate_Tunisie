@@ -38,7 +38,7 @@
 
   </style>
     @yield('head')
-    <title>Medicate Tunis :Home</title>
+    <title>Medicate Tunis : @yield('titel')</title>
 </head>
 
 @if (Session::get('applocale')=="ar")

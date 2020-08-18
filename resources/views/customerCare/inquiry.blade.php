@@ -8,118 +8,22 @@
      
 <link rel="stylesheet" href="{{asset('css/pages/news/index.css')}}">
 
-<style>
-#complaint{
-	margin-top: 10%;
-	text-align: center;
-}
-
-
-
-form {
-	max-width: 600px;
-	text-align: center;
-	margin: 20px auto;
-	border-width: 1px;
-	border-style: solid;
-	padding: 10px;
-	border-color: #18a8aa63;
-	border-radius: 18px;
-  
-
-  }
-  input, textarea , select {
-	/* border:0; */
-	outline:0;
-	padding: 1em;
-	
-	display: block;
-	width: 100%;
-	margin-top: 1em;
-	font-family: 'Merriweather', sans-serif;
-	resize: none;
-	border-radius: 9px;
-	border-width: 1px;
-	border-style: solid;
-    
-   
-  }
-  select:focus ,textarea:focus,input:focus{
-	  /* background-color: red; */
-	  border-color: #18a8aa;
-  }
-  
-#submit:hover{
-background-color: #18a8aa;
-color: white;
-}
-  
-  textarea {
-      height: 439px;
-  }
-
-
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-#cover{
-	/* background-image: url('https://www.hlb.com.my/content/dam/hlb/hk/images/contact-us/contact-us-banner.jpeg'); */
-	/* background-attachment: fixed; */
-	background-repeat: no-repeat;
-	background-size: cover;
-	/* backdrop-filter: blur(5px); */
-	/* -webkit-filter: blur(8px);x`x` */
-}
-#bg-text{
-	
-}
-</style>
+<link rel="stylesheet" href="{{asset('css/pages/customerCare.css')}}">
 <title>Medicate Tunis : News </title>
 @endsection
-
+ 
 @section('content')
 <div id="complaint">
 <section  id="cover" >
 <div id="bg-text">
-	<h3>العناية بالعملاء/ تقديم إستفسار</h3>
+	<h3>{{__('customerCare/master.customer_care')}}/  {{__('customerCare/inquiry.inquiry')}}</h3>
 
 	<img src="{{asset('img/comp.png')}}" alt="" srcset="">
 	<br>
 	<br>
 	<br>
-	<h1>تقديم إستفسار</h1>
-	<p> قسم العناية بالعملاء على أتم الإستعداد لمساعدتك.
-		لا تتردد في التواصل معنا إن كان لديك سؤال عن أي من خدماتنا.</p>
+	<h1>{{__('customerCare/inquiry.inquiry')}}</h1>
+	<p> {{__('customerCare/inquiry.descrption')}}</p>
 </div>
 </section>
 
@@ -138,24 +42,24 @@ color: white;
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 
-			<input type="text" id="input-name" name="name" placeholder="الاسم">
+			<input type="text" id="input-name" name="name" placeholder="{{__('customerCare/master.name')}}">
 
 			@error('cardnumber')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 
-			<input type="number" id="input-cardnumber" name="cardnumber" placeholder="رقم العضوية (للأعضاء الحاليين فقط)">
+			<input type="number" id="input-cardnumber" name="cardnumber" placeholder="{{__('customerCare/master.cardNumber')}}">
 			@error('mobileNo')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 
-			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="الجوال">
+			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="{{__('customerCare/master.mobileNumber')}}">
 
 			@error('email')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 
-			<input type="email" id="input-email" name="email" placeholder="البريد اﻹلكتروني">
+			<input type="email" id="input-email" name="email" placeholder="{{__('customerCare/master.email')}}">
 
 			@error('aboutinquiry')
 				<label class=" alert-danger">{{ $message }}</label>
@@ -164,13 +68,13 @@ color: white;
 			{{-- <input type="text" id="input-subject" placeholder="Subject"> --}}
 
 			<select name="aboutinquiry" id="" >
-				<option >أرغب بالاستفسار عن</option>
-				<option value="مطالباتي">مطالباتي</option>
-				<option value="تأميني"> تأميني</option>
-				<option value="اخري">اخري</option>
+				<option >{{__('customerCare/inquiry.sendAbut')}}</option>
+				<option value="{{__('customerCare/inquiry.claims')}}">{{__('customerCare/inquiry.claims')}}</option>
+				<option value="{{__('customerCare/inquiry.insurance')}}"> {{__('customerCare/inquiry.insurance')}}</option>
+				<option value="{{__('customerCare/inquiry.other')}}">{{__('customerCare/inquiry.other')}}</option>
 			</select>
 			<input type="file" name="" id="">
-			<label for="">إضافة ملف</label>
+			<label for="">{{__('customerCare/master.uplade')}}</label>
 		</div>
 		<div class="half right cf">
 			@error('message')
@@ -179,7 +83,7 @@ color: white;
 
 			<textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
 		</div>  
-		<input id="submit" type="submit" value="Submit" id="input-submit">
+		<input id="submit" type="submit" value="{{__('customerCare/inquiry.send')}}" id="input-submit">
 		</form>
 	</div>
 </section>

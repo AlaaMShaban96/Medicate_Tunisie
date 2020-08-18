@@ -4,12 +4,15 @@
 
 @extends('layouts.master')
 
+@section('titel')
+    About Us
+@endsection
 @section('head')
 
 
 <link rel="stylesheet" href="{{asset('css/pages/find_us.css')}}">
 <link rel="stylesheet" href="{{asset('css/pages/about_us.css')}}">
-<title>Medicate Tunis : About Us</title>
+
 <style>
 .centeredd {
   position: absolute;
@@ -163,7 +166,7 @@ blockquote:after {
 {{-- Our team --}}
 
 <div >
-  <h1 class="text-center">- Our Team Doctors -</h1>
+  {{-- <h1 class="text-center">- Our Team Doctors -</h1>
 
   <section>
     <div class="container">
@@ -266,11 +269,11 @@ blockquote:after {
 
       </div><!-- /end row -->
     </div><!-- /end container -->
-  </section>
+  </section> --}}
 
 
 
-{{--   
+ {{--   
 
   <div class="container" style="padding-top: 10%;">
     <h1 class="text-center">- Our Team IT -</h1>
@@ -345,7 +348,9 @@ blockquote:after {
       </div>
     </div>
   </div>
-</div> --}}
+ --}}
+</div> 
+
 <section>
   <div id="xx">
     <div class="container">
@@ -353,185 +358,111 @@ blockquote:after {
     <h1 class="text-center"> {{__('find_us.find_us')}} </h1>
       <div class="row"> 
       <!--team-4--> 
-        <div class="col-lg-4">
-          <div class="our-team-main">
+
+      @switch(Session::get('applocale'))
+          @case('ar')
+                @foreach ($locations as $location)
+                  <div class="col-lg-4">
+                    <div class="our-team-main">
+                    
+                      <div class="team-front">
+                      <img src="{{$location->country->img_path}}"  class="img-fluid" />
+                        {{-- <h3>{{__('find_us.libya_titel')}}</h3> --}}
+                        <h3>{{$location->country->name_ar}}</h3>
+                        {{-- <p>Web Designer</p> --}}
+                      </div>
+                      
+                      <div class="team-back">
+                        <span>
+                          {{$location->description_ar}}
+                          <br>
+                          <b>tel: +{{$location->tel}}</b><br>
+                          <b>Fax: +{{$location->fax}}</b><br>
+                          
+                          Email: {{$location->email}}
+                        </span>
+                        <br>
+                        <a href="{{$location->google_map}}"style="color: black;" >
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          {{__('find_us.maps')}}
+                        </a>
           
-            <div class="team-front">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/2000px-Flag_of_Libya.svg.png"  class="img-fluid" />
-              <h3>{{__('find_us.libya_titel')}}</h3>
-              {{-- <p>Web Designer</p> --}}
-            </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                @endforeach
+              @break
+          @case('en')
+                  @foreach ($locations as $location)
+                    <div class="col-lg-4">
+                      <div class="our-team-main">
+                      
+                        <div class="team-front">
+                        <img src="{{$location->country->img_path}}"  class="img-fluid" />
+                          {{-- <h3>{{__('find_us.libya_titel')}}</h3> --}}
+                          <h3>{{$location->country->name_en}}</h3>
+                          {{-- <p>Web Designer</p> --}}
+                        </div>
+                        
+                        <div class="team-back">
+                          <span>
+                            {{$location->description_en}}
+                            <br>
+                            <b>tel: +{{$location->tel}}</b><br>
+                            <b>Fax: +{{$location->fax}}</b><br>
+                            
+                            Email: {{$location->email}}
+                          </span>
+                          <br>
+                          <a href="{{$location->google_map}}"style="color: black;" >
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            {{__('find_us.maps')}}
+                          </a>
             
-            <div class="team-back">
-              <span>
-                {{__('find_us.libya_discription')}}
-                <br>
-                <b>Tel: +973 1 7382721</b><br>
-                <b>Fax: +973 1 7382082</b><br>
-                
-                Email: nextcare@nextcarehealth.com
-              </span>
-              <br>
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-  
-            </div>
-          
-          </div>
-        </div>
-        <!--team-4-->
-        <div class="col-lg-4">
-          <div class="our-team-main">
-    
-          <div class="team-front">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" class="img-fluid" />
-            <h3>Turkey</h3>
-            {{-- <p>Web Designer</p> --}}
-          </div>
-    
-          <div class="team-back">
-            <span>
-              <p>
-                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
-              </p>
-              <b>Tel: +973 1 7382721</b><br>
-              <b>Fax: +973 1 7382082</b><br>
-              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
-              Email: nextcare@nextcarehealth.com</p>
-            </span>
-            <br>
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-          </div>
-    
-          </div>
-        </div>
-      <!--team-1-->
-      
-  
-      <!--team-2-->
-        <div class="col-lg-4">
-          <div class="our-team-main">
-  
-            <div class="team-front">
-              <img src="https://flagpedia.net/data/flags/vector/tn.svg"   class="img-fluid" />
-              <h3>Tunisia</h3>
-            {{-- <p>Web Designer</p> --}}
-            </div>
-  
-          <div class="team-back">
-            <span>
-              <p>
-                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
-              </p>
-              <b>Tel: +973 1 7382721</b><br>
-              <b>Fax: +973 1 7382082</b><br>
-              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
-              Email: nextcare@nextcarehealth.com</p>
-            </span>
-            <br>
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-          </div>
-  
-          </div>
-        </div>
-      <!--team-2-->
-  
-      <!--team-3-->
-        <div class="col-lg-4">
-          <div class="our-team-main">
-  
-            <div class="team-front">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Algeria.svg/800px-Flag_of_Algeria.svg.png"  class="img-fluid" />
-              <h3>Algeria</h3>
-              {{-- <p>Web Designer</p> --}}
-            </div>
-  
-            <div class="team-back">
-              <span>
-                <p>
-                  Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
-                </p>
-                <b>Tel: +973 1 7382721</b><br>
-                <b>Fax: +973 1 7382082</b><br>
-                <p>P.O.Box 18442 Manama, Kingdom of Bahrain
-                Email: nextcare@nextcarehealth.com</p>
-              </span>
-              <br>
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-            </div>
-  
-          </div>
-        </div>
-      <!--team-3-->
-  
-  
-  
-      <!--team-5-->
-      <div class="col-lg-4">
-        <div class="our-team-main">
-  
-          <div class="team-front">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" class="img-fluid" />
-            <h3>Germany</h3>
-          {{-- <p>Web Designer</p> --}}
-          </div>
-  
-          <div class="team-back">
-            <span>
-              <p>
-                Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
-              </p>
-              <b>Tel: +973 1 7382721</b><br>
-              <b>Fax: +973 1 7382082</b><br>
-              <p>P.O.Box 18442 Manama, Kingdom of Bahrain
-              Email: nextcare@nextcarehealth.com</p>
-            </span>
-            <br>
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-          </div>
-  
-        </div>
-      </div>
-      <!--team-5-->
-      <div class="col-lg-4">
-        <div class="our-team-main">
-  
-        <div class="team-front">
-          <img src="https://cdn.webshopapp.com/shops/94414/files/53852256/egypt-flag-image-free-download.jpg"  class="img-fluid" />
-          <h3>Egypt</h3>
-          {{-- <p>Web Designer</p> --}}
-        </div>
-  
-        <div class="team-back">
-          <span>
-            <p>
-              Capital Plus Tower 13 floor, Office No. 131 & 132, Building 79, Road 2802, Block 428 Al Seef District
-            </p>
-            <b>Tel: +973 1 7382721</b><br>
-            <b>Fax: +973 1 7382082</b><br>
-            <p>P.O.Box 18442 Manama, Kingdom of Bahrain
-            Email: nextcare@nextcarehealth.com</p>
-          </span>
-          
-  
-          <br>
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>
-                {{__('find_us.maps')}}
-              </a>
-        </div>
-  
-        </div>
-      </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  @endforeach
+              @break
+          @default
+              @foreach ($locations as $location)
+                <div class="col-lg-4">
+                  <div class="our-team-main">
+                  
+                    <div class="team-front">
+                    <img src="{{$location->country->img_path}}"  class="img-fluid" />
+                      {{-- <h3>{{__('find_us.libya_titel')}}</h3> --}}
+                      <h3>{{$location->country->name_fr}}</h3>
+                      {{-- <p>Web Designer</p> --}}
+                    </div>
+                    
+                    <div class="team-back">
+                      <span>
+                        {{$location->description_fr}}
+                        <br>
+                        <b>tel: +{{$location->tel}}</b><br>
+                        <b>Fax: +{{$location->fax}}</b><br>
+                        
+                        Email: {{$location->email}}
+                      </span>
+                      <br>
+                      <a href="{{$location->google_map}}"style="color: black;" >
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        {{__('find_us.maps')}}
+                      </a>
+        
+                    </div>
+                  
+                  </div>
+                </div>
+              @endforeach
+      @endswitch
+
+     
+
+     
     <!--team-1-->
       <!--team-6-->
     

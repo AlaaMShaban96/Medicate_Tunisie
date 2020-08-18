@@ -15,6 +15,12 @@
    
    
     @yield('head') 
+    <link rel="stylesheet" href="{{asset("css/flexslider.css")}}">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{{asset("css/owl.carousel.min.css")}}">
+    <link rel="stylesheet" href="{{asset("css/owl.theme.default.min.css")}}">
+    
     <link href="{{asset('assets/cpanel/vendor/bootstrap4/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/cpanel/css/master.css')}}" rel="stylesheet">
     <link href="{{asset('assets/cpanel/vendor/chartsjs/Chart.min.css')}}" rel="stylesheet">
@@ -38,7 +44,10 @@
                 </li>
                 <li>
                      <a href="{{url('/cpanel/company-service')}}"> Company Service </a> 
-                    </li>
+                </li>
+                <li>
+                     <a href="{{url('/cpanel/your-heailte')}}"> Your Heailte </a> 
+                </li>
                 <li> 
                     <a href="{{url('/cpanel/clinic')}}">Clinic </a>
                  </li>

@@ -45,7 +45,14 @@
     /* display: block; */
     visibility: visible;
 }
-
+.news-whatsapp{
+  margin-left: 40%;
+}
+@media  (max-width: 585px) {
+  .news-whatsapp{
+  margin-left: 0%;
+}
+}
 </style>
 @switch(Session::get('applocale'))
 
@@ -58,7 +65,7 @@
                     <div class="col-sm col-md-6"  id="time-work-navbar">
                       
                       <p class="bold text-left">
-                        <span style="margin-left: 40%;">
+                        <span class="news-whatsapp">
                           <a style="color: white;" href="{{url('/news')}}">{{__('_nav._news')}}</a>
                           <span>&nbsp|&nbsp</span>
                           <a style="color: white;" href="{{url('/news')}}">
@@ -158,7 +165,7 @@
                       </div>
                     </li>
                     <li id=""><a href="">{{__('_nav._investors')}}</a></li>
-                  <li id=""><a href="{{asset('/masaanda-Services')}}">خدمات مسانيدة</a></li>
+                  {{-- <li id=""><a href="{{asset('/masaanda-Services')}}">خدمات مسانيدة</a></li> --}}
                     <li id="bookingNav"><a  href="{{url('/bookingg')}}">{{__('_nav._booking')}}</a></li>
                     {{-- <li id="service"><a href="{{url('/service')}}">{{__('_nav._service')}}</a></li> --}}
                     <li id="service">
@@ -217,7 +224,7 @@
                       <p class="bold text-left">
                         8am to 10pm
                         &nbsp &nbsp &nbsp &nbsp 
-                        <span class="news-whatsapp" style="margin-left: 40%;">
+                        <span class="news-whatsapp">
                           <a style="color: white;" href="{{url('/news')}}">
                             <i class="fa fa-whatsapp " aria-hidden="true"></i>
                            0021671948171

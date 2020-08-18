@@ -7,103 +7,7 @@
 @section('head')
      
 <link rel="stylesheet" href="{{asset('css/pages/news/index.css')}}">
-
-<style>
-#complaint{
-	margin-top: 10%;
-	text-align: center;
-}
-
-
-
-form {
-	max-width: 600px;
-	text-align: center;
-	margin: 20px auto;
-	border-width: 1px;
-	border-style: solid;
-	padding: 10px;
-	border-color: #18a8aa63;
-	border-radius: 18px;
-  
-
-  }
-  input, textarea , select {
-	/* border:0; */
-	outline:0;
-	padding: 1em;
-	
-	display: block;
-	width: 100%;
-	margin-top: 1em;
-	font-family: 'Merriweather', sans-serif;
-	resize: none;
-	border-radius: 9px;
-	border-width: 1px;
-	border-style: solid;
-    
-   
-  }
-  select:focus ,textarea:focus,input:focus{
-	  /* background-color: red; */
-	  border-color: #18a8aa;
-  }
-  
-#submit:hover{
-background-color: #18a8aa;
-color: white;
-}
-  
-  textarea {
-      height: 439px;
-  }
-
-
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-#cover{
-	/* background-image: url('https://www.hlb.com.my/content/dam/hlb/hk/images/contact-us/contact-us-banner.jpeg'); */
-	/* background-attachment: fixed; */
-	background-repeat: no-repeat;
-	background-size: cover;
-	/* backdrop-filter: blur(5px); */
-	/* -webkit-filter: blur(8px);x`x` */
-}
-#bg-text{
-	
-}
-</style>
+<link rel="stylesheet" href="{{asset('css/pages/customerCare.css')}}">
 <title>Medicate Tunis : News </title>
 @endsection
 
@@ -111,14 +15,15 @@ color: white;
 <div id="complaint">
 <section  id="cover" >
 <div id="bg-text">
-	<h3>العناية بالعملاء/ تقديم شكوى</h3>
-
+	<h3>{{__('customerCare/master.customer_care')}}/  {{__('customerCare/complaint.complaint')}}</h3>
+	
 	<img src="{{asset('img/complaints.png')}}" alt="" srcset="">
 	<br>
 	<br>
 	<br>
-	<h1>تقديم شكوى</h1>
-	<p>يحق لك الحصول على خدمات بأعلى مستوى من المهنية. إذا كان هناك مشكلة، من فضلك قم بتعبئة النموذج أدناه لتخبرنا عنها. وسوف تتم مراجعتها فوراً.</p>
+	<h1>  {{__('customerCare/complaint.complaint')}}</h1>
+	<p>
+		{{__('customerCare/complaint.complaint')}}	</p>
 </div>
 </section>
 
@@ -136,45 +41,45 @@ color: white;
 			@error('name')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="text" id="input-name" name="name" placeholder="الاسم">
+			<input type="text" id="input-name" name="name" placeholder="{{__('customerCare/master.name')}}">
 
 			@error('cardnumber')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="number" id="input-cardnumber" name="cardnumber" placeholder="رقم العضوية (للأعضاء الحاليين فقط)">
+			<input type="number" id="input-cardnumber" name="cardnumber" placeholder="{{__('customerCare/master.cardNumber')}}">
 			@error('mobileNo')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="الجوال">
+			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="{{__('customerCare/master.mobileNumber')}}">
 			@error('email')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="text" id="input-email" name="email" placeholder="البريد اﻹلكتروني">
+			<input type="text" id="input-email" name="email" placeholder=" {{__('customerCare/master.email')}}">
 			{{-- <input type="text" id="input-subject" placeholder="Subject"> --}}
 			@error('aboutcomplaints')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 			<select name="aboutcomplaints" id=""  >
-				<option >أرغب بالاستفسار عن</option>
-				<option value="مقدم الخدمة الطبية">مقدم الخدمة الطبية</option>
-				<option value="الفريق الطبي">الفريق الطبي</option>
-				<option value="فريق مديكيت">فريق مديكيت</option>
-				<option value="اخري">اخري</option>
+				<option >   {{__('customerCare/complaint.sendAbut')}}</option>
+				<option value="{{__('customerCare/complaint.medicalServiceProvider')}}">{{__('customerCare/complaint.medicalServiceProvider')}}</option>
+				<option value="{{__('customerCare/complaint.medicalTeam')}}">{{__('customerCare/complaint.medicalTeam')}}</option>
+				<option value="{{__('customerCare/complaint.medicateTeam')}}">{{__('customerCare/complaint.medicateTeam')}}</option>
+				<option value="{{__('customerCare/complaint.other')}}">{{__('customerCare/complaint.other')}}</option>
 			</select>
 			@error('img')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
 			<input type="file" name="img" id="">
-			<label for="">إضافة ملف</label>
+			<label for="">{{__('customerCare/master.uplade')}}</label>
 		</div>
 		
 		<div class="half right cf">
 			@error('message')
 			<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+			<textarea name="message" type="text" id="input-message" placeholder="{{__('customerCare/complaint.message')}}"></textarea>
 		</div>  
-		<input id="submit" type="submit" value="تقديم شكوي" id="input-submit">
+		<input id="submit" type="submit" value="{{__('customerCare/complaint.send')}}" id="input-submit">
 	</form>
 	</div>
 </section>

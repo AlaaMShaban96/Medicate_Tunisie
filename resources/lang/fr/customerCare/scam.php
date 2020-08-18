@@ -1,0 +1,20 @@
+<?php
+return[
+    "reportFraud"=>"Signaler la fraude",
+    "descrption"=>"		Signaler des fraudes ou des abus nous aidera à protéger vos droits et vos prestations d’assurance maladie. Soyez assuré que toutes les données que vous nous fournissez sont confidentielles et seront traitées comme anonymes. ",
+    "companyName"=>" Nom de l’entreprise (facultatif)",
+    "yourDescrption"=>"Description plus proche de votre état ",
+    "yourDescrption_optional_1"=>"Je suis victime de fraude ou d’abus.",
+    "yourDescrption_optional_2"=>" Je signale des abus ou des fraudes à quelqu’un d’autre.",
+    "yourDescrption_optional_3"=>"Je représente une entreprise ou une institution qui a été victime de fraude ou d’abus. ",
+    "yourDescrption_optional_4"=>" Je suis témoin de fraude ou d’abus.",
+    "other"=>" Autres",
+    "sendAbut"=>"Je voudrais faire rapport (facultatif) :",
+    "sendAbut_optional_1"=>"Fournisseur de services médicaux",
+    "sendAbut_optional_2"=>"Médecin",
+    "sendAbut_optional_3"=>"Membre",
+    "sendAbut_optional_4"=>"Société",
+    "sendAbut_optional_5"=>"Vendeur ",
+    "message"=>" Signaler la fraude ",
+    "send"=>"Envoyer une fraude de rapport",
+];

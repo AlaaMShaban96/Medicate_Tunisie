@@ -23,16 +23,16 @@ Route::get('/api', 'HomeController@api');
 
 
 
+Route::get('/about-us', 'HomeController@aboutUs');
 Route::get('/', 'HomeController@index');
 Route::post('/send-complaint', 'HomeController@sendComplaint');
 Route::post('/send-inquiry', 'HomeController@sendInquiry');
 Route::post('/send-scam', 'HomeController@sendScam');
 Route::post('/send-suggestion', 'HomeController@sendSuggestion');
-// Route::get('/find-us', inquiry.blade.php 
+
 Route::view('/find-us', 'findUs');
 Route::view('/masaanda-Services', 'masaanda-Services');
-Route::view('/about-us', 'aboutUs');
-// Route::view('/yourHealth', 'yourHealth');
+
 Route::get('/yourHealth', 'HomeController@yourHealth');
 
 
@@ -47,7 +47,7 @@ Route::view('/scam', 'customerCare.scam');
 
 
 Route::view('/cpanel', 'cpanel/index');
-// Route::view('/bookin', 'cpanel/index');
+
 Route::get('/service', 'CompanyServiceController@index');
 Route::get('/service-info/{service}', 'CompanyServiceController@show');
 
@@ -85,8 +85,7 @@ Route::group(['prefix' => '/cpanel'], function () {
     Route::get('/diag', 'Cpanel\DiagController@index');
     // this route for controll pharmacy
     Route::get('/clinic', 'Cpanel\ClinicController@index');
-    // this route for controll pharmacy
-   
+  
 
 
 
@@ -117,6 +116,14 @@ Route::group(['prefix' => '/cpanel'], function () {
     Route::put('/partner/{partner}/update', 'Cpanel\PartnerController@update');
 
     Route::delete('/partner/{partner}', 'Cpanel\PartnerController@destroy');
+
+     // this route for controll your-heailte category
+     Route::get('/your-heailte', 'Cpanel\CategoryController@index');
+     Route::get('/category/add', 'Cpanel\CategoryController@create');
+     Route::post('/category/store', 'Cpanel\CategoryController@store');
+     Route::get('/category/{category}/edit', 'Cpanel\CategoryController@edit');
+     Route::put('/category/{category}/update', 'Cpanel\CategoryController@update');
+     Route::delete('/category/delete/{category}', 'Cpanel\CategoryController@destroy');
 
   
 });

@@ -7,106 +7,10 @@
 @section('head')
      
 <link rel="stylesheet" href="{{asset('css/pages/news/index.css')}}">
+<link rel="stylesheet" href="{{asset('css/pages/customerCare.css')}}">
 
 <style>
-#complaint{
-	margin-top: 10%;
-	text-align: center;
-}
 
-
-
-form {
-	max-width: 600px;
-	text-align: center;
-	margin: 20px auto;
-	border-width: 1px;
-	border-style: solid;
-	padding: 10px;
-	border-color: #18a8aa63;
-	border-radius: 18px;
-  
-
-  }
-  input, textarea , select {
-	/* border:0; */
-	outline:0;
-	padding: 1em;
-	
-	display: block;
-	width: 100%;
-	margin-top: 1em;
-	font-family: 'Merriweather', sans-serif;
-	resize: none;
-	border-radius: 9px;
-	border-width: 1px;
-	border-style: solid;
-    
-   
-  }
-  select:focus ,textarea:focus,input:focus{
-	  /* background-color: red; */
-	  border-color: #18a8aa;
-  }
-  
-#submit:hover{
-background-color: #18a8aa;
-color: white;
-}
-  
-  textarea {
-      height: 439px;
-  }
-
-
-
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
-
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-#cover{
-	/* background-image: url('https://www.hlb.com.my/content/dam/hlb/hk/images/contact-us/contact-us-banner.jpeg'); */
-	/* background-attachment: fixed; */
-	background-repeat: no-repeat;
-	background-size: cover;
-	/* backdrop-filter: blur(5px); */
-	/* -webkit-filter: blur(8px);x`x` */
-}
-#bg-text{
-	
-}
-.radio{
-	text-align: start;
-	
-}
 </style>
 <title>Medicate Tunis : News </title>
 @endsection
@@ -115,12 +19,15 @@ color: white;
 <div id="complaint">
 <section  id="cover" >
 <div id="bg-text">
-	<h3>العناية بالعملاء/تقديم إقتراح</h3>
+	<h3>{{__('customerCare/master.customer_care')}}/{{__('customerCare/suggestion.suggestion')}} </h3>
 	<img src="{{asset('img/unnamed.png')}}" alt="" srcset="">
 	<br>
+	<br> 
 	<br>
-	<br>	<h1>تقديم إقتراح</h1>
-	<p>إذا كنت ترى أن هناك خدمة يمكننا تطويرها أو تريد أن تقترح علينا منتج جديد نرجو أن تتواصل معنا. فنحن نحرص دوماً على توفير أفضل عناية لعملائنا. </p>
+	<h1>{{__('customerCare/suggestion.suggestion')}}</h1>
+	<p>
+		{{__('customerCare/suggestion.descrption')}}
+	</p>
 </div>
 </section>
 
@@ -139,54 +46,54 @@ color: white;
 			@error('name')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="text" id="input-name" name="name" placeholder="الاسم">
+			<input type="text" id="input-name" name="name" placeholder="{{__('customerCare/master.name')}}">
 
 			@error('cardnumber')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="number" id="input-cardnumber" name="cardnumber"  placeholder="رقم العضوية (للأعضاء الحاليين فقط)">
+			<input type="number" id="input-cardnumber" name="cardnumber"  placeholder="{{__('customerCare/master.cardNumber')}}">
 
 			@error('mobileNo')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="الجوال">
+			<input type="number" id="input-mobileNo" name="mobileNo" placeholder="{{__('customerCare/master.mobileNumber')}}">
 
 			@error('email')
 				<label class=" alert-danger">{{ $message }}</label>
 			@enderror
-			<input type="email" id="input-email" name="email" placeholder="البريد اﻹلكتروني">
+			<input type="email" id="input-email" name="email" placeholder="{{__('customerCare/master.email')}}">
 			{{-- <input type="text" id="input-subject" placeholder="Subject"> --}}
 			@error('drone')
 			<label class=" alert-danger">{{ $message }}</label>
 		   @enderror
-			<p>أريد أن أرسل رأيي عن</p>
+			<p>{{__('customerCare/suggestion.sendAbut')}}</p>
 
 			
 			<div class="radio">
 			
-			<input type="radio" id="huey" name="drone" value="القسم"
+			<input type="radio" id="huey" name="drone" value="{{__('customerCare/master.department')}}"
 					checked>
-			<label for="huey">القسم</label>
+			<label for="huey">{{__('customerCare/master.department')}}</label>
 			</div>
 
 			<div class="radio">
-			<input type="radio" id="dewey" name="drone" value="المنتج / الخدمة">
-			<label for="dewey">المنتج / الخدمة</label>
+			<input type="radio" id="dewey" name="drone" value="{{__('customerCare/master.another')}}">
+			<label for="dewey">{{__('customerCare/master.another')}}</label>
 			</div>
 
 			@error('file')
 			<label class=" alert-danger">{{ $message }}</label>
 		   @enderror
 			<input type="file" name="file" id="">
-			<label for="">إضافة ملف</label>
+			<label for="">{{__('customerCare/master.uplade')}}</label>
 		</div>
 		<div class="half right cf">
 			@error('message')
 			<label class=" alert-danger">{{ $message }}</label>
 		   @enderror
-			<textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+			<textarea name="message" type="text" id="input-message" placeholder="{{__('customerCare/master.message')}}"></textarea>
 		</div>  
-		<input id="submit" type="submit" value="تقديم اقتراح" id="input-submit">
+		<input id="submit" type="submit" value="{{__('customerCare/suggestion.send')}}" id="input-submit">
 		</form>
 	</div>
 </section>

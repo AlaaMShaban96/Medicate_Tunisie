@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\News;
 use App\Partner;
+use App\Category;
+use App\Location;
 use GuzzleHttp\Client;
 use App\CompanyService;
 use Illuminate\Http\Request;
@@ -38,9 +40,14 @@ class HomeController extends Controller
    public function yourHealth(Request $request )
    {
        $class =$request->x;
-       return view('yourHealth',compact('class'));
+       $categories=Category::all();
+       return view('yourHealth',compact('class','categories'));
    }
-   
+   public function aboutUs()
+   {
+       $locations= Location::all();
+       return view('aboutUs', compact('locations'));
+   }
 
    public function api()
    {
@@ -55,7 +62,7 @@ class HomeController extends Controller
 
     }
     public function sendComplaint(Request $request)
-   {
+    {
         $request->validate([
 
             'name' => 'required',

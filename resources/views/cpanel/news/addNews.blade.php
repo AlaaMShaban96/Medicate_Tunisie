@@ -65,7 +65,8 @@
                     <div class="form-group">
                         
                         <textarea id="summernote3" class="form-control" id="editor" rows="5" placeholder="Description Franch" name="description_fr"></textarea>
-                    </div>                    @error('description_fr')
+                    </div> 
+                    @error('description_fr')
                         <small class="input-error">{{ $message }}</small>
                     @enderror
                 </td>

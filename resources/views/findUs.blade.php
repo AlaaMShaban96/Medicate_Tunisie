@@ -4,12 +4,15 @@
 
 @extends('layouts.master')
 
+@section('titel')
+ Find Us
+@endsection
 @section('head')
 
  
 
 <link rel="stylesheet" href="{{asset('css/pages/find_us.css')}}">
-<title>Medicate Tunis : Find Us</title>
+
 
 @endsection
 
