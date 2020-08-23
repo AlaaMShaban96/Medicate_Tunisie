@@ -447,15 +447,15 @@
                 {{-- <h2>Basic Fit 1 Package</h2>
                 <h3>$33<sup>.99</sup> <span>/ one time</span></h3> --}}
                 <img class="img-card-medicate" src="{{asset('img/medicate card bronze.png')}}" alt="" srcset="">
-                <ul>
+                {{-- <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
                   <li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
                   <li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-                </ul>
+                </ul> --}}
 
                 <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
+                  <a href="#" class="btn btn-skin btn-lg">Soon</a>
                 </div>
               </div>
             </div>
@@ -465,16 +465,16 @@
             <div class="wow bounceInUp" data-wow-delay="0.3s">
               <div class="pricing-content featured">
                 <img class="img-card-medicate" src="{{asset('img/medicate card gold.png')}}" alt="" srcset="">
-                <ul>
+                {{-- <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
                   <li>General Screening – Basic <i class="fa fa-check icon-success"></i></li>
                   <li>Body Composition Analysis <i class="fa fa-check icon-success"></i></li>
-                  <li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li>
+                  <li>GR Assessment & Scoring <i class="fa fa-check icon-success"></i></li> --}}
                 </ul>
 
                 <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
+                  <a href="#" class="btn btn-skin btn-lg">Soon</a>
                 </div>
               </div>
             </div>
@@ -484,15 +484,15 @@
             <div class="wow bounceInUp" data-wow-delay="0.2s">
               <div class="pricing-content general last">
                 <img class="img-card-medicate" src="{{asset('img/medicate card silver.png')}}" alt="" srcset="">
-                <ul>
+                {{-- <ul>
                   <li>Anthropometry (BMI, WH Ratio) <i class="fa fa-check icon-success"></i></li>
                   <li>Post Examination Review <i class="fa fa-check icon-success"></i></li>
                   <li>General Screening – Regular <i class="fa fa-check icon-success"></i></li>
                   <li><del>Health Screening Report</del> <i class="fa fa-times icon-danger"></i></li>
-                </ul>
+                </ul> --}}
 
                 <div class="price-bottom">
-                  <a href="#" class="btn btn-skin btn-lg">Purchase</a>
+                  <a href="#" class="btn btn-skin btn-lg">Soon</a>
                 </div>
               </div>
             </div>
