@@ -41,6 +41,6 @@ class FirebaseController extends Controller
         // $factory = (new Factory())
         // ->withDatabaseUri('https://medicate-int.firebaseio.com');
         //  dd($factory);   
-        return view('firebase');
+        return view('cpanel/firebase');
     }
 }

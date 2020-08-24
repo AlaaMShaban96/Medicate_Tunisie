@@ -39,7 +39,7 @@ firebase.database().ref('MedicateDoctors').on('value',(snap)=>{
         li.appendChild(div);
         // li.appendChild(document.createTextNode(name));
         ul.appendChild(li);
-        console.log(element.key)
+        // console.log(element.key)
 
     });
   // console.log(snap.child('comp1284').child('1').child('msg').val());
@@ -57,7 +57,7 @@ function show(element) {
     var ul = document.getElementById("chat");
     ul.innerHTML="";
     snap.forEach(element => {
-  if (element.key<= this.messageIndex) {
+      if (element.key<= this.messageIndex) {
   
 
       var li = document.createElement("li");
@@ -78,32 +78,54 @@ function show(element) {
       // div.appendChild(div2);
       li.appendChild(message);
       ul.appendChild(li);
-        console.log(element.child('msg').val());
+        // console.log(element.child('msg').val());
   }
     });
   
-});
-
+  });
+  goto();
+  // $("#chat").animate({scrollTop: $('ul#chat li:last').offset().top});
 }
 // function send() {
 //   console.log(this.sendTo);
 // }
 function send() {
-  firebase.database().ref('MedicateDoctors').child(this.sendTo).child(this.messageIndex+1).set({
+ 
+  firebase.database().ref('MedicateDoctors').child(this.sendTo).child(this.messageIndex+=1).set({
 
     msg:document.getElementById('sendMessage').value,
-    msg_date:'10:37 ص',
+    msg_date:formatAMPM(),
     send_by:'admin',
     send:false,
    
    
   });
+  
   document.getElementById('sendMessage').value="";
-
+  goto();
+  // show(this.sendTo);
+  // $("#chat").animate({scrollTop: $('ul#chat li:last').offset().top});
 }
 
-$('#chat').on('scroll', function() {
-  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-      alert('end reached');
-  }
-})
+
+
+
+function formatAMPM() {
+ 
+  var hours = new Date().getHours();
+  var year = new Date().getFullYear();
+  var month = new Date().getMonth();
+  var day = new Date().getDay();
+  var minutes = new Date().getMinutes();
+  var ampm = hours >= 12 ? 'م' : 'ص';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var strTime =day+'-'+ month+'-'+year+' '+hours + ':' + minutes + ' ' + ampm;
+  return strTime;
+}
+function goto() {
+  $("#chat").animate({scrollTop: $('ul#chat li:last').offset().top});
+  console.log('index for scroll '+ $('ul#chat li:last').offset().top);
+  console.log('index for scroll '+ $('ul#chat li:last').offset().top+80);
+}

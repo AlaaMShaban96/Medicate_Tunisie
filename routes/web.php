@@ -46,7 +46,7 @@ Route::view('/complaint', 'customerCare.complaint');
 Route::view('/scam', 'customerCare.scam');
 
 
-Route::view('/cpanel', 'cpanel/index');
+
 
 Route::get('/service', 'CompanyServiceController@index');
 Route::get('/service-info/{service}', 'CompanyServiceController@show');
@@ -72,62 +72,69 @@ Route::post('/diag-send','RequestController@addDiag');
 
 Route::post('/clinic-send','RequestController@addClinic');
 
+Route::group(['middleware' => ['auth']], function () {
 
-Route::group(['prefix' => '/cpanel'], function () {
-
-
-
-    // this route for controll doctor
-    Route::get('/doctor', 'Cpanel\DoctorController@index');
-    // this route for controll pharmacy
-    Route::get('/pharmacy', 'Cpanel\PharmacyController@index');
-    // this route for controll pharmacy
-    Route::get('/diag', 'Cpanel\DiagController@index');
-    // this route for controll pharmacy
-    Route::get('/clinic', 'Cpanel\ClinicController@index');
-  
+   
 
 
+        Route::group(['prefix' => '/cpanel'], function () {
 
-    // this route for controll news
-    Route::get('/news', 'Cpanel\NewsController@index');
-    Route::get('/news/cancel', 'Cpanel\NewsController@cancel');
-    Route::get('/news/add', 'Cpanel\NewsController@create');
-    Route::post('/news/store', 'Cpanel\NewsController@store');
-    Route::get('/news/{news}/edit', 'Cpanel\NewsController@edit');
-    Route::get('/news/{news}', 'Cpanel\NewsController@show');
-    Route::put('/news/{news}/update', 'Cpanel\NewsController@update');
-    Route::delete('/news/{news}', 'Cpanel\NewsController@destroy');
+            Route::view('', 'cpanel/index');
 
-    //this for service company
-    Route::get('/company-service', 'Cpanel\CompanyServiceController@index');
-    Route::get('/company-service/cancel', 'Cpanel\CompanyServiceController@cancel');
-    Route::get('/compane-service/add', 'Cpanel\CompanyServiceController@create');
-    Route::post('/compane-service/store', 'Cpanel\CompanyServiceController@store');
-    Route::get('/compane-service/{service}/edit', 'Cpanel\CompanyServiceController@edit');
-    Route::put('/compane-service/{service}/update', 'Cpanel\CompanyServiceController@update');
-    Route::delete('/compane-service/{service}', 'Cpanel\CompanyServiceController@destroy');
+            // this route for controll doctor
+            Route::get('/doctor', 'Cpanel\DoctorController@index');
+            // this route for controll pharmacy
+            Route::get('/pharmacy', 'Cpanel\PharmacyController@index');
+            // this route for controll pharmacy
+            Route::get('/diag', 'Cpanel\DiagController@index');
+            
+            Route::view('/masseg', 'cpanel/firebase');
+            // this route for controll pharmacy
+            Route::get('/clinic', 'Cpanel\ClinicController@index');
+        
 
-    //this route for partner
-    Route::get('/partner', 'Cpanel\PartnerController@index');
-    Route::get('/partner/add', 'Cpanel\PartnerController@create');
-    Route::post('/partner/store', 'Cpanel\PartnerController@store');
-    Route::get('/partner/{partner}/edit', 'Cpanel\PartnerController@edit');
-    Route::put('/partner/{partner}/update', 'Cpanel\PartnerController@update');
 
-    Route::delete('/partner/{partner}', 'Cpanel\PartnerController@destroy');
 
-     // this route for controll your-heailte category
-     Route::get('/your-heailte', 'Cpanel\CategoryController@index');
-     Route::get('/category/add', 'Cpanel\CategoryController@create');
-     Route::post('/category/store', 'Cpanel\CategoryController@store');
-     Route::get('/category/{category}/edit', 'Cpanel\CategoryController@edit');
-     Route::put('/category/{category}/update', 'Cpanel\CategoryController@update');
-     Route::delete('/category/delete/{category}', 'Cpanel\CategoryController@destroy');
+            // this route for controll news
+            Route::get('/news', 'Cpanel\NewsController@index');
+            Route::get('/news/cancel', 'Cpanel\NewsController@cancel');
+            Route::get('/news/add', 'Cpanel\NewsController@create');
+            Route::post('/news/store', 'Cpanel\NewsController@store');
+            Route::get('/news/{news}/edit', 'Cpanel\NewsController@edit');
+            Route::get('/news/{news}', 'Cpanel\NewsController@show');
+            Route::put('/news/{news}/update', 'Cpanel\NewsController@update');
+            Route::delete('/news/{news}', 'Cpanel\NewsController@destroy');
 
-  
+            //this for service company
+            Route::get('/company-service', 'Cpanel\CompanyServiceController@index');
+            Route::get('/company-service/cancel', 'Cpanel\CompanyServiceController@cancel');
+            Route::get('/compane-service/add', 'Cpanel\CompanyServiceController@create');
+            Route::post('/compane-service/store', 'Cpanel\CompanyServiceController@store');
+            Route::get('/compane-service/{service}/edit', 'Cpanel\CompanyServiceController@edit');
+            Route::put('/compane-service/{service}/update', 'Cpanel\CompanyServiceController@update');
+            Route::delete('/compane-service/{service}', 'Cpanel\CompanyServiceController@destroy');
+
+            //this route for partner
+            Route::get('/partner', 'Cpanel\PartnerController@index');
+            Route::get('/partner/add', 'Cpanel\PartnerController@create');
+            Route::post('/partner/store', 'Cpanel\PartnerController@store');
+            Route::get('/partner/{partner}/edit', 'Cpanel\PartnerController@edit');
+            Route::put('/partner/{partner}/update', 'Cpanel\PartnerController@update');
+
+            Route::delete('/partner/{partner}', 'Cpanel\PartnerController@destroy');
+
+            // this route for controll your-heailte category
+            Route::get('/your-heailte', 'Cpanel\CategoryController@index');
+            Route::get('/category/add', 'Cpanel\CategoryController@create');
+            Route::post('/category/store', 'Cpanel\CategoryController@store');
+            Route::get('/category/{category}/edit', 'Cpanel\CategoryController@edit');
+            Route::put('/category/{category}/update', 'Cpanel\CategoryController@update');
+            Route::delete('/category/delete/{category}', 'Cpanel\CategoryController@destroy');
+
+        
+        });
+        
 });
-
 
 Auth::routes();
 

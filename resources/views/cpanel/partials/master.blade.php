@@ -41,6 +41,7 @@
                 
                 <li> 
                     <a href="{{url('/cpanel/news')}}">  News </a> 
+                    <a href="{{url('/cpanel/masseg')}}">  Masseg </a> 
                 </li>
                 <li>
                      <a href="{{url('/cpanel/company-service')}}"> Company Service </a> 
@@ -100,7 +101,17 @@
                                     <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a></li>
                                     <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
                                     <div class="dropdown-divider"></div>
-                                    <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                    <li><a href="" class="dropdown-item">
+                                        <form action="/logout" method="post">
+                                        @csrf
+                                        {{-- <i ></i>--}}
+                                        <button  type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                                        </form>
+                                        </a> 
+                                    </li>
+                                    <li class="nav-item">
+                                        <a  href="{{ url('/register') }}">{{ __('Register') }}</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
