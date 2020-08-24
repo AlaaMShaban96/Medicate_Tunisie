@@ -128,3 +128,7 @@ Route::group(['prefix' => '/cpanel'], function () {
   
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

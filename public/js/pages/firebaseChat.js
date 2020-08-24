@@ -1,8 +1,5 @@
 
 // Your web app's Firebase configuration
-
-const { timers } = require("jquery");
-
 // Your web app's Firebase configuration
 var firebaseConfig = {
   apiKey: "AIzaSyAd9tihQpdroWQPacSxG3WG_wGSzvNjZyI",
@@ -21,7 +18,7 @@ var sendTo="";
 var messageIndex="";
 // Get a reference to the database service
 firebase.database().ref('MedicateDoctors').on('value',(snap)=>{
-    //  this.messageIndex =  snap.child('comp1284').numChildren();
+    var totalRecord =  snap.child('comp1284').numChildren();
     var ul = document.getElementById("acconts");
     ul.innerHTML="";
     snap.forEach(element => {
@@ -56,10 +53,12 @@ firebase.database().ref('MedicateDoctors').on('value',(snap)=>{
 function show(element) {
  this.sendTo=element;
   firebase.database().ref('MedicateDoctors').child(element).on('value',(snap)=>{
-    // this.messageIndex = snap.numChildren();
+     this.messageIndex =  snap.numChildren();
     var ul = document.getElementById("chat");
     ul.innerHTML="";
     snap.forEach(element => {
+  if (element.key<= this.messageIndex) {
+  
 
       var li = document.createElement("li");
       li.setAttribute('class',element.child('send_by').val() == 'admin'?'me':"you");
@@ -80,22 +79,31 @@ function show(element) {
       li.appendChild(message);
       ul.appendChild(li);
         console.log(element.child('msg').val());
-
+  }
     });
   
 });
 
 }
 // function send() {
-//   firebase.database().ref('MedicateDoctors').child(this.sendTo).child(this.messageIndex+1).set({
-
-//     msg:Document.getElementById('sendMessage').val,
-//     msg_date:time(),
-//     send_by:'admin',
-//     send:false,
-   
-   
-//   });
-//   console.log('done');
-
+//   console.log(this.sendTo);
 // }
+function send() {
+  firebase.database().ref('MedicateDoctors').child(this.sendTo).child(this.messageIndex+1).set({
+
+    msg:document.getElementById('sendMessage').value,
+    msg_date:'10:37 ص',
+    send_by:'admin',
+    send:false,
+   
+   
+  });
+  document.getElementById('sendMessage').value="";
+
+}
+
+$('#chat').on('scroll', function() {
+  if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+      alert('end reached');
+  }
+})
